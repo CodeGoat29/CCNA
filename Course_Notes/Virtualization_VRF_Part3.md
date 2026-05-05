@@ -1,6 +1,6 @@
-# 54. VIRTUALIZATION (VRF): PART 3
+# 54. Virtualization (VRF): Part 3
 
-INTRO TO VRF
+## Intro to VRF
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e122f3c6-290f-4f33-a31d-f308f12140a3)
 
@@ -17,7 +17,7 @@ INTRO TO VRF
     - Each CUSTOMER’S TRAFFIC is isolated from the OUTSIDE
     - CUSTOMER IP ADDRESSES can overlap without issue
 
-VRF CONFIGURATION
+## VRF Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fec7669b-8868-4529-81fa-6f52e07ff6e4)
 

@@ -1,6 +1,6 @@
-# 30. TCP and UDP (LAYER 4 PROTOCOLS)
+# 30. TCP and UDP (Layer 4 Protocols)
 
-BASICS OF LAYER 4
+## Basics of Layer 4
 
 - Provides TRANSPARENT transfer of DATA between END HOSTS (Host To Host communication)
 
@@ -17,7 +17,7 @@ BASICS OF LAYER 4
 
 ---
 
-WHAT IS A SESSION ? 
+## What Is a Session ? 
 
 - A SESSION is an EXCHANGE of DATA between TWO or MORE communicating DEVICES
 
@@ -33,7 +33,7 @@ The FOLLOWING ranges have been designated by IANA (Internet Assigned Numbers Aut
 
 ---
 
-TCP (TRANSMISSION CONTROL PROTOCOL)
+## TCP (Transmission Control Protocol)
 
 - A CONNECTION-ORIENTED protocol
     - Before actually SENDING DATA to the DESTINATION HOST, the TWO HOSTS communicate to establish a CONNECTION. Once the CONNECTION is established, DATA exchange begins.
@@ -71,7 +71,7 @@ Terminating connections
 
 ---
 
-UDP (USER DATAGRAM PROTOCOL)
+## UDP (User Datagram Protocol)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/773a7e94-50b1-4179-b2e6-0d45ec5c1b3d)
 
@@ -94,7 +94,7 @@ UDP (USER DATAGRAM PROTOCOL)
 
 ---
 
-COMPARING TCP AND UDP
+## Comparing TCP and UDP
 
 Number of Fields in their Headers
 
@@ -108,6 +108,6 @@ Number of Fields in their Headers
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fcbef599-9277-4b06-8d59-2349ca70817a)
 
-IMPORTANT PORT NUMBERS
+## Important Port Numbers
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9e1f0422-d027-4a06-a359-d47c5c39dba1)

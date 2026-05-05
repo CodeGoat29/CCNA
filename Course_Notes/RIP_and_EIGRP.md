@@ -1,37 +1,37 @@
-# 25. RIP and EIGRP (IGP : DYNAMIC VECTOR)
+# 25. Rip and Eigrp (Igp : Dynamic Vector)
 
-ROUTING INFORMATION PROTOCOL (RIP)
+## Routing Information Protocol (Rip)
 
 - Routing Information Protocol (Industry Standard)
 - is a DISTANCE VECTOR IGP
     - uses Routing-By-Rumor logic to learn/share routes
 - Uses HOP COUNT as it’s METRIC (One Router = One Hop)  Bandwidth is irrelevant
 - MAX HOP COUNT is 15 (anything more is considered unreachable)
-- Has THREE VERSIONS:
+- **Has Three Versions:**
     - RIPv1 and RIPv2; used for IPv4
     - RIPng (RIP Next Generation) used for IPv6
-- Uses TWO MESSAGE TYPES:
-    - REQUEST :
+- **Uses Two Message Types:**
+- **Request :**
         - To ask RIP-ENABLED neighbour ROUTERS to send their ROUTING TABLE
-    - RESPONSE:
+- **Response:**
         - To SEND the LOCAL router’s ROUTING TABLE to neighbouring ROUTERS
 
 By DEFAULT, RIP-Enabled ROUTERS will share their ROUTING TABLE every 30 seconds
 
-RIPv1 and RIPv2
+## Ripv1 and Ripv2
 
-RIPv1:
+## Ripv1:
 
 - Only advertises *classful addresses* (Class A, Class B, Class C)
 - Doesn’t support VLSM, CIDR
 - Doesn’t include SUBNET MASK information in ADVERTISEMENTS (RESPONSE messages)
-    - Example:
+    - **Example:**
         - 10.1.1.0/24 will become 10.0.0.0 (Class A Address, so assumed to be /8)
         - 172.16.192.0/18 will become 172.16.0.0 (Class B Address, so assumed to be /16)
         - 192.168.1.40/30 will become 172.168.1.0 (Class C Address, so assumed to be /24)
 - Messages are BROADCAST to 255.255.255.255
 
-RIPv2:
+## Ripv2:
 
 - Supports VLSM, CIDR
 - Includes SUBNET MASK information in ADVERTISEMENTS
@@ -41,7 +41,7 @@ RIPv2:
 
 ---
 
-CONFIGURING RIP
+## Configuring Rip
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1d14ec8b-121c-4666-b608-1e5d1889424c)
 
@@ -80,7 +80,7 @@ Because the RIP “network” command is CLASSFUL. It will automatically convert
 
 ---
 
-HOW TO ADVERTISE A DEFAULT ROUTE INTO RIP
+## How to Advertise a Default Route Into Rip
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/57de003e-0e8e-48c7-bb72-fbe25208d847)
 
@@ -112,7 +112,7 @@ Since both have an equal number of “hops”, both paths appear in the DEFAULT 
 
 ---
 
-ENHANCED INTERIOR GATEWAY ROUTING PROTOCOL (EIGRP)
+## Enhanced Interior Gateway Routing Protocol (Eigrp)
 
 - Enhanced Interior Gateway Routing Protocol
 - is a DISTANCE VECTOR IGP
@@ -125,7 +125,7 @@ ENHANCED INTERIOR GATEWAY ROUTING PROTOCOL (EIGRP)
 
 ---
 
-CONFIGURATION OF EIGRP
+## Configuration of Eigrp
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f2b42631-bcb9-4f62-afe9-b7bb1e7e0d7e)
 
@@ -143,7 +143,7 @@ A WILDCARD MASK is an “inverted” SUBNET MASK
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f64e06d3-75ad-4f4f-b7d6-26f27ffae541)
 
-“0” in the WILDCARD MASK = BITS MUST MATCH !
+## “0” in The Wildcard Mask = Bits Must Match !
 
 “1” in the WILDCARD MASK = Do not have to match
 
@@ -159,7 +159,7 @@ A WILDCARD MASK is an “inverted” SUBNET MASK
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f3f169da-d733-4da9-8d8a-c90e2077d8a7)
 
-“Router ID”
+## “Router Id”
 
 ROUTER ID order of priority:
 
@@ -171,12 +171,12 @@ ROUTER ID order of priority:
 
 “Distance” (AD)
 
-EIGRP has TWO VALUES:
+## Eigrp Has Two Values:
 
 - Internal = 90
 - External = 170
 
-MEMORIZE THESE VALUES!
+## Memorize These Values!
 
 “show ip route” (for EIGRP)
 
@@ -186,17 +186,17 @@ NOTE the large METRIC numbers. This is a DOWNSIDE to EIGRP - even on small netwo
 
 ---
 
-EIGRP METRIC
+## Eigrp Metric
 
 - By DEFAULT, EIGRP uses BANDWIDTH and DELAY to calculate METRIC
 - Default “K” values are:
-    - K1 = 1, K2 = 0, K3 = 1, K4 = 0, K5 = 0
+- K1 = 1, K2 = 0, K3 = 1, K4 = 0, K5 = 0
 
-💡 Simplified calculation : METRIC = BANDWIDTH (Slowest Link) + DELAY (of ALL LINKS)
+> **Note:** Simplified calculation : METRIC = BANDWIDTH (Slowest Link) + DELAY (of ALL LINKS)
 
 ---
 
-EIGRP TERMINOLOGY
+## Eigrp Terminology
 
 - **Feasible Distance** = This ROUTER’s METRIC value to the ROUTE’s DESTINATION
 - **Reported Distance** (aka **Advertised Distance**) = The neighbor’s METRIC value to the ROUTE’s DESTINATION
@@ -212,7 +212,7 @@ EIGRP TERMINOLOGY
 
 ---
 
-EIGRP : UNEQUAL-COST LOAD-BALANCED
+## Eigrp : Unequal-Cost Load-Balanced
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/23a2045b-a925-4f75-b0f8-78cbae2aa1e2)
 
@@ -224,4 +224,4 @@ Variance 1 = only ECMP (Equal-Cost Multiple Path) load-balancing will be perform
 
 Variance 2 = ***feasible successor*** routes with an FD up to 2x the ***successor*** route’s FD can be used to load-balance
 
-💡 EIGRP will only perform UNEQUAL-COST LOAD-BALANCING over ***feasible successor*** ROUTES. If a ROUTE doesn’t meet the ***feasibility condition***, it will NEVER be selected for load-balancing, regardless of **variance**
+> **Note:** EIGRP will only perform UNEQUAL-COST LOAD-BALANCING over ***feasible successor*** ROUTES. If a ROUTE doesn’t meet the ***feasibility condition***, it will NEVER be selected for load-balancing, regardless of **variance**

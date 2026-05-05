@@ -1,15 +1,14 @@
-# 21. SPANNING TREE PROTOCOL (STP) : PART 2
+# 21. Spanning Tree Protocol (Stp) : Part 2
 
-STP STATES
+## Stp States
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5c9a17ff-b0d6-455c-8677-5144dd5a0048)
-
 
 - ROOT / DESIGNATED PORTS remain STABLE in a FORWARDING state
 - NON-DESIGNATED PORTS remain STABLE in a BLOCKING state
 - LISTENING and LEARNING are TRANSITIONAL states which are passed through when an interface is activated, or when a BLOCKING PORT must transition to a FORWARDING state due to a change in network topology.
 
-**1) BLOCKING / STABLE**
+## **1) Blocking / Stable**
 
 - NON-DESIGNATED PORTS are in a BLOCKING state
 - Interfaces in a BLOCKING state are effectively disabled to prevent loops
@@ -17,7 +16,7 @@ STP STATES
 - Interfaces in a BLOCKING state do NOT forward STP BPDUs
 - Interfaces in a BLOCKING state do NOT learn MAC ADDRESSES
 
-**2) LISTENING / TRANSITIONAL**
+## **2) Listening / Transitional**
 
 - After the BLOCKING state, interfaces with the DESIGNATED or ROOT role enter the LISTENING state
 - ONLY DESIGNATED or ROOT PORTS enter the LISTENING state (NON-DESIGNATED PORTS are ALWAYS BLOCKING)
@@ -26,7 +25,7 @@ STP STATES
 - Interfaces in a LISTENING state ONLY Forward/Receive STP BPDUs
 - Interfaces in a LISTENING state does NOT learn MAC ADDRESSES from regular traffic that arrives on the interface
 
-**3) LEARNING / TRANSITIONAL**
+## **3) Learning / Transitional**
 
 - After the LISTENING state, a DESIGNATED or ROOT port will enter the LEARNING state
 - The LEARNING state is 15 seconds long by Default. This is determined by the FORWARD DELAY TIMER (same one used for both LISTENING and LEARNING states)
@@ -34,7 +33,7 @@ STP STATES
 - Interfaces in a LEARNING state ONLY Sends/Receives STP BPDUs
 - Interfaces in a LEARNING state **learns** MAC ADDRESSES from regular traffic that arrives on the interface
 
-4) FORWARDING / STABLE
+### **4) Forwarding / Stable**
 
 - ROOT and DESIGNATED PORTS are in a FORWARDING state
 - A PORT in the FORWARDING state operate as NORMAL
@@ -42,22 +41,19 @@ STP STATES
 - A PORT in the FORWARDING state Sends/Receives STP BPDUs
 - A PORT in the FORWARDING state **learns** MAC ADDRESSES
 
-SUMMARY : 
+## Summary : 
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f4cea5ca-b90a-423e-9160-f206b8b1621d)
 
-
 ---
 
-STP TIMERS
+## Stp Timers
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a174469f-9e75-4645-aff8-d4bfe46fb207)
 
+> **Note:** SWITCHES do NOT forward the BPDUs out of their ROOT PORTS and NON-DESIGNATED PORTS - ONLY their DESIGNATED PORTS !!!
 
-💡 SWITCHES do NOT forward the BPDUs out of their ROOT PORTS and NON-DESIGNATED PORTS - ONLY their DESIGNATED PORTS !!!
-
-
-MAX AGE TIMER:
+### **Max Age Timer**
 
 - If another BPDU is received BEFORE MAX AGE TIMER counts down to 0, the TIME will RESET to 20 Seconds and no changes will occur.
 - If another BPDU is not received, the MAX AGE TIMER counts down to 0 and the SWITCH will re-evaluate it’s STP choices, including ROOT BRIDGE, LOCAL ROOT, DESIGNATED, and NON-DESIGNATED PORTS.
@@ -65,23 +61,21 @@ MAX AGE TIMER:
     - So… it can take 50 Seconds for a BLOCKING interface to transition to FORWARDING! (MAX AGE TIMER  + (LISTENING + LEARNING 15 Second timers))
 - These TIMERS and TRANSITIONAL STATES are to make sure that LOOPS are not accidentally created by an INTERFACE moving to FORWARDING STATE too soon
 
- HOWEVER …
+## However …
 
-💡 A FORWARDING interface can move DIRECTLY to a BLOCKING state (there is no worry about creating a loop)
+> **Note:** A FORWARDING interface can move DIRECTLY to a BLOCKING state (there is no worry about creating a loop)
 
-💡 A BLOCKING interface can NOT move DIRECTLY to a FORWARDING state. It MUST go through the LISTENING and LEARNING states first!
-
+> **Note:** A BLOCKING interface can NOT move DIRECTLY to a FORWARDING state. It MUST go through the LISTENING and LEARNING states first!
 
 ---
 
-STP BPDU (BRIDGE PROTOCOL DATA UNIT)
+## Stp Bpdu (Bridge Protocol Data Unit)
 
 Ethernet Header of a BPDU
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0e68839f-c4ec-448b-8876-791212462009)
 
-
-💡 PVST+ uses the MAC ADDRESS : 
+> **Note:** PVST+ uses the MAC ADDRESS : 
 
 01 : 00 : 0c : cc : cc : cd
 
@@ -89,78 +83,72 @@ PVST = ONLY ISL Trunk Encapsulation
 
 PVST+ = Supports 802.1Q
 
-💡 Regular STP (not Cisco’s PVST+) uses the MAC ADDRESS : 
+> **Note:** Regular STP (not Cisco’s PVST+) uses the MAC ADDRESS : 
 
 01 : 80 : c2 : 00 : 00 : 00
 
-💡 The STP TIMERS on the ROOT BRIDGE determine ALL STP TIMERS for the entire network!
+> **Note:** The STP TIMERS on the ROOT BRIDGE determine ALL STP TIMERS for the entire network!
 
 ---
 
-STP OPTIONAL FEATURES (STP TOOLKIT)
+## Stp Optional Features (Stp Toolkit)
 
-PORTFAST:
+### **Portfast**
 
 - Can be Enabled on INTERFACES which are connected to END HOSTS
 
-💡 PORTFAST allows a PORT to move immediately to the FORWARDING state, bypassing LISTENING and LEARNING
+> **Note:** PORTFAST allows a PORT to move immediately to the FORWARDING state, bypassing LISTENING and LEARNING
 
 - If used, it MUST be ENABLED only on PORTS connected to END HOSTS
 - If ENABLED on a PORT connected to another SWITCH, it could cause a LAYER 2 LOOP
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/43c91f09-0d9f-4b81-b5a2-f02003e25b88)
 
-
 You can also ENABLE PORTFAST with the following command:
 
-💡 SW1(config)# spanning-tree portfast default
+> **Note:** SW1(config)# spanning-tree portfast default
 
 This ENABLES PORTFAST on ALL ACCESS PORTS (not TRUNK PORTS)
 
-BPDU GUARD:
+### **Bpdu Guard**
 
 - If an INTERFACE with BPDU GUARD ENABLED receives a BPDU from another SWITCH, the INTERFACE will be SHUT DOWN to prevent loops from forming.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/00c61767-72b4-4d51-b964-f76b6f4f6ae9)
 
-
 You can also ENABLE BPDU GUARD with the following command:
 
-💡 SW1(config)# spanning-tree portfast bpduguard default
-
+> **Note:** SW1(config)# spanning-tree portfast bpduguard default
 
 This ENABLES BPDU GUARD on all PORTFAST-enabled INTERFACES
 
-ROOT GUARD / LOOP GUARD:
+### **Root Guard / Loop Guard**
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bb38aedc-df38-4d76-b6cb-30319e74ecc1)
 
-
 You probably do NOT have to know these STP optional features (or others such as UplinkFast, Backbone Fast, etcetera) for the CCNA. 
 
-BUT…
+## But…
 
-💡 Make sure you know PORTFAST and BPDU GUARD.
+> **Note:** Make sure you know PORTFAST and BPDU GUARD.
 
 ---
 
-STP CONFIGURATION
+## Stp Configuration
 
 Command to CONFIGURE Spanning-Tree mode on a SWITCH
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f29e2f41-3fac-463c-ab14-bb2d2f49816d)
 
-
 Modern Cisco SWITCHES run **rapid-pvst**, by default
 
 ---
 
-CONFIGURE THE PRIMARY ROOT BRIDGE
+## Configure The Primary Root Bridge
 
 Command to CONFIGURE Spanning-Tree PRIMARY ROOT BRIDGE on a SWITCH
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e90f16ad-c85c-4868-bbf4-9095c0abd581)
-
 
 Confirm with “(do) show spanning-tree”
 
@@ -176,8 +164,6 @@ Command to CONFIGURE Spanning-Tree SECONDARY ROOT BRIDGE on a SWITCH
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7d28f782-4673-4bc8-9aae-999aeac90685)
 
-
-
 - The “spanning-tree vlan <vlan-number> root secondary” command sets the STP PRIORITY to 28672 (exactly 4096 higher than 24576).
 
 ---
@@ -185,7 +171,6 @@ Command to CONFIGURE Spanning-Tree SECONDARY ROOT BRIDGE on a SWITCH
 VLAN 1 TOPOLOGY running PVST+
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/880a4cc7-e472-4764-a68b-a62288066796)
-
 
 SW1 WAS the PRIMARY ROOT BRIDGE but : 
 
@@ -196,17 +181,15 @@ The TOPOLOGY for VLAN 2, however, won’t be the same. It will be the OLD Topolo
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2cedeb36-27f1-4984-96e7-28ab70957c51)
 
-
-WHY?
+## Why?
 Because we made changes ONLY to the TOPOLOGY found in VLAN 1 (see the commands we used)
 
 ---
 
-CONFIGURE STP PORT SETTINGS
+## Configure Stp Port Settings
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/58af0a8d-eeb4-4c34-8b54-6b8ff511695c)
 
-
-“cost” = “ROOT COST”
+## “Cost” = “Root Cost”
 
 “port-priority” = “PORT PRIORITY”

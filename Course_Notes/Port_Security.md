@@ -1,6 +1,6 @@
-# 49. PORT SECURITY
+# 49. Port Security
 
-INTRO TO PORT SECURITY
+## Intro to Port Security
 
 - PORT SECURITY is a security feature of Cisco SWITCHES
 - It allows you to control WHICH SOURCE MAC ADDRESS(ES) are allowed to enter the SWITCHPORT
@@ -19,7 +19,7 @@ INTRO TO PORT SECURITY
 
 ---
 
-WHY USE PORT SECURITY?
+## Why Use Port Security?
 
 - PORT SECURITY allows NETWORK admins to control which DEVICES are allowed to access the NETWORK
 - However, MAC ADDRESS SPOOFING is a simple task
@@ -31,7 +31,7 @@ WHY USE PORT SECURITY?
     - The SWITCH’S MAC ADDRESS table can also become full due to such an attack
 - Limiting the NUMBER of MAC ADDRESSES on an INTERFACE can protect against those attacks
 
-ENABLING PORT SECURITY
+## Enabling Port Security
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b00765c2-f3a1-45be-8ed4-0a8dab68e43e)
 
@@ -43,11 +43,11 @@ ENABLING PORT SECURITY
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f071f447-a6ef-4ee6-8a40-2bde94030993)
 
-RE-ENABLING AN INTERFACE (MANUALLY)
+## Re-Enabling an Interface (Manually)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/706736d4-ee7c-42b2-b424-6cc30eb50905)
 
-RE-ENABLING AN INTERFACE (ERR-DISABLE RECOVERY)
+## Re-Enabling an Interface (Err-Disable Recovery)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6eb0d808-a989-4261-9b39-1ac9e1bf1460)
 
@@ -55,20 +55,20 @@ RE-ENABLING AN INTERFACE (ERR-DISABLE RECOVERY)
 
 ---
 
-VIOLATION MODES
+## Violation Modes
 
 - There are THREE DIFFERENT VIOLATION MODES that determine what the SWITCH will do if an unauthorized FRAME enters an INTERFACE configured with PORT SECURITY
-    - SHUTDOWN
+- Shutdown
         - Effectively shuts down the PORT by placing it in an ‘err-disabled` state
         - Generates a SYSLOG and / or SNMP message when the INTERFACE is ‘disabled’
         - The VIOLATION counter is set to 1 when the INTERFACE is ‘disabled’
-    - RESTRICT
+- Restrict
         - The SWITCH discards traffic from unauthorized MAC ADDRESSES
         - The INTERFACE is NOT disabled
         - Generates a SYSLOG and / or SNMP message each time an unauthorized MAC is detected
         - The VIOLATION counter is incremented by 1 for each unauthorized FRAME
     
-    - PROTECT
+- Protect
         - The SWITCH discards traffic from unauthorized MAC ADDRESSES
         - The INTERFACE is NOT disabled
         - It does NOT generate a SYSLOG / SNMP message for unauthorized traffic
@@ -76,18 +76,17 @@ VIOLATION MODES
     
 ---
 
-VIOLATION MODE - RESTRICT
+## Violation Mode - Restrict
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/819f00b9-9694-442d-8459-8018f4277e45)
 
-
-VIOLATION MODE - PROTECT
+## Violation Mode - Protect
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/20d17f97-056e-4e76-8566-bb49c10bb9e1)
 
 ---
 
-SECURE MAC ADDRESS AGING
+## Secure Mac Address Aging
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4454fedf-f942-4b0d-9b6f-074765de653d)
 
@@ -95,9 +94,9 @@ SECURE MAC ADDRESS AGING
     - Can be configured with `switchport port-security aging time *minutes*`
 
 - The DEFAULT Aging Type is ABSOLUTE
-    - ABSOLUTE
+- Absolute
         - After the SECURE MAC ADDRESS is learned, the AGING TIMER starts and the MAC is removed after the TIMER expires, even if the SWITCH continues receiving FRAMES from that SOURCE MAC ADDRESS.
-    - INACTIVITY
+- Inactivity
         - After the SECURE MAC ADDRESS is learned, the AGING TIMER starts but is RESET every time a FRAME from that SOURCE MAC ADDRESS is received on the INTERFACE
             - Aging type is configured with:  `switchport port-security aging type {absolute | inactivity}`
 - Secure Static MAC AGING (address configured with `switchport port-security mac-address x.x.x`) is DISABLED by DEFAULT
@@ -106,7 +105,7 @@ SECURE MAC ADDRESS AGING
 
 ---
 
-STICKY SECURE MAC ADDRESSES 
+## Sticky Secure Mac Addresses 
 
 - ‘STICKY’ SECURE MAC ADDRESS learning can be enabled with the following command:
     - `SW(config-if)# switchport port-security mac-address sticky`
@@ -123,7 +122,7 @@ STICKY SECURE MAC ADDRESSES
 
 ---
 
-MAC ADDRESS TABLE
+## Mac Address Table
 
 - SECURE MAC ADDRESSES will be added to the MAC ADDRESS TABLE like any other MAC ADDRESS
     - STICKY and STATIC SECURE MAC ADDRESSES will have a type of STATIC
@@ -135,6 +134,6 @@ MAC ADDRESS TABLE
 
 ---
 
-COMMAND REVIEW
+## Command Review
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/716ce91d-d1bb-4f12-a8fd-226b65f22569)

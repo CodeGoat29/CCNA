@@ -1,6 +1,6 @@
-# 53.  WAN ARCHITECTURES
+# 53.  WAN Architectures
 
-INTRODUCTION TO WANS
+## Introduction to Wans
 
 - WAN stands for WIDE AREA NETWORK
 - A WAN is a NETWORK that extends over a large geographic area
@@ -12,7 +12,7 @@ INTRODUCTION TO WANS
 
 ---
 
-WAN OVER DEDICATED CONNECTION (LEASED LINE)
+## WAN Over Dedicated Connection (Leased Line)
 
 HUB-and-SPOKE topology
 
@@ -20,17 +20,17 @@ HUB-and-SPOKE topology
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cfc23064-a133-445a-b854-e044828eca7d)
 
-WAN CONNECTION VIA ETHERNET (FIBER)
+## WAN Connection Via Ethernet (Fiber)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/022ccdbd-7ce9-41fd-9f99-9e9c6dcb9f76)
 
-WAN OVER SHARED INFRASTRUCTURE (INTERNET VPN)
+## WAN Over Shared Infrastructure (Internet Vpn)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/38eff264-7ed4-43fd-943b-47e9e1ce995e)
 
 ---
 
-LEASED LINES
+## Leased Lines
 
 - A LEASED LINE is a dedicated physical link, typically connecting two sites
 - LEASED LINES use serial connections (PPP or HDLC encapsulation)
@@ -39,12 +39,12 @@ LEASED LINES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/77dd5503-8b29-4919-8747-6dd80eec28fa)
 
-MPLS VPNs
+## Mpls Vpns
 
 - MPLS stands for “Multi Protocol Label Switching”
 - Similar to the Internet, service providers’ MPLS NETWORKS are shared infrastructure because many customer enterprises connect to and share the same infrastructure to make WAN connections
 - However, the “label switching” in the name of MPLS allows VPNs to be created over the MPLS infrastructure through the use of LABELS
-- IMPORTANT terms:
+- **Important Terms:**
     - CE ROUTER = Customer Edge ROUTER
     - PE ROUTER = Provider Edge ROUTER
     - P ROUTER = Provider Core ROUTER
@@ -56,7 +56,7 @@ MPLS VPNs
 - The CE ROUTERS do NOT USE MPLS, it is only used by the PE/P ROUTERS
 - When using a LAYER 3 MPLS VPN, the CE and PE ROUTERS peer using OSPF, for example, to share ROUTING information
 
-EXAMPLE: 
+## Example: 
 
 OFFICE A’s CE will peer with one PE
 
@@ -82,25 +82,25 @@ CE ROUTERS connected via LAYER 2 MPLS VPN
 
 ---
 
-MPLS 
+## Mpls 
 
 - Many different technologies can be used to connect to a SERVICE PROVIDER’s MPLS NETWORK for WAN Service
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c6e6e60d-2a96-415e-82a2-a090c38a68a3)
 
-INTERNET CONNECTIVITY
+## Internet Connectivity
 
 - There are countless ways for an enterprise to connect to the INTERNET
 - For example, PRIVATE WAN technologies such as LEASED LINES and MPLS VPNs can be used to connect to a SERVICE PROVIDER’s INTERNET infrastructure
 - In addition, technologies such as CATV and DSL commonly used by consumers (Home Internet Access) can also be used by an enterprise
 - These days for both enterprise and consumer INTERNET access, FIBER OPTIC ETHERNET connections are growing in popularity due to high speeds they provide over long distances
 - Let’s briefly look at TWO INTERNET access technologies mentioned above:
-    - CABLE (CATV)
-    - DSL
+- Cable (Catv)
+- Dsl
 
 ---
 
-DIGITAL SUBSCRIBER LINE (DSL)
+## Digital Subscriber Line (Dsl)
 
 - DSL provides INTERNET connectivity to customers over phone lines and can share the same phone line that is already installed in most homes
 - A DSL MODEM (Modulator / Demodulator) is required to convert DATA into a format suitable to be sent over the phone lines
@@ -108,7 +108,7 @@ DIGITAL SUBSCRIBER LINE (DSL)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a708b6b4-6de5-4a72-8c77-13f569f4c2d5)
 
-CABLE INTERNET
+## Cable Internet
 
 - CABLE INTERNET provides INTERNET ACCESS via the same CATV (Cable Television) lines used for TV service
 - Like DLS, a CABLE MODEM is required to convert DATA into a format suitable to be sent over the CATV CABLES.
@@ -118,22 +118,22 @@ CABLE INTERNET
 
 ---
 
-REDUNDANT INTERNET CONNECTIONS
+## Redundant Internet Connections
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/af770f82-a55c-4af5-af7b-5708b39833c4)
 
 ---
 
-INTERNET VPNs
+## Internet Vpns
 
 - PRIVATE WAN SERVICES such as LEASED LINES and MPLS provide security because each customer’s TRAFFIC is separated by using dedicated physical connections (LEASED LINE) or by MPLS TAGS
 - When using the INTERNET as a WAN to connect SITES together, there is no built-in security by DEFAULT
 - To provide secure communications over the Internet, VPNs (Virtual Private Networks) are used
-- We will cover two kinds of Internet VPNs:
+- **We Will Cover Two Kinds of Internet Vpns:**
     - SITE-TO-SITE VPNS using IPSec
     - REMOTE-ACCESS VPNs using TLS
 
-SITE-TO-SITE VPNs (IPSec)
+## Site-to-Site Vpns (Ipsec)
 
 - A “SITE-TO-SITE” VPN is a VPN between two DEVICES and is used to connect TWO SITES together over the INTERNET
 - A VPN “TUNNEL” is created between the TWO DEVICES by ENCAPSULATING the original IP PACKET with a VPN HEADER and a new IP HEADER
@@ -143,7 +143,7 @@ SITE-TO-SITE VPNs (IPSec)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d41295a9-af54-4cd5-acc8-4b60c39c40c2)
 
-PROCESS SUMMARY:
+### **Process Summary**
 
 1) The SENDING DEVICE combines the original PACKET and SESSION KEY (ENCRYPTION KEY) and runs them through an ENCRYPTION FORMULA
 
@@ -158,7 +158,7 @@ PROCESS SUMMARY:
 
 ---
 
-LIMITATIONS OF STANDARD IPSec
+## Limitations of Standard Ipsec
 
 1) IPSec doesn’t support BROADCAST or MULTICAST TRAFFIC, only UNICAST.
 
@@ -186,7 +186,7 @@ GRE over IPSec
 
 ---
 
-DMVPN
+## Dmvpn
 
 - DMVPN (Dynamic Multipoint VPN) is a Cisco-Developed solution that allows ROUTERS to dynamically create a FULL MESH of IPSec TUNNELS without having to manually configure every SINGLE TUNNEL
 
@@ -202,7 +202,7 @@ DMVPN provides the configuration simplicity of HUB-AND-SPOKE (each SPOKE ROUTER 
 
 ---
 
-REMOTE-ACCESS VPNs
+## Remote-Access Vpns
 
 - Whereas SITE-TO-SITE VPNs are used to make a POINT-TO-POINT connection between TWO SITES over the INTERNET, REMOTE-ACCESS VPNs are used to allow END DEVICES (PCs, Mobile Phone) to ACCESS the company’s internal resources securely over the INTERNET
 - REMOTE-ACCESS VPNs typically use TLS (TRANSPORT LAYER SECURITY)
@@ -228,7 +228,7 @@ SITE-TO-SITE versus REMOTE-ACCESS VPN
 
 ---
 
-LAB COMMANDS
+## Lab Commands
 
 Create the Tunnel interface
 

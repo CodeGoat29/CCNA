@@ -1,6 +1,6 @@
-# 59. INTRODUCTION TO NETWORK AUTOMATION
+# 59. Introduction to Network Automation
 
-WHY NETWORK AUTOMATION
+## Why Network Automation
 
 - Previous versions of the CCNA focused on the traditional model of managing / controlling networks
 - The current version focuses on the traditional model as well, but CCNA candidates are expected to have a basic understanding of various topics related to network automation
@@ -8,7 +8,7 @@ WHY NETWORK AUTOMATION
 
 ---
 
-DOWNSIDES OF CONFIGURING DEVICES ONE-BY-ONE
+## Downsides of Configuring Devices One-By-One
 
 - Typos and other small mistakes are common
 - It is time-consuming and very inefficient in large-scale networks
@@ -16,7 +16,7 @@ DOWNSIDES OF CONFIGURING DEVICES ONE-BY-ONE
 
 ---
 
-BENEFITS OF NETWORK AUTOMATION
+## Benefits of Network Automation
 
 - Human Error (Typos, etc) is reduced
 - Networks become much more scalable and implemented in a fraction of the time
@@ -41,7 +41,7 @@ There are various tools / methods that can be used to automate tasks in the netw
 
 ---
 
-LOGICAL “PLANES” OF NETWORK FUNCTIONS
+## Logical “Planes” of Network Functions
 
 **What does a ROUTER do?**
 
@@ -69,7 +69,6 @@ The various functions of network devices can be logically divided up (categorize
 - MANAGEMENT PLANE
 ```
 
-
 - The operations of the MANAGEMENT PLANE and the CONTROL PLANE are usually managed by the CPU
 - However, this is not desirable for DATA PLANE operations because CPU processing is slow (relatively speaking)
 - Instead, a specialized hardware ASIC (Application-Specific Integrated Circuit) is used.
@@ -84,14 +83,14 @@ The various functions of network devices can be logically divided up (categorize
 
 ---
 
-A SIMPLE SUMMARY:
+### **a Simple Summary**
 
 >- When a DEVICE receives CONTROL / MANAGEMENT traffic (destined for itself), it will be processed in the CPU
 >- When a DEVICE receives DATA traffic which should pass through the DEVICE, it is processed by the ASIC for maximum speed
 
 ---
 
-DATA PLANE
+## Data Plane
 
 - All tasks involved in forwarding USER  DATA / TRAFFIC from one INTERFACE to another are part of the DATA PLANE
 - A ROUTER receives a message, looks for the most specific matching ROUTER in its ROUTING TABLE, and forwards it out of the appropriate INTERFACE to the next hop
@@ -106,13 +105,13 @@ DATA PLANE
 
 ---
 
-CONTROL PLANE
+## Control Plane
 
 - How does a DEVICE’s DATA PLANE make its forwarding decisions?
-    - ROUTING TABLE
+- Routing Table
     - MAC ADDRESS table
     - ARP table
-    - STP
+- Stp
     - etc…
     
 - Functions that build THESE tables (and other functions that influence the DATA PLANE) are part of the CONTROL PLANE
@@ -128,7 +127,7 @@ CONTROL PLANE
 
 ---
 
-MANAGEMENT PLANE
+## Management Plane
 
 - Like the CONTROL PLANE, the MANAGEMENT PLANE performs overhead work
     - However, the MANAGEMENT PLANE doesn’t directly affect the forwarding of messages in the DATA PLANE
@@ -142,12 +141,12 @@ MANAGEMENT PLANE
 
 ---
 
-SOFTWARE-DEFINED NETWORKING (SDN)
+## Software-Defined Networking (Sdn)
 
 - SOFTWARE-DEFINED NETWORKING (SDN) is an approach to networking that centralizes the CONTROL PLANE into an application called a *CONTROLLER*
 - SDN is also called SOFTWARE-DEFINED-ARCHITECTURE (SDA) or CONTROLLER-BASED NETWORKING
 - Traditional CONTROL PLANES use a distributed architecture
-    - For example:
+    - **for Example:**
         - Each ROUTER in the NETWORK runs OSPF and the ROUTERS share routing information and then calculate their preferred routes to each destination
 - An SDN CONTROLLER centralized CONTROL PLANE functions like calculation routes
     - That is just an example and how much of the CONTROL PLANE is centralized varies greatly
@@ -157,7 +156,7 @@ SOFTWARE-DEFINED NETWORKING (SDN)
 
 ---
 
-SOUTHBOUND INTERFACE (SBI)
+## Southbound Interface (Sbi)
 
 - The SBI is used for communications between the CONTROLLER and the NETWORK DEVICES it controls
 - It typically consists of a COMMUNICATION PROTOCOL and API (Application Programming Interface)
@@ -165,22 +164,22 @@ SOUTHBOUND INTERFACE (SBI)
 - APIs facilitate data exchanges between programs
     - DATA is exchanged between the CONTROLLER and the NETWORK DEVICES
     - An API on the NETWORK DEVICES allows the CONTROLLER to access information on the DEVICES, control their DATA PLANE TABLES, etc.
-- Some examples of SBIs :
+- **Some Examples of Sbis :**
     - OpenFlow
     - Cisco OpFlex
     - Cisco OnePK (Open Network Environment Platform Kit)
-    - NETCONF
+- Netconf
 
 ---
 
- NORTHBOUND INTERFACE (NBI)
+## Northbound Interface (Nbi)
 
 - Using the SBI, the CONTROLLER communicates with the managed DEVICES and gathers information about them:
     - The DEVICES in the NETWORK
     - The TOPOLOGY (how the DEVICES are connected together)
     - The available INTERFACES on each DEVICE
     - Their CONFIGURATIONS
-- The NORTHBOUND INTERFACE (NBI) is what allows us to:
+- **The Northbound Interface (Nbi) Is What Allows Us to:**
     - Interact with the CONTROLLER
     - Access the DATA it gathers about the NETWORK
     - Program the NETWORK
@@ -196,9 +195,9 @@ SOUTHBOUND INTERFACE (SBI)
 
 ---
 
-AUTOMATION IN TRADITIONAL NETWORKS VS SDN
+## Automation in Traditional Networks Vs Sdn
 
-- Networking tasks can be automated in traditional NETWORK architectures too:
+- **Networking Tasks Can Be Automated in Traditional Network Architectures Too:**
     - SCRIPTS can be written (ie: using Python) to push commands to many DEVICES at once
     - Python with good use of REGULAR EXPRESSIONS can parse through “show” commands to gather information about network devices
     
@@ -209,6 +208,5 @@ AUTOMATION IN TRADITIONAL NETWORKS VS SDN
 - SDN Tools can provide the benefits of automation without the requirement of third-party scripts and apps.
     - You don’t need expertise in automation to make use of SDN Tools
     - However, APIs allow third-party applications to interact with the CONTROLLER, which can be very powerful
-
 
 >💡 Although SDN and automation aren’t the same thing, the SDN architecture greatly facilitates the automation of various tasks in the network via the SDN CONTROLLER and APIs

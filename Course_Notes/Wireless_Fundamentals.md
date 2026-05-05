@@ -1,4 +1,4 @@
-# 55. WIRELESS FUNDAMENTALS
+# 55. Wireless Fundamentals
 
 - Although we will briefly look at other types of WIRELESS NETWORKS, in this section of the course we will be focusing on WIRELESS LANs using WI-FI
 - The STANDARDS we use for WIRELESS LANs are defined in IEEE 802.11
@@ -6,7 +6,7 @@
 - The WI-FI ALLIANCE tests and certifies equipment for 802.11 standards compliance
 - However, WI-FI has become the common term that people use to refer to 802.11 WIRELESS LANs and that term will be used through the course videos
 
-WIRELESS NETWORKS
+## Wireless Networks
 
 - WIRELESS NETWORKS have some issues that we need to deal with
 
@@ -32,34 +32,34 @@ WIRELESS NETWORKS
 
 ---
 
-SIGNAL ABSORPTION
+## Signal Absorption
 
 - ABSOPTION happens when a WIRELESS SIGNAL PASSES THROUGH a material and is converted into HEAT, weakening the SIGNAL
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9ef52c86-66ef-46fb-872e-cb76f0fb8d83)
 
-SIGNAL REFLECTION
+## Signal Reflection
 
 - REFLECTION happens when a SIGNAL BOUNCES off a material (like metal)
     - This is why WI-FI reception is usually POOR in elevators. The SIGNAL bounces off the metal and very little penetrates into the elevator
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d57a94df-4e82-46f2-8045-de01f7a293f1)
 
-SIGNAL REFRACTION
+## Signal Refraction
 
 - REFRACTION happens when a WAVE is BENT when entering a medium where the SIGNAL travels at a different speed
     - For example, glass and water can refract waves
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9c807832-6feb-40ed-81aa-f9d7337da241)
 
-SIGNAL DIFFRACTION
+## Signal Diffraction
 
 - DIFFRACTION happens when a WAVE encounters an OBSTACLE and travels AROUND it
     - This can result in “BLIND SPOTS” behind the obstacle
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/abd44fc3-ec6f-484c-8c81-a2de38c26999)
 
-SIGNAL SCATTERING
+## Signal Scattering
 
 - SCATTERING happens when a material causes a SIGNAL to SCATTER in all directions
     - Dust, smog, uneven surfaces, etc. can cause scattering
@@ -74,7 +74,7 @@ SIGNAL SCATTERING
 
 ---
 
-RADIO FREQUENCY (RF)
+## Radio Frequency (RF)
 
 - To send WIRELESS SIGNALS, the SENDER applies an ALTERNATING CURRENT to an antenna
     - This creates ELECTROMAGNETIC WAVES which propagate out as WAVES
@@ -92,7 +92,7 @@ RADIO FREQUENCY (RF)
     - THz (TERAHERTZ) = 1,000,000,000,000 cycles per second
     
 
-4 CYCLES per 1 SECOND = 4 HERTZ
+## 4 Cycles Per 1 Second = 4 Hertz
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/448e6f45-6ef1-4c53-abf7-dd843e8d7a84)
 
@@ -110,14 +110,14 @@ RADIO FREQUENCY (RF)
 
 ---
 
-RADIO FREQUENCY BANDS 
+## Radio Frequency Bands 
 
 - WI-FI uses TWO MAIN BANDS (FREQUENCY RANGES)
 - 2.4 GHz band
     - Range is 2.400 - 2.4835 GHz
 - 5 GHz band
     - Range is 5.150 - 5.825 GHz
-    - Divided into FOUR SMALLER BANDS:
+    - **Divided Into Four Smaller Bands:**
         - 5.150 - 5.250 GHz
         - 5.250 - 5.350 GHz
         - 5.470 - 5.725 GHz
@@ -130,7 +130,7 @@ RADIO FREQUENCY BANDS
 
 ---
 
-CHANNELS
+## Channels
 
 - Each BAND is divided up into MULTIPLE “CHANNELS”
     - DEVICES are configured to TRANSMIT and RECEIVE traffic on one (or more) of these CHANNELS
@@ -149,24 +149,24 @@ CHANNELS
 
 ---
 
-WI-FI STANDARDS (802.11)
+## Wi-Fi Standards (802.11)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/424d3b31-2bbe-454d-973c-fdf1534adfdd)
 
 ---
 
-SERVICE SETS
+## Service Sets
 
 - 802.11 defines different kinds of SERVICE SETS which are groups of WIRELESS NETWORK DEVICES
-- There are THREE MAIN TYPES:
-    - INDEPENDENT
-    - INFRASTRUCTURE
-    - MESH
+- **There Are Three Main Types:**
+- Independent
+- Infrastructure
+- Mesh
 - ALL DEVICES in a SERVICE SET share the same SSID (Service Set Identifier)
 - The SSID is a HUMAN-READABLE NAME which identifies the SERVICE SET
 - The SSID does NOT have to be UNQUE
 
-SERVICE SETS : IBSS
+## Service Sets : IBSS
 
 - An IBSS (INDEPENDENT BASIC SERVICE SET) is a WIRELESS NETWORK in which TWO or MORE WIRELESS DEVICES connect directly without using an AP (ACCESS POINT)
 - Also called an AD HOC NETWORK
@@ -175,7 +175,7 @@ SERVICE SETS : IBSS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5fe65388-0045-4f35-bd8b-5325e2779ab2)
 
-SERVICE SETS : BSS
+## Service Sets : BSS
 
 - A BSS (BASIC SERVICE SET) is a kind of infrastructure SERVICE SET in which CLIENTS connect to each other via an AP (ACCESS POINT) but not DIRECTLY to each other
 - A BSSID (BASIC SERVICE SET ID) is used to uniquely identify the AP
@@ -187,7 +187,7 @@ SERVICE SETS : BSS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ef259f45-ead1-45f3-8ad3-5f343a763988)
 
-SERVICE SETS: ESS
+## Service Sets: ESS
 
 - To create LARGER WIRELESS LANS beyond the range of a SINGLE AP, we use an ESS (EXTENDED SERVICE SET)
 - APs with their own BSSs are connected by a WIRED NETWORK
@@ -200,10 +200,10 @@ SERVICE SETS: ESS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4a2ccc9e-c3c2-43db-b0b2-c704d5da223e)
 
-SERVICE SETS: MBSS
+## Service Sets: MBSS
 
 - An MBSS (MESH BASIC SERVICE SET) can be used in situations where it’s difficult to run an ETHERNET connection to every AP
-- MESH APs use TWO RADIOS:
+- **Mesh APs Use Two Radios:**
     - ONE provides BSS to WIRELESS CLIENTS
     - ONE forms a “BACKHAUL NETWORK” which is used to BRIDGE traffic from AP to AP
 - At least ONE AP is connected to the WIRED NETWORK and it is called the RAP (ROOT ACCESS POINT)
@@ -214,7 +214,7 @@ SERVICE SETS: MBSS
 
 ---
 
-DISTRIBUTION SYSTEM
+## Distribution System
 
 - Most WIRELESS NETWORKS are not STANDALONE NETWORKS
     - Rather, they are a way for WIRELESS CLIENTS to connect to the WIRED NETWORK INFRASTRUCTURE
@@ -231,7 +231,7 @@ DISTRIBUTION SYSTEM
 
 ---
 
-ADDITIONAL AP OPERATIONAL MODES
+## Additional AP Operational Modes
 
 - APs can operate in ADDITIONAL MODES beyond the ones we’ve introduced so far
 
@@ -257,6 +257,6 @@ ADDITIONAL AP OPERATIONAL MODES
 
 ---
 
-REVIEW
+## Review
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7bac6988-f3af-4ee3-8046-7d926069934c)
 

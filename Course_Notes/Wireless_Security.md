@@ -1,35 +1,35 @@
-# 57. WIRELESS SECURITY
+# 57. Wireless Security
 
-INTRO TO WIRELESS NETWORK SECURITY
+## Intro to Wireless Network Security
 
 - Although SECURITY is important in ALL NETWORKS, it is even more essential in WIRELESS NETWORKS
 - Because WIRELESS SIGNALS are not contained within a WIRE, any DEVICE within range of the signal can receive traffic
 - In WIRED NETWORKS, traffic is often only ENCRYPTED when sent over an UNTRUSTED NETWORK such as the INTERNET
 - In WIRELESS NETWORKS, it is VERY important to ENCRYPT traffic sent between the WIRELESS CLIENTS and the AP
 
-- We will cover THREE MAIN CONCEPTS:
-    - AUTHENTICATION
-    - ENCRYPTION
-    - INTEGRITY
+- **We Will Cover Three Main Concepts:**
+- Authentication
+- Encryption
+- Integrity
 
 ---
 
-AUTHENTICATION
+## Authentication
 
 - All CLIENTS must be AUTHENTICATED before they can associate with an AP
 - In a corporate setting, only TRUSTED USERS / DEVICES should be given ACCESS to the NETWORK
     - In corporate settings, a separate SSID which doesn’t have ACCESS to the corporate NETWORK can be provided for GUEST USERS
 - Ideally, CLIENTS should also AUTHENTICATE the AP to avoid associating with a malicious AP
-- There are MULTIPLE WAYS to AUTHENTICATE:
-    - PASSWORD
-    - USERNAME / PASSWORD
-    - CERTIFICATES
+- **There Are Multiple Ways to Authenticate:**
+- Password
+- Username / Password
+- Certificates
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/00d34740-8da7-428d-8b36-f8998ec2f0cd)
 
 ---
 
-ENCRYPTION
+## Encryption
 
 - Traffic sent between CLIENTS and APs should be ENCRYPTED so that it can’t be read by anyone except the AP and the CLIENT
 - There are many possible PROTOCOLS that can be used to ENCRYPT traffic
@@ -40,7 +40,7 @@ ENCRYPTION
 
 ---
 
-INTEGRITY
+## Integrity
 
 - As explained in the “SECURITY FUNDAMENTALS” video of the course, INTEGRITY ensures that the message is not modified by a third-party
 - The message that is sent by the SOURCE HOST should be the same as the message that is received by the DESTINATION HOST
@@ -50,7 +50,7 @@ INTEGRITY
 
 ---
 
-AUTHENTICATION METHODS
+## Authentication Methods
 
 The original 802.11 STANDARD included TWO OPTIONS for AUTHENTICATION:
 
@@ -65,7 +65,7 @@ The original 802.11 STANDARD included TWO OPTIONS for AUTHENTICATION:
     - WEP KEYS can be 40 bits or 104 bits in length
     - The above KEYS are combined with a 24-bit “IV” (INITIALIZATION VECTOR) to bring the total length to 64 bits or 128 bits
     - WEP ENCRYPTION is NOT SECURE and can easily be cracked
-    - WEP can be used for AUTHENTICATION like this:
+    - **Wep Can Be Used for Authentication Like This:**
     
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/86e4f243-1692-41a6-9b15-6b2e99942e50)
@@ -76,11 +76,11 @@ EAP (Extensible Authentication Protocol)
 
 - EAP is an AUTHENTICATION FRAMEWORK
 - It defines a STANDARD SET of AUTHENTICATION FUNCTIONS that are used by the various *EAP METHODS*
-- We will look at FOUR EAP METHODS:
-    - LEAP
-    - EAP-FAST
-    - PEAP
-    - EAP-TLS
+- **We Will Look At Four Eap Methods:**
+- Leap
+- Eap-Fast
+- Peap
+- Eap-Tls
 - EAP is integrated with **802.1X** which provides *PORT-BASED NETWORK ACCESS CONTROL*
 
 **802.1X** is used to limit NETWORK ACCESS for CLIENTS connected to a LAN or WLAN until they AUTHENTICATE
@@ -104,7 +104,7 @@ There are **THREE MAIN ENTITIES** in 802.1X:
 
 - EAP-FAST (EAP FLEXIBLE AUTHENTICATION via SECURE TUNNELING)
     - EAP-FAST was also developed by Cisco
-    - Consists of THREE PHASES:
+    - **Consists of Three Phases:**
         - A PAC (PROTECTED ACCESS CREDENTIAL) is generated and passed from SERVER to CLIENT
         - A SECURE TLS TUNNEL is established between the CLIENT and AUTHENTICATION SERVER
         - Inside of the SECURE (ENCRYPTED) TLS TUNNEL, the CLIENT and SERVER communicated further to AUTHENTICATE / AUTHORIZE the CLIENT
@@ -132,12 +132,12 @@ There are **THREE MAIN ENTITIES** in 802.1X:
 
 ---
 
-ENCRYPTION / INTEGRITY METHODS
+## Encryption / Integrity Methods
 
 - TKIP (Temporal Key Integrity Protocol)
     - WEP was found to be vulnerable, but WIRELESS hardware at the time was built to use WEP
     - A temporary solution was needed until a new STANDARD was created and a new HARDWARE was built
-    - TKIP adds various SECURITY FEATURES:
+    - **Tkip Adds Various Security Features:**
         - A MIC (Message Integrity Check) is added to protect the integrity of messages
         - A KEY MIXING ALGORITHM is used to create a unique WEP key for every frame
         - The INITIALIZATION VECTOR is doubled in length from 24 bits to 48 bits, making BRUTE-FORCE attacks much more difficult
@@ -154,66 +154,66 @@ ENCRYPTION / INTEGRITY METHODS
     - It is used in WPA2
     - To use CCMP, it must be supported by the DEVICE’S hardware.
     - Old hardware built only to use WEP / TKIP cannot use CCMP
-    - CCMP consists of TWO DIFFERENT ALGORITHMS to provide ENCRYPTION and MIC :
+    - **Ccmp Consists of Two Different Algorithms to Provide Encryption and Mic :**
         - AES (Advanced Encryption Standard) COUNTER MODE ENCRYPTION
             - AES is the MOST SECURE ENCRYPTION PROTOCOL currently available.
             - Widely used all over the world
             - There are multiple MODES of operation for AES.
             - CCMP uses “COUNTER MODE”
-        - CBC-MAC (CIPHER BLOCK CHAINING MESSAGE AUTHENTICATION CODE)
+- Cbc-Mac (Cipher Block Chaining Message Authentication Code)
             - Used as a MIC to ENSURE the INTEGRITY of MESSAGES
 
 - GCMP (GALOIS / COUNTER MODE PROTOCOL)
     - GCMP is MORE SECURE and EFFICIENT than CCMP
     - Its increased efficiency allows higher data throughput than CCMP
     - It is used in WPA3
-    - GCMP consists of TWO ALGORITHMS:
-        - AES COUNTER MODE ENCRYPTION
-        - GMAC (GALOIS MESSAGE AUTHENTICATION CODE)
+    - **Gcmp Consists of Two Algorithms:**
+- Aes Counter Mode Encryption
+- Gmac (Galois Message Authentication Code)
             - Used as a MIC to ENSURE the INTEGRITY of MESSAGE
 
 ---
 
-WI-FI PROTECTED ACCESS (WPA)
+## Wi-Fi Protected Access (WPA)
 
-- The WI-FI Alliance has developed THREE WPA CERTIFICATIONS for WIRELESS DEVICES:
-    - WPA
-    - WPA2
-    - WPA3
+- **The Wi-Fi Alliance Has Developed Three WPA Certifications for Wireless Devices:**
+- WPA
+- Wpa2
+- Wpa3
 - To be WPA-CERTIFIED, EQUIPMENT must be TESTED in authorized testing labs
-- All of the above support TWO AUTHENTICATION MODES:
-    - PERSONAL MODE :
+- **All of The Above Support Two Authentication Modes:**
+- **Personal Mode :**
         - A PRE-SHARED KEY (PSK) is used for AUTHENTICATOIN
         - When you connect to a home WI-FI NETWORK, enter the PASSWORD and are AUTHENTICATED, that is PERSONAL MODE
         - This is common in small NETWORKS
         - The PSK itself is NOT sent over the air
         - A FOUR-WAY HANDSHAKE is used for AUTHENTICATION and the PSK is used to GENERATE ENCRYPTION KEYS
-    - ENTERPRISE MODE :
+- **Enterprise Mode :**
         - 802.1X is used with an AUTHENTICATION SERVER (RADIUS SERVER)
         - No specific EAP METHOD is specified, so all are supported (PEAP, EAP-TLS, etc)
     
-    WPA
+## WPA
     
-    - The WPA CERTIFICATION was developed after WEP was proven to be vulnerable and includes the following PROTOCOLS:
+    - **The WPA Certification Was Developed After Wep Was Proven to Be Vulnerable and Includes The Following Protocols:**
         - TKIP (based on WEP) provides ENCRYPTION / MIC
         - 802.1X AUTHENTICATION (ENTERPRISE MODE) or PSK (PERSONAL MODE)
     
-    WPA2
+## Wpa2
     
-    - Was released in 2004 and includes the following PROTOCOLS:
+    - **Was Released in 2004 and Includes The Following Protocols:**
         - CCMP provides ENCRYPTION / MIC
         - 802.1X AUTHENTICATION (ENTERPRISE MODE) or PSK (PERSONAL MODE)
     
-    WPA3
+## Wpa3
     
-    - Was released in 2018 and includes the following PROTOCOLS:
+    - **Was Released in 2018 and Includes The Following Protocols:**
         - GCMP provides ENCRYPTION / MIC
         - 802.1X AUTHENTICATION (ENTERPRISE MODE) or PSK (PERSONAL MODE)
         
-        - WPA3 also provides several additional security features:
-            - PMF (PROTECTED MANAGEMENT FRAMES)
+        - **Wpa3 Also Provides Several Additional Security Features:**
+- Pmf (Protected Management Frames)
                 - Protecting 802.11 MANAGEMENT FRAMES from eavesdropping / forging
-            - SAE (SIMULTANEOUS AUTHENTICATION OF EQUALS)
+- Sae (Simultaneous Authentication Of Equals)
                 - Protects the four-way handshake when using PERSONAL MODE AUTHENTICATION
-            - FORWARD SECRECY
+- Forward Secrecy
                 - Prevents DATA from being DECRYPTED after it has been transmitted over the air so an ATTACKER can’t capture WIRELESS FRAMES and then try to DECRYPT them later

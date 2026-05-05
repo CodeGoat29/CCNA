@@ -1,6 +1,6 @@
-# 43. FTP and TFTP
+# 43. Ftp and Tftp
 
-THE PURPOSE OF FTP / TFTP
+## The Purpose of Ftp / Tftp
 
 - FTP (File Transfer Protocol) and TFTP (Trivial File Transfer Protocol) are INDUSTRY STANDARD PROTOCOLS used to TRANSFER FILES over a NETWORK
 - They BOTH use a CLIENT-SERVER model
@@ -13,9 +13,9 @@ THE PURPOSE OF FTP / TFTP
 
 ---
 
-TFTP and FTP FUNCTIONS AND DIFFERENCES
+## Tftp and Ftp Functions and Differences
 
-TFTP
+## Tftp
 
 - TFTP first standardized in 1981
 - Named “Trivial” because it’s SIMPLE and has only basic features compared to FTP
@@ -29,7 +29,7 @@ TFTP
 - UDP is CONNECTIONLESS and doesn’t provided RELIABILITY with RETRANSMISSIONS
 - However, TFTP has SIMILAR built-in FEATURES within the PROTOCOL itself
 
-TFTP RELIABILITY
+## Tftp Reliability
 
 - Every TFTP DATA message is ACKNOWLEDGED
     - If the CLIENT is transferring a FILE TO the SERVER, the SERVER will send ACK messages
@@ -38,7 +38,7 @@ TFTP RELIABILITY
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6b8f914e-0d8f-4cfd-bbbb-3552b5cebb3e)
 
-TFTP “CONNECTIONS”
+## Tftp “Connections”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d6634813-5132-4fd8-a712-7bc7b4ea21db)
 
@@ -55,29 +55,29 @@ UDP PORT 69 (TFTP) is only used at the initial request message
 
 --- 
 
-FTP
+## Ftp
 
 - FTP was first standardized in 1971
 - FTP uses TCP PORTS 20 and 21
 - USERNAMES and PASSWORDS are used for AUTHENTICATION, however there is NO ENCRYPTION
 - For GREATER security, FTPS (FTP over SSL / TLS) can be used (Upgrade to FTP)
 - SSH File Transfer Protocol (SFTP) can also be used for GREATER security (New Protocol)
-- FTP is MORE complex than TFTP and ALLOWS not only FILE TRANSFERS but CLIENTS can also:
+- **Ftp Is More Complex Than Tftp and Allows Not Only File Transfers But Clients Can Also:**
     - Navigate FILE DIRECTORIES
-    - ADD / REMOVE FILES
-    - LIST FILES
+- Add / Remove Files
+- List Files
     - etc…
 - The CLIENT sends FTP *commands* to the SERVER to perform these functions
 
-FTP CONTROL CONNECTIONS
+## Ftp Control Connections
 
-- FTP uses TWO TYPES of connections:
+- **Ftp Uses Two Types of Connections:**
     - An FTP CONTROL connection (TCP 21) is established and used to send FTP commands and replies
     - When FILES or DATA are to be transferred, separate FTP DATA (TCP 20) connections are established and terminated as needed
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8ff1d9a5-785b-4fb4-86a4-766c1107812f)
 
-ACTIVE MODE FTP DATA CONNECTIONS
+## Active Mode Ftp Data Connections
 
 - The DEFAULT method of establishing FTP DATA connections is ACTIVE MODE in which the SERVER initiates the TCP connection.
 
@@ -88,13 +88,13 @@ ACTIVE MODE FTP DATA CONNECTIONS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5872df1c-b97f-4f61-b0da-6a06e7f69f1a)
 
-FTP VERSUS TFTP
+## Ftp Versus Tftp
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e7c11655-61be-40f0-943c-8c51998dc2e2)
 
 ---
 
-IOS FILE SYSTEMS
+## IOS File Systems
 
 - A FILE SYSTEM is a way of controlling how DATA is STORED and RETRIEVED
 - You can VIEW the FILE SYSTEM of a Cisco IOS DEVICE with `show file systems`
@@ -103,7 +103,7 @@ IOS FILE SYSTEMS
 
 ---
 
-USING FTP / TFTP IN IOS
+## Using Ftp / Tftp in IOS
 
 - You can VIEW the current version of IOS with `show version`
 
@@ -115,25 +115,25 @@ USING FTP / TFTP IN IOS
 
 ---
 
-COPYING FILES WITH TFTP
+## Copying Files With Tftp
 
-STEP 1
+## Step 1
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f0ce7ea9-115e-4db8-9baf-55ee1bf0d548)
 
-STEP 2
+## Step 2
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9be3610d-3e22-476f-ab90-117ba7d93cf0)
 
-STEP 3
+## Step 3
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/604528f7-af5d-44a4-a877-c9d82d7910d1)
 
 ---
 
-COPYING FILES WITH FTP
+## Copying Files With Ftp
 
-STEP 1
+## Step 1
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0e9c1dc5-0dce-4cbb-b584-0509c2119f63)
 
@@ -141,6 +141,6 @@ STEP 2 and 3 identical to TFTP above
 
 ---
 
-COMMAND SUMMARY
+## Command Summary
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e5f525cd-6e98-4501-9e7c-1c1f4af1d23e)

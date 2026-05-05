@@ -1,6 +1,6 @@
-# 27. OSPF : PART 2 (IGP : LINK STATE)
+# 27. OSPF : Part 2 (Igp : Link State)
 
-OSPF METRIC (Cost)
+## OSPF Metric (Cost)
 
 - OSPFs METRIC is called **COST**
 - It is automatically calculated based on the bandwidth (SPEED) of the INTERFACE
@@ -23,7 +23,7 @@ Gigabit Ethernet COST
 
 You can (and SHOULD) change the REFERENCE BANDWIDTH with this command:
 
-💡 R1(config-router)# **auto-cost reference-bandwidth** *megabits-per-second*
+> **Note:** R1(config-router)# **auto-cost reference-bandwidth** *megabits-per-second*
 
 The command is entered in “megabits per second” (DEFAULT is “100”)
 
@@ -46,9 +46,7 @@ LOOPBACK INTERFACES have a COST of 1
 
 To CHANGE the OSPF COST of an INTERFACE, you use the command :
 
-<aside>
-💡 R1(config-if)# ip ospf cost <cost>
-</aside>
+> **Note:** R1(config-if)# ip ospf cost <cost>
 
 MANUAL COSTS take precedent over AUTOMATIC CALCULATED COST
 
@@ -56,10 +54,7 @@ One more option to change the OSPF COST of an INTERFACE is to change the BANDWID
 
 The FORMULA to CALCULATE OSPF COST is :
 
-<aside>
-💡 **reference bandwidth / interface bandwidth**
-
-</aside>
+> **Note:** **reference bandwidth / interface bandwidth**
 
 - Although the BANDWIDTH matches the INTERFACE SPEED (by DEFAULT), changing the INTERFACE BANDWIDTH **doesn’t actually change the speed at which the INTERFACE operates**
 - The BANDWIDTH is just a VALUE that is used to calculate OSPF COST, EIGRP METRIC, etcetera…
@@ -74,33 +69,27 @@ THEN use the **“ip ospf cost”** command to change the COST of the individual
 
 ---
 
-SUMMARY:
+### **Summary**
 
 THREE WAYS to modify the OSPF COST:
 
 1) Change the ***reference bandwidth***
 
-<aside>
-💡 R1(config-router)# **auto-cost reference-bandwidth** *megabits-per-second*
-</aside>
+> **Note:** R1(config-router)# **auto-cost reference-bandwidth** *megabits-per-second*
 
 2) Manual configuration:
 
-<aside>
-💡 R1(config-router)# ip ospf cost <cost>
-</aside>
+> **Note:** R1(config-router)# ip ospf cost <cost>
 
 3) Change the ***interface bandwidth***
 
-<aside>
-💡 R1(config-router)# **bandwidth <***kilobits-per-second>*
-</aside>
+> **Note:** R1(config-router)# **bandwidth <***kilobits-per-second>*
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/aba02fbc-174c-41a1-a8e3-0ffdda3a6cbd)
 
 ---
 
-BECOMING OSPF NEIGHBORS
+## Becoming OSPF Neighbors
 
 - Making sure that ROUTERS successfully become OSPF NEIGHBORS is the MAIN task in configuring and troubleshooting OSPF.
 - Once ROUTERS become NEIGHBORS, they AUTOMATICALLY do the work of sharing NETWORK information, calculating routes, etc.
@@ -109,7 +98,7 @@ BECOMING OSPF NEIGHBORS
 - **Hello** messages are MULTICAST to **224.0.0.5** (multicast address for ALL OSPF ROUTERS)
 - OSPF messages are ENCAPSULATED in an IP HEADER, with a **value of “89”** in the PROTOCOL field.
 
-DOWN STATE
+## Down State
 
 - OSPF is activated on R1s G0/0 INTERFACE
 - It sends an OSPF “hello” message to 224.0.0.5
@@ -117,7 +106,7 @@ DOWN STATE
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fa9b91da-e0c3-42d9-8c0a-eb47991b1894)
 
-INIT STATE
+## Init State
 
 - When R2 receives the “hello” packet, it will add an entry for R1 to its OSPF neighbor table
 - In R2’s neighbor table, the relationship with R1 is now in the INIT state
@@ -125,7 +114,7 @@ INIT STATE
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/70f3474f-f4bf-4194-b479-d7a65ad82505)
 
-2-WAY STATE
+## 2-Way State
 
 - R2 will send a “hello” packet containing the RID of BOTH ROUTERS
 - R1 will insert R2 into its OSPF neighbor table in the 2-WAY state
@@ -139,7 +128,7 @@ INIT STATE
 - They are now READY to SHARE LSAs to build a common LSDB.
 - In SOME NETWORK types, a DR (Designated ROUTER) and BDR (Backup Designated Router) will be elected at this point (OSPF Network Types and DR/DBR elections will be discussed in Day 28)
 
-EXSTART STATE
+## Exstart State
 
 - The TWO ROUTERS will now prepare to exchange information about their LSDB
 - Before that, they have to choose which one will START the exchange
@@ -150,7 +139,7 @@ EXSTART STATE
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/34fa7cca-f837-432b-9296-d1be69a8869c)
 
-EXCHANGE STATE
+## Exchange State
 
 - In the EXCHANGE state, the ROUTERS exchange DBDs which contain a LIST of the LSAs in their LSDB
 - These DBDs do NOT include detailed information about the LSAs, just BASIC INFORMATION
@@ -158,7 +147,7 @@ EXCHANGE STATE
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/600722df-4737-4a69-867e-662c03a6b4b4)
 
-LOADING STATE
+## Loading State
 
 - In the LOADING state, ROUTERS send **Link State Requests (LSR)** messages to request that their neighbors SEND them any LSAs they don’t have
 - LSAs are sent in **Link State Update (LSU)** messages
@@ -166,7 +155,7 @@ LOADING STATE
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4fc0fc23-ce00-4381-afef-259091b8f8ef)
 
-FULL STATE
+## Full State
 
 - In the FULL state, the ROUTERS have a FULL OSPF adjacency and identical LSDBs
 - They continue to SEND and LISTEN for “hello” packets (every 10 seconds by default) to maintain the neighbor adjacency
@@ -178,11 +167,11 @@ FULL STATE
 
 ---
 
-OSPF NEIGHBORS SUMMARY:
+### **OSPF Neighbors Summary**
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0d9f9d7e-04fd-472c-8449-a4f12172c055)
 
-1 ) BECOME NEIGHBORS
+## 1 ) Become Neighbors
 
 - DOWN STATE
 - INIT STATE
@@ -197,38 +186,29 @@ OSPF NEIGHBORS SUMMARY:
 
 ---
 
-SUMMARY OF OSPF MESSAGE TYPES
+## Summary of OSPF Message Types
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/05b6d3ee-8fdb-4f25-9214-557eeb9a53a6)
 
 ---
 
-MORE OSPF CONFIGURATIONS
+## More OSPF Configurations
 
 Activate OSPF DIRECTLY on an INTERFACE with this command:
 
-<aside>
-💡 R1(config-if)# ip ospf *process-id* area *area*
-
-</aside>
+> **Note:** R1(config-if)# ip ospf *process-id* area *area*
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ad7aafd6-9cd8-4259-bd32-aff7b5893b46)
 
 Configure ALL INTERFACES as OSPF Passive Interfaces
 
-<aside>
-💡 R1(config-router) #passive-interface default
-
-</aside>
+> **Note:** R1(config-router) #passive-interface default
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e953696d-283f-4676-8df2-9aff0418d78d)
 
 Can then REMOVE specific INTERFACES from being passive using:
 
-<aside>
-💡 R1(config-router) #no passive-interface *interface-id*
-
-</aside>
+> **Note:** R1(config-router) #no passive-interface *interface-id*
 
 Activating OSPF DIRECTLY on INTERFACES will show a different output in “show ip protocols”
 

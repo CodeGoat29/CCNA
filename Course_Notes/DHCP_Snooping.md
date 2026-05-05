@@ -1,6 +1,6 @@
-# 50. DHCP SNOOPING (LAYER 2)
+# 50. DHCP Snooping (Layer 2)
 
-WHAT IS DHCP SNOOPING?
+## What Is DHCP Snooping?
 
 - DHCP SNOOPING is a security feature of SWITCHES that is used to filter DHCP messages received on UNTRUSTED PORTS
 - DHCP SNOOPING only filters DHCP MESSAGES.
@@ -15,9 +15,9 @@ WHAT IS DHCP SNOOPING?
 
 ---
 
-ATTACKS ON DHCP
+## Attacks On DHCP
 
-DHCP STARVATION
+## DHCP Starvation
 
 - An example of a DHCP-based ATTACK is a DHCP STARVATION ATTACK
 - An ATTACKER uses spoofed MAC ADDRESSES to flood DHCP DISCOVER messages
@@ -41,54 +41,54 @@ DHCP POISONING (Man-in-the-Middle)
 
 ---
 
-DHCP MESSAGES
+## DHCP Messages
 
 - When DHCP SNOOPING filters messages, it differentiates between DHCP SERVER messages and DHCP CLIENT messages
 
-- Messages sent by DHCP SERVERS:
-    - OFFER
-    - ACK
+- **Messages Sent By DHCP Servers:**
+- Offer
+- Ack
     - NAK = Opposite of ACK - used to DECLINE a CLIENT’S REQUEST
-- Messages sent by DHCP CLIENTS:
-    - DISCOVER
-    - REQUEST
+- **Messages Sent By DHCP Clients:**
+- Discover
+- Request
     - RELEASE = Used to tell the SERVER that the CLIENT no longer needs its IP ADDRESS
     - DECLINE = Used to DECLINE the IP ADDRESS offered by a DHCP SERVER
 
 ---
 
-HOW DOES IT WORK?
+## How Does It Work?
 
 - If a DHCP MESSAGE is received on a TRUSTED PORT, forward it as normal without inspection
 - If a DHCP MESSAGE is received on an UNTRUSTED PORT, inspect it and act as follows:
     - If it is a DHCP SERVER message, discard it
     - If it as a DHCP CLIENT message, perform the following checks:
-        - DISCOVER / REQUEST messages :
+        - **Discover / Request Messages :**
             - Check if the FRAME’S SOURCE MAC ADDRESS and the DHCP MESSAGE’S CHADDR FIELDS match.
-                - MATCH = FORWARD
-                - MISMATCH = DISCARD
-        - RELEASE / DECLINE messages:
+- Match = Forward
+- Mismatch = Discard
+        - **Release / Decline Messages:**
             - Check if the PACKET’S SOURCE IP ADDRESS and the receiving INTERFACE match the entry in the *DHCP SNOOPING BINDING TABLE*
-                - MATCH = FORWARD
-                - MISMATCH = DISCARD
+- Match = Forward
+- Mismatch = Discard
     
 - When a CLIENT successfully leases an IP ADDRESS from a SERVER, create a new entry in the *DHCP SNOOPING BINDING TABLE*
 
 ---
 
-DHCP SNOOPING CONFIGURATION
+## DHCP Snooping Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/729466dc-9432-47d2-8799-652fa064b058)
 
-SWITCH 2’s CONFIGURATION
+## Switch 2’S Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8d6cacb8-ffd8-4cf0-bd96-fe9978377989)
 
-SWITCH 1’s CONFIGURATION
+## Switch 1’S Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bb11e4fd-a340-4dd3-a6f5-3cd280fc5a13)
 
-DHCP SNOOPING RATE-LIMITING
+## DHCP Snooping Rate-Limiting
 
 - DHCP SNOOPING can limit the RATE at which DHCP messages are allowed to enter an INTERFACE
 - If the RATE of DHCP messages crosses the configured LIMIT, the INTERFACE is `err-disabled`
@@ -102,7 +102,7 @@ DHCP SNOOPING RATE-LIMITING
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/83c324aa-baa0-4ae1-82ac-157e503e048a)
 
-DHCP OPTION 82 (INFORMATION OPTION)
+## DHCP Option 82 (Information Option)
 
 - OPTION 82, also known as a ‘DHCP RELAY AGENT INFOMRATION OPTION’ is one of MANY DHCP OPTIONS
 - It provides additional information about which DHCP RELAY AGENT received the CLIENT’S message, on which INTERFACE, in which VLAN, etc.
@@ -131,6 +131,6 @@ R1 responds with an DHCP OFFER message, as normal
 
 ---
 
-COMMAND SUMMARY
+## Command Summary
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/308e32fa-52bd-4ee4-9356-f14e65416e17)

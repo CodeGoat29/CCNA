@@ -1,10 +1,10 @@
 # 36. CDP and LLDP (Layer 2 Discovery Protocol)
 
-INTRO TO LAYER 2 DISCOVERY PROTOCOLS
+## Intro to Layer 2 Discovery Protocols
 
 - LAYER 2 DISCOVERY PROTOCOL, such as CDP and LLDP share information WITH and DISCOVER information about NEIGHBORING (Connected) DEVICES
 
-- The SHARED INFORMATION includes:
+- **The Shared Information Includes:**
     - Hostname
     - IP Address
     - Device Type
@@ -19,16 +19,12 @@ INTRO TO LAYER 2 DISCOVERY PROTOCOLS
 
 ---
 
-CISCO DISCOVERY PROTOCOL (CDP)
+## Cisco Discovery Protocol (CDP)
 
 - CDP is a Cisco proprietary protocol
 - It is enabled on Cisco devices (routers, switches, firewalls, IP Phones, etc) by DEFAULT
 
-<aside>
-💡 CDP Messages are periodically sent to Multicast MAC ADDRESS `0100.0CCC.CCCC`
-
-</aside>
-
+> **Note:** CDP Messages are periodically sent to Multicast MAC ADDRESS `0100.0CCC.CCCC`
 
 - When a DEVICE receives a CDP message, it PROCESSES and DISCARDS the message. It does NOT forward it to other devices.
 - By DEFAULT, CDP Messages are sent once every **60 seconds**
@@ -41,7 +37,7 @@ CISCO DISCOVERY PROTOCOL (CDP)
 
 ---
 
-CDP NEIGHBOR TABLES
+## CDP Neighbor Tables
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/00cd814e-0255-4fac-ac71-3e50054f813c)
 
@@ -59,7 +55,7 @@ CDP NEIGHBOR TABLES
 
 ---
 
-MORE DETAILED OUTPUT
+## More Detailed Output
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cd4fbedb-c12f-4e1e-8582-8db16985121f)
 
@@ -67,13 +63,13 @@ MORE DETAILED OUTPUT
 
 ---
 
-SHOW SPECIFIC CDP NEIGHBOR ENTRY
+## Show Specific CDP Neighbor Entry
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/83ef9488-e82c-4453-ae6e-02575039d0f9)
 
 ---
 
-CDP CONFIGURATION COMMANDS
+## CDP Configuration Commands
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/393b2680-2304-4c8e-9180-88cc5fefbfd8)
 
@@ -89,16 +85,13 @@ CDP CONFIGURATION COMMANDS
 
 ---
 
-LINK LAYER DISCOVERY PROTOCOL (LLDP)
+## Link Layer Discovery Protocol (LLDP)
 
 - LLDP is an INDUSTRY STANDARD PROTOCOL (IEEE 802.1AB)
 - It is usually DISABLED on Cisco devices, by DEFAULT, so it must be manually ENABLED
 - A device can run CDP and LLDP at the same time
 
-<aside>
-💡 LLDP Messages are periodically sent to Multicast MAC ADDRESS `0180.c200.000E`
-
-</aside>
+> **Note:** LLDP Messages are periodically sent to Multicast MAC ADDRESS `0180.c200.000E`
 
 - When a DEVICE receives an LLDP message, it PROCESSES and DISCARDS the message. It does NOT forward it to OTHER DEVICES
 - By DEFAULT, LLDP Messages are sent once every **30 seconds**
@@ -108,7 +101,7 @@ LINK LAYER DISCOVERY PROTOCOL (LLDP)
 
 ---
 
-LLDP CONFIGURATION COMMANDS
+## LLDP Configuration Commands
 
 - LLDP is usually GLOBALLY DISABLED by DEFAULT
 - LLDP is also DISABLED on each INTERFACE, by DEFAULT
@@ -130,19 +123,19 @@ YOU NEED TO ENABLE BOTH TO SEND AND RECEIVE (Unless you want to only enable SEND
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/78fab926-9fda-4c83-91eb-eda4bf4ec005)
 
-SHOW LLDP STATUS
+## Show LLDP Status
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/32b11d7b-4050-422e-afd4-bec23e8db3a1)
 
-SHOW ALL LLDP NEIGHBORS
+## Show All LLDP Neighbors
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/85a46d24-5574-4400-bc03-6b0568294940)
 
-SHOW LLDP NEIGHBORS in DETAIL
+## Show LLDP Neighbors in Detail
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/26751ca8-ed54-4e5c-9927-8c6eb0e2e3f7)
 
-SHOW SPECIFIC LLDP DEVICE ENTRY
+## Show Specific LLDP Device Entry
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b5332838-d112-4556-bee0-c3716a3d4f89)
 

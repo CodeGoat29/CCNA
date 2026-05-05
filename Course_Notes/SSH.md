@@ -1,6 +1,6 @@
 # 42. SSH (Secure Shell)
 
-CONSOLE PORT SECURITY
+## Console Port Security
 
 - By DEFAULT, no password us needed to access the CLI of a CISCO IOS DEVICE via the CONSOLE PORT
 - You can CONFIGURE a PASSWORD on the *console line*
@@ -14,7 +14,7 @@ CONSOLE PORT SECURITY
 
 ---
 
-LAYER 2 SWITCH MANAGEMENT IP
+## Layer 2 Switch Management IP
 
 - LAYER 2 SWITCHES do not perform PACKET ROUTING and build a ROUTING TABLE. They are NOT IP ROUTING aware
 - However, you CAN assign an IP ADDRESS to an SVI to allow REMOTE CONNECTIONS to the CLI of the SWITCH (using Telnet or SSH)
@@ -23,53 +23,50 @@ LAYER 2 SWITCH MANAGEMENT IP
 
 ---
 
-TELNET
+## Telnet
 
 - TELNET (Teletype Network) is a PROTOCOL used to REMOTELY ACCESS the CLI of a REMOTE HOST
 - TELNET was developed in 1969
 - TELNET has been largely REPLACE by SSH, which is MORE Secure
 - TELNET sends data in PLAIN TEXT. NO ENCRYPTION(!)
 
-<aside>
-💡 TELNET SERVERS listen for TELNET traffic on TCP PORT 23
-
-</aside>
+> **Note:** TELNET SERVERS listen for TELNET traffic on TCP PORT 23
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9dffe7fb-4fa4-4ee9-90bf-d27461bb5190)
 
 ---
 
-VERIFY TELNET CONFIGURATION
+## Verify Telnet Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e077b5fd-3130-4fb0-9b17-d28bdef665df)
 
 ---
 
-SSH
+## SSH
 
 - SSH (Secure Shell) was developed in 1995 to REPLACE LESS SECURE PROTOCOLS, like TELNET
 - SSHv2, a major revision of SSHv1, was released in 2006
 - If a DEVICE supports both v1 and v2, it is said to run ‘version 1.99’
 - Provides SECURITY features; such as DATA ENCRYPTION and AUTHENTICATION
 
-CHECK SSH SUPPORT
+## Check SSH Support
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/441c38b7-4b79-4c80-8eca-0463960124b6)
 
-RSA KEYS
+## Rsa Keys
 
 - To ENABLE and use SSH, you must first generate an RSA PUBLIC and PRIVATE KEY PAIR
 - The KEYS are used for DATA ENCRYPTION / DECRYPTION, AUTHENTICATION, etc.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/73bd5a86-32da-4ec6-b385-fe5425a72808)
 
-VTY LINES
+## Vty Lines
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/04e9072f-ccde-476d-a84d-3034e0b39d19)
 
 ---
 
-SUMMARY ABOUT SSH CONFIGURATIONS
+## Summary About SSH Configurations
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bb6d358f-e742-434b-835c-5c7cd762abdb)
 

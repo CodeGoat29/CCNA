@@ -1,6 +1,6 @@
-# 63. ANSIBLE, PUPPET, AND CHEF
+# 63. Ansible, Puppet, and Chef
 
-CONFIGURATION DRIFT
+## Configuration Drift
 
 - CONFIGURATION DRIFT is when individual changes made over time causes a device’s configuration to deviate from the standard / correct configurations as defined by the company
     - Although each device will have unique parts of its configurations (IP Addresses, hostname, etc) most of a device’s configuration is usually defined in standard templates designed by the network architects / engineers of the company
@@ -14,7 +14,7 @@ CONFIGURATION DRIFT
         - Even if configurations are properly saved like this, it doesn’t guarantee that the configurations actually match the standard
 ---
 
-CONFIGURATION PROVISIONING
+## Configuration Provisioning
 
 - CONFIGURATION PROVISIONING refers to how configuration changes are applied to devices
     - This includes configuring new devices, too
@@ -22,7 +22,7 @@ CONFIGURATION PROVISIONING
     - This is not practical in large networks
 - Configuration management tools like Ansible, Puppet, and Chef allow us to make changes to devices on a mass scale with a fraction of time and effort.
 
-- TWO ESSENTIAL COMPONENTS:
+- **Two Essential Components:**
     - Templates
     - Variables
 
@@ -30,14 +30,14 @@ CONFIGURATION PROVISIONING
 
 ---
 
-INTRO TO CONFIGURATION MANAGEMENT TOOLS
+## Intro to Configuration Management Tools
 
 - CONFIGURATION MANAGEMENT TOOLS are network automation tools that facilitate the centralized control of large numbers of network devices
 - The option you need to be aware of for the CCNA are Ansible, Puppet, and Chef
 - These tools were originally developed after the rise of VMs, to enable server system admins to automate the process of creating, configuring, and removing VMs
     - However, they are also widely used to manage network devices
     
-- These tools can be used to perform tasks such as :
+- **These Tools Can Be Used to Perform Tasks Such As :**
     - Generate configurations for new devices on a large scale
     - Perform configuration changes on devices (all devices in your network, or certain subset of devices)
     - Check device configurations for compliance with defined standards
@@ -47,7 +47,7 @@ INTRO TO CONFIGURATION MANAGEMENT TOOLS
 
 ---
 
-ANSIBLE 
+## Ansible 
 
 - ANSIBLE is a configuration management tool owned by Red Hat
 - Ansible itself is written in Python
@@ -58,17 +58,17 @@ ANSIBLE
     - Puppet and Chef use a *pull* model
     
 - After installing Ansible itself, you must create several text files:
-    - PLAYBOOKS :
+- **Playbooks :**
         - These files are “blueprints of automation tasks”
         - They outline the logic and actions of the tasks that Ansible should do
         - Written in YAML
-    - INVENTORY :
+- **Inventory :**
         - These files list the devices that will be managed by Ansible, as well as characteristics of each device such as their device role (Access Switch, Core Switch, WAN Router, Firewall, etc.)
         - Written in INI, YAML, or other formats
-    - TEMPLATES :
+- **Templates :**
         - These files represent a device’s configuration file, but specific values for variables are not provided.
         - Written in JINJA2 format
-    - VARIABLES :
+- **Variables :**
         - These files list variables and their values.
         - These values are substituted into the templates to create complete configuration files.
         - Written in YAML
@@ -77,7 +77,7 @@ ANSIBLE
 
 ---
 
-PUPPET 
+## Puppet 
 
 - PUPPET is a configuration management tool written in RUBY
 - Puppet is typically agent-based
@@ -89,10 +89,10 @@ PUPPET
 - Puppet uses a PULL model (clients “pull” configurations from the Puppet master)
     - Clients use TCP 8140 to communicate with the Puppet master
 - Instead of YAML, it uses a proprietary language for files
-- Text files required on the Puppet master include:
-    - MANIFEST :
+- **Text Files Required On The Puppet Master Include:**
+- **Manifest :**
         - The file defines the desired configuration state of a network device
-    - TEMPLATES :
+- **Templates :**
         - Similar to Ansible templates.
         - Used to generate MANIFESTS
 
@@ -100,7 +100,7 @@ PUPPET
 
 ---
 
-CHEF
+## Chef
 
 - CHEF is a configuration management tool written in RUBY
 - CHEF is Agent-Based
@@ -109,22 +109,22 @@ CHEF
 - CHEF uses a PULL model
 - The server uses TCP 10002 to send configurations to clients
 - Files use a DSL (Domain-Specific Language) based on Ruby
-- Text files used by CHEF include:
-    - RESOURCES :
+- **Text Files Used By Chef Include:**
+- **Resources :**
         - The “ingredients” in a RECIPE.
         - Configuration objects managed by CHEF
-    - RECIPES :
+- **Recipes :**
         - The “recipes” in a COOKBOOK.
         - Outlines the logic and actions of the tasks performed on the resources
-    - COOKBOOKS :
+- **Cookbooks :**
         - A set of related RECIPES grouped together
-    - RUN-LIST :
+- **Run-List :**
         - An ordered list of RECIPES that are run to bring a device to the desired configuration state
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/eaf5be1b-3635-4806-bb7a-f397ffa1b411)
 
 ---
 
-MEMORIZE THIS CHART FOR THE CCNA
+## Memorize This Chart for The CCNA
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a4d212e6-df46-45d1-a2ca-3e55220c4b5c)

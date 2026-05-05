@@ -1,6 +1,6 @@
-# 56. WIRELESS ARCHITECTURES
+# 56. Wireless Architectures
 
-802.11 MESSAGE / FRAME FORMAT
+## 802.11 Message / Frame Format
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7b459483-7156-44cf-9ee7-f9391e476636)
 
@@ -39,13 +39,13 @@
 
 ---
 
-802.11 ASSOCIATION PROCESS
+## 802.11 Association Process
 
 - ACCESS POINTS bridge traffic between WIRELESS STATIONS and other DEVICES
 - For a STATION to send traffic through the AP, it must be associated with the AP
 - There are THREE 802.11 CONNECTION STATES:
-    - NOT AUTHENTICATED, NOT ASSOCIATED
-    - AUTHENTICATED, NOT ASSOCIATED
+- Not Authenticated, Not Associated
+- Authenticated, Not Associated
     - AUTHENTICATED and ASSOCIATED
 
 - The STATION must be AUTHENTICATED and ASSOCIATED with the AP to send traffic through it
@@ -54,26 +54,26 @@
 
 ---
 
-802.11 MESSAGE TYPES
+## 802.11 Message Types
 
 - There are THREE 802.11 MESSAGE TYPES
-    - MANAGEMENT
-    - CONTROL
-    - DATA
+- Management
+- Control
+- Data
 
 - MANAGEMENT
     - Used to manage the BSS
-        - BEACON
-        - PROBE REQUEST / PROBE RESPONSE
-        - AUTHENTICATION
-        - ASSOCIATION REQUEST / ASSOCIATION RESPONSE
+- Beacon
+- Probe Request / Probe Response
+- Authentication
+- Association Request / Association Response
 
 - CONTROL
     - Used to control access to the medium (RADIO FREQUENCY)
     - Assists with delivery of MANAGEMENT and DATA FRAMES
-        - RTS (REQUEST TO SEND)
-        - CTS (CLEAR TO SEND)
-        - ACK
+- Rts (Request To Send)
+- Cts (Clear To Send)
+- Ack
 
 - DATA
     - Used to send actual DATA PACKETS
@@ -82,7 +82,7 @@
 
 ---
 
-AUTONOMOUS APs
+## Autonomous APs
 
 - AUTONOMOUS APs are self-contained SYSTEMS that do NOT RELY on a WLC
 - AUTONOMOUS APs are configured individually
@@ -109,30 +109,30 @@ AUTONOMOUS APs
 - AUTONOMOUS APs can be used in SMALL NETWORKS but they are not viable in MEDIUM to LARGE NETWORKS
     - LARGE NETWORKS can have thousands of APs
 
-- AUTONOMOUS APs can also function in the modes covered in the previous video:
-    - REPEATER
-    - OUTDOOR BRIDGE
-    - WORKGROUP BRIDGE
+- **Autonomous APs Can Also Function in The Modes Covered in The Previous Video:**
+- Repeater
+- Outdoor Bridge
+- Workgroup Bridge
 
 ---
 
-LIGHTWEIGHT APs
+## Lightweight APs
 
 - The functions of an AP can be split between the AP and a WIRELESS LAN CONTROLLER (WLC)
 - The is what is called SPLIT-MAC ARCHITECTURE
 
 - LIGHTWEIGHT APs handle **“real-time”** operations like:
-    - TRANSMITTING / RECEIVING RF TRAFFIC
-    - ENCRYPTION / DECRYPTION OF TRAFFIC
-    - SENDING OUT BEACONS / PROBES
-    - PACKET PRIORITIZATION
+- Transmitting / Receiving Rf Traffic
+- Encryption / Decryption Of Traffic
+- Sending Out Beacons / Probes
+- Packet Prioritization
     - Etc…
 - WLC Functions (not time dependent)
-    - RF MANAGEMENT
+- Rf Management
     - SECURITY / QoS MANAGEMENT
-    - CLIENT AUTHENTICATION
-    - CLIENT ASSOCIATION / ROAMING MANAGEMENT
-    - RESOURCE ALLOCATION
+- Client Authentication
+- Client Association / Roaming Management
+- Resource Allocation
     - Etc…
     
 - The WLC is also used to centrally configured the lightweight APs
@@ -145,13 +145,13 @@ LIGHTWEIGHT APs
 - THE WLC and lightweight APs use a PROTOCOL called CAPWAP (CONTROL AND PROVISIONING OF WIRELESS ACCESS POINTS) to communicate
     - Based on an older PROTOCOL called LWAPP (LIGHTWEIGHT ACCESS POINT PROTOCOL)
 
-- TWO TUNNELS are created between each AP and the WLC :
+- **Two Tunnels Are Created Between Each AP and The WLC :**
     - CONTROL TUNNEL (UDP Port 5246)
         - This TUNNEL is used to configure the APs and control and manage operations
         - All traffic in this TUNNEL is ENCRYPTED, by default
     - DATA TUNNEL (UDP Port 5247)
         - All traffic from WIRELESS CLIENTS is sent through this TUNNEL to the WLC
-        - IT DOES NOT GO DIRECTLY TO THE WIRED NETWORK !
+- It Does Not Go Directly To The Wired Network !
 
 - Traffic in this TUNNEL is not ENCRYPTED by default but you can configure it to be ENCRYPTED with DTLS (DATAGRAM TRANSPORT LAYER SECURITY)
 
@@ -182,11 +182,11 @@ There are some KEY BENEFITS to SPLIT-MAC ARCHITECTURE
 
 ---
 
-- LIGHTWEIGHT APs can be configured to operate in VARIOUS MODES:
-    - LOCAL
+- **Lightweight APs Can Be Configured to Operate in Various Modes:**
+- Local
         - This is the DEFAULT mode where the AP offers a BSS (more multiple BSSs) for CLIENTS to associate with
         
-    - FLEXCONNECT
+- Flexconnect
         - Like a LIGHTWEIGHT AP in LOCAL mode, it offers ONE or MORE BSSs for CLIENTS to associate with
         - HOWEVER, FLEXCONNECT allows the AP to locally SWITCH traffic between the WIRED (TRUNK) and WIRELESS NETWORKS (ACCESS) if the TUNNELS to the WLC go down
     
@@ -225,7 +225,7 @@ There are some KEY BENEFITS to SPLIT-MAC ARCHITECTURE
 
 ---
 
-CLOUD-BASED APs
+## Cloud-Based APs
 
 - CLOUD-BASED AP architecture is between AUTONOMOUS AP and SPLIT-MAC ARCHITECTURE
     - AUTONOMOUS APs that are centrally managed in the CLOUD
@@ -241,22 +241,22 @@ CLOUD-BASED APs
 
 ---
 
-WIRELESS LAN CONTROLLER (WLC) DEPLOYMENTS
+## Wireless LAN Controller (WLC) Deployments
 
 - In a SPLIT-MAC ARCHITECTURE, there FOUR MAIN WLC DEPLOYMENT MODES:
-    - UNIFIED
+- Unified
         - THE WLC is a HARDWARE APPLICANCE in a central location of the NETWORK
-    - CLOUD-BASED
+- Cloud-Based
         - The WLC is a VM running on a SERVER, usually in a PRIVATE CLOUD in a DATA CENTER
         - This is NOT the same as the CLOUD-BASED AP ARCHITECTURE discussed previously
-    - EMBEDDED
+- Embedded
         - The WLC is integrated within a SWITCH
-    - MOBILITY EXPRESS
+- Mobility Express
         - THE WLC is integrated within an AP
 
 ---
 
-UNIFIED WLC
+## Unified WLC
 
 - THE WLC is a HARDWARE APPLICANCE in a central location of the NETWORK
 - A UNIFIED WLC can support up to about 6000 APs
@@ -266,7 +266,7 @@ UNIFIED WLC
 
 ---
 
-CLOUD-BASED
+## Cloud-Based
 
 - The WLC is a VM running on a SERVER, usually in a PRIVATE CLOUD in a DATA CENTER
 - CLOUD-BASED WLCs can typically support up to about 3000 APs
@@ -276,7 +276,7 @@ CLOUD-BASED
 
 ---
 
-EMBEDDED WLC
+## Embedded WLC
 
 - The WLC is embedded within a SWITCH
 - An EMBEDDED WLC can support up to about 200 APs
@@ -286,7 +286,7 @@ EMBEDDED WLC
 
 ---
 
-CISCO MOBILITY EXPRESS WLC
+## Cisco Mobility Express WLC
 
 - The WLC is embedded within an AP
 - A MOBILITY EXPRESS WLC can support up to about 100 APs

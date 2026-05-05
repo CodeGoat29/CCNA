@@ -1,27 +1,27 @@
-# 48. SECURITY FUNDAMENTALS
+# 48. Security Fundamentals
 
-KEY SECURITY CONCEPTS
+## Key Security Concepts
 
-WHY SECURITY?
+## Why Security?
 
 What is the purpose / goal of SECURITY in an ENTERPRISE ?
 
-- The principles of the CIA TRIAD form the FOUNDATION of SECURITY:
-    - CONFIDENTIALITY
+- **The Principles of The Cia Triad Form The Foundation of Security:**
+- Confidentiality
         - Only AUTHORIZED USERS should be able to ACCESS DATA
         - Some INFORMATION / DATA is PUBLIC and can be accessed by ANYONE
         - Some INFORMATION / DATA is SECRET and should be only be accessed by SPECIFIC people
-    - INTEGRITY
+- Integrity
         - DATA should not be tampered with (modified) by unauthorized USERS
         - DATA should be CORRECT and AUTHENTIC
-    - AVAILABILITY
+- Availability
         - The NETWORK / SECURITY should be OPERATIONAL and ACCESSIBLE to AUTHORIZED USERS
 
 ATTACKERS can threaten the CONFIDENTIALITY, INTEGRITY, and AVAILBILITY of an enterprise’s SYSTEMS and INFORMATION
 
 ---
 
-VULNERABILITY, EXPLOIT, THREAT, MITIGATION
+## Vulnerability, Exploit, Threat, Mitigation
 
 - A VULNERABILITY is any potential weakness that can compromise the CIA of a SYSTEM / INFO
     - A potential weakness isn’t a problem in its own
@@ -32,19 +32,16 @@ VULNERABILITY, EXPLOIT, THREAT, MITIGATION
     - A hacker EXPLOITING a VULNERABILITY in your system is a THREAT
 
 - A MITIGATION TECHNIQUE is something that can protect against threats
-    - Should be implemented everywhere a VULNERABILITY can be EXPLOITED:
+    - **Should Be Implemented Everywhere a Vulnerability Can Be Exploited:**
         - Client Devices
         - Servers, Switches, Routers, Firewalls
         - etc.
 
-<aside>
-💡 NO SYSTEM IS PERFECTLY SECURE!
-
-</aside>
+> **Note:** NO SYSTEM IS PERFECTLY SECURE!
 
 ---
 
-COMMON ATTACKS
+## Common Attacks
 
 - DoS (Denial of Service) Attacks
 - Spoofing Attacks
@@ -78,7 +75,7 @@ Example : A TCP SYN Flood Attack
 
 ---
 
-SPOOFING ATTACKS
+## Spoofing Attacks
 
 - To SPOOF an ADDRESS is to use a FAKE SOURCE ADDRESS (IP or MAC)
 - Numerous attacks involve spoofing; it’s not a SINGLE kind of attack
@@ -90,7 +87,7 @@ SPOOFING ATTACKS
 
 ---
 
-REFLECTION / AMPLIFICATION ATTACKS
+## Reflection / Amplification Attacks
 
 - In a REFLECTION attack, the ATTACKER sends traffic to a *reflector*, and spoofs the SOURCE of the PACKET using the TARGET’S IP ADDRESS
 - The *reflector* (ie: a DNS Server) sends the reply to the TARGET’S IP ADDRESS
@@ -102,7 +99,7 @@ REFLECTION / AMPLIFICATION ATTACKS
 
 ---
 
-MAN-IN-THE-MIDDLE ATTACKS
+## Man-in-The-Middle Attacks
 
 - In a MAN-IN-THE-MIDDLE attack, the ATTACKER places himself between the SOURCE and DESTINATION to eavesdrop on communications, or to modify traffic before it reaches the DESTINATION
 - A common example is ARP SPOOFING, also known as ARP POISONING
@@ -122,7 +119,7 @@ MAN-IN-THE-MIDDLE ATTACKS
 
 ---
 
-RECONNAISSANCE ATTACKS
+## Reconnaissance Attacks
 
 - RECONNAISSANCE ATTACKS are not attacks themselves but they are used to gather information about a TARGET which can be used for a future attack
 - This is often publicly available information
@@ -136,7 +133,7 @@ https://lookup.icann.org/lookup
 
 ---
 
-MALWARE
+## Malware
 
 - MALWARE (MALICIOUS SOFTWARE) refers to a variety of harmful programs that can infect a computer
 - VIRUSES infect other software (a ‘host program’)
@@ -151,7 +148,7 @@ The above MALWARE types can exploit various VULNERABILITIES to threaten any of t
 
 ---
 
-SOCIAL ENGINEERING ATTACKS
+## Social Engineering Attacks
 
 - SOCIAL ENGINEERING ATTACKS target the most vulnerable part of ANY system - PEOPLE!
 - They involve psychological manipulation to make the TARGET reveal confidential information or perform some action
@@ -168,18 +165,18 @@ SOCIAL ENGINEERING ATTACKS
 
 ---
 
-PASSWORD-RELATED ATTACKS
+## Password-Related Attacks
 
 - Most systems use a USERNAME / PASSWORD combination to AUTHENTICATE users
 - The USERNAME is often simple / easy to guess (for example the user’s email address) and the strength and secrecy of the password is relied on to provide the necessary security
 - ATTACKERS can learn a user’s passwords via multiple methods:
     - Guessing
-    - DICTIONARY ATTACK :
+- **Dictionary Attack :**
         - A program runs through a ‘dictionary’ or list of common words / passwords to find the TARGET’S password
-    - BRUTE FORCE ATTACK :
+- **Brute Force Attack :**
         - A program tries every possible combination of letters, numbers, and special characters to find the TARGET’S password
 
-- STRONG PASSWORDS should contain:
+- **Strong Passwords Should Contain:**
     - At LEAST 8 characters (preferably more)
     - A mixture of UPPERCASE and LOWERCASE letters
     - A mixture of LETTERS and NUMBERS
@@ -188,24 +185,24 @@ PASSWORD-RELATED ATTACKS
 
 ---
 
-PASSWORDS / MULTI-FACTOR AUTHENTICATION (MFA)
+## Passwords / Multi-Factor Authentication (Mfa)
 
 - MULTI-FACTOR AUTHENTICATION involves providing more than just a USERNAME / PASSWORD to prove your identity
 - It usually involves providing TWO of the following ( = Two-Factor Authentication) :
-    - SOMETHING YOU KNOW
+- Something You Know
         - A USERNAME / PASSWORD combination, a PIN, etc.
         
-    - SOMETHING YOU HAVE
+- Something You Have
         - Pressing a notification that appears on your phone, a badge that is scanned, etc.
     
-    - SOMETHING YOU ARE
+- Something You Are
         - Biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc.
 
 - Requiring multiple factors of AUTHENTICATION greatly increases the security. Even if the ATTACKER learns the TARGET’S PASSWORD (SOMETHING YOU KNOW), they won’t be able to login to the TARGET’S account
 
 ---
 
-DIGITAL CERTIFICATES
+## Digital Certificates
 
 - DIGITAL CERTIFICATES are another form of AUTHENTICATION used to prove the identity of the holder of the certificate
 - They are used for websites to verify that the website being accessed is legitimate
@@ -213,7 +210,7 @@ DIGITAL CERTIFICATES
 
 ---
 
-CONTROLLING AND MONITORING USERS WITH AAA
+## Controlling and Monitoring Users With Aaa
 
 - AAA (Triple-A) stands for AUTHENTICATION, AUTHORIZATION, and ACCOUNTING
 - It is a framework for controlling and monitor users of a computer system (ie: a network)
@@ -232,21 +229,18 @@ CONTROLLING AND MONITORING USERS WITH AAA
 - Enterprises typically use a AAA server to provide AAA services
     - ISE (Identity Services Engine) is Cisco’s AAA server
 
-- AAA Servers usually support the following TWO AAA Protocols:
+- **Aaa Servers Usually Support The Following Two Aaa Protocols:**
     - RADIUS :  Open Standard Protocol
         - Uses UDP PORTS 1812 and 1813
         
     - TACACS+ : Cisco Proprietary Protocol
         - Uses TCP PORT 49
 
-<aside>
-💡 FOR THE CCNA, KNOW THE DIFFERENCES BETWEEN AUTHENTICATION, AUTHORIZATION, and ACCOUNTING
-
-</aside>
+> **Note:** FOR THE CCNA, KNOW THE DIFFERENCES BETWEEN AUTHENTICATION, AUTHORIZATION, and ACCOUNTING
 
 ---
 
-SECURITY PROGRAM ELEMENTS
+## Security Program Elements
 
 - USER AWARENESS PROGRAMS are designed to make employees aware of potential security threats and risks
 - USER TRAINING PROGRAMS are formal than USER AWARENESS PROGRAMS

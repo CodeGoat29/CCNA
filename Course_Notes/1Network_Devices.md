@@ -32,7 +32,7 @@ A **computer network** is a digital telecommunications network that allows **nod
 - Provide connectivity **between LANs**.
 - Send data over the **Internet**.
 
-### **Firewalls** (Can Operate at Layers 3, 4, and 7)
+### **Firewalls** (Can Operate At Layers 3, 4, and 7)
 
 ![Firewall](image-5.png)
 

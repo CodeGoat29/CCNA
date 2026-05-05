@@ -1,6 +1,6 @@
-# 29. FIRST HOP REDUNDANCY PROTOCOLS
+# 29. First Hop Redundancy Protocols
 
-THE PURPOSE OF FHRPS
+## The Purpose of Fhrps
 
  
 ![image](https://github.com/psaumur/CCNA/assets/106411237/32c286ce-e042-4cda-9067-c232a210ec81)
@@ -15,7 +15,7 @@ This is what the FIRST HOP REDUNDANCY PROTOCOL is designed to fix
 
 ---
 
-FIRST HOP REDUNDANCY PROTOCOL (FHRP)
+## First Hop Redundancy Protocol (Fhrp)
 
 - Computer networking protocol
 - Designed to PROTECT the DEFAULT GATEWAY used on a SUBNET by allowing TWO or MORE ROUTERS to provide BACKUP for that ADDRESS
@@ -23,7 +23,7 @@ FIRST HOP REDUNDANCY PROTOCOL (FHRP)
 
 ---
 
-HOW DOES FHRP WORK?
+## How Does Fhrp Work?
 
 - TWO (or more) ROUTERS share a VIP (A Virtual IP ADDRESS)
 - THIS VIP is used by HOSTS as the DEFAULY GATEWAY IP
@@ -32,7 +32,7 @@ HOW DOES FHRP WORK?
 - When a HOST sends traffic to an ADDRESS outside of the NETWORK, it sends an ARP REQUEST (Broadcast Flood) to the VIP to find out it’s MAC ADDRESS
     - Spanning Tree prevents BROADCAST STORM due to Broadcast Flood
 - The ACTIVE ROUTER sends the ARP REPLY back (it’s VIRTUAL MAC ADDRESS) to the HOST
-- The HOST now sends traffic OUTSIDE of the NETWORK with:
+- **The Host Now Sends Traffic Outside of The Network With:**
     - Source IP (HOST IP)
     - Destination IP (External IP ADDRESS)
     - Source MAC (HOST MAC ADDRESS)
@@ -61,28 +61,25 @@ It becomes a STANDBY ROUTER
 
 R2 remains the ACTIVE ROUTER
 
-<aside>
-💡 FPRPs are “non-preemptive”. The current ACTIVE ROUTER will not automatically give up its role, even if the former ACTIVE ROUTER returns.
+> **Note:** FPRPs are “non-preemptive”. The current ACTIVE ROUTER will not automatically give up its role, even if the former ACTIVE ROUTER returns.
 
 *** You CAN change this setting to make R1 ‘preempt’ R2 and take back it’s ACTIVE role, automatically ***
 
-</aside>
-
 ---
 
-HSRP (HOT STANDBY ROUTER PROTOCOL)
+## Hsrp (Hot Standby Router Protocol)
 
 - **Cisco proprietary**
 - An ACTIVE and STANDBY ROUTER are elected
-- There are TWO VERSIONS :
+- **There Are Two Versions :**
     - version 1
     - version 2 : *adds IPv6 support* and increases # of *groups* that can be configured
 
-- Multicast IPv4 ADDRESSES :
+- **Multicast Ipv4 Addresses :**
     - **v1** : 224.0.0.2
     - **v2** : 224.0.0.102
 
-- VIRTUAL MAC ADDRESSES :
+- **Virtual Mac Addresses :**
     - **v1** : 0000.0c07.acXX (XX = HSRP GROUP NUMBER)
     - **v2** : 0000.0c9f.fXXX (XXX = HSRP GROUP NUMBER)
 
@@ -92,15 +89,15 @@ HSRP (HOT STANDBY ROUTER PROTOCOL)
 
 ---
 
-VRRP (VIRTUAL ROUTER REDUNDANCY PROTOCOL)
+## Vrrp (Virtual Router Redundancy Protocol)
 
 - Open Standard
 - A MASTER and BACKUP ROUTER are elected
 
-- Multicast IPv4 ADDRESSES :
+- **Multicast Ipv4 Addresses :**
     - 224.0.0.18
 
-- VIRTUAL MAC ADDRESSES :
+- **Virtual Mac Addresses :**
     - 0000.5e00.01XX (XX = VRRP GROUP NUMBER)
         - for GROUP NUMBERS > 99, you need to convert the number to HEX
         - Example: 200 = “c8” in Hex so the MAC would be 0000.5e00.01c8
@@ -111,7 +108,7 @@ VRRP (VIRTUAL ROUTER REDUNDANCY PROTOCOL)
 
 ---
 
-GLBP (GATEWAY LOAD BALANCING PROTOCOL)
+## Glbp (Gateway Load Balancing Protocol)
 
 - Cisco Proprietary
 - LOAD BALANCES among MULTIPLE ROUTERS within a SINGLE SUBNET
@@ -119,10 +116,10 @@ GLBP (GATEWAY LOAD BALANCING PROTOCOL)
 - Up to FOUR AVFs (Active Virtual Forwarders) are assigned BY the AVG (the AVG can be an AVF, too)
 - Each AVF acts as the DEFAULT GATEWAY for a portion of the HOSTS in the SUBNET
 
-- Multicast IPv4 ADDRESSES :
+- **Multicast Ipv4 Addresses :**
     - 224.0.0.102
 
-- VIRTUAL MAC ADDRESSES :
+- **Virtual Mac Addresses :**
     - 0007.b400.XXYY (XX = GLBP GROUP NUMBER, YY = AVF NUMBER)
 
 ---
@@ -133,7 +130,7 @@ MEMORIZE THIS CHART and the differences between the FHRPs
 
 ---
 
-BASIC HSRP CONFIGURATION
+## Basic Hsrp Configuration
 
 R1s configuration
 

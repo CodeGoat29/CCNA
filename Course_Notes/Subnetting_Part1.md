@@ -1,18 +1,16 @@
-# 13. SUBNETTING : PART 1
+# 13. Subnetting : Part 1
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a475e909-59b8-4615-a0b9-8a3c1fbdc313)
 
-
 HOWEVER, only Class A, B, C Addresses can be assigned to a device as an IP Address.
 
-CLASS 		PREFIX LENGTH
+## Class 		Prefix Length
 
-A 			/8
-B 			/16
-C 			/24
+## a 			/8
+## B 			/16
+## C 			/24
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f0836136-c4a9-475b-b6c2-d1c550b8cfdd)
-
 
 The IANA (Internet Assigned Numbers Authority) assigns IPv4 addresses/networks to companies based on their size.
 
@@ -31,14 +29,14 @@ CIDR (Classless Inter-Domain Routing) removed the requirements of CLASS A, B, an
 
 ---
 
-HOW MANY USABLE ADDRESSES ARE THERE IN EACH NETWORK?
+## How Many Usable Addresses Are There in Each Network?
 
-REMEMBER:
+### **Remember**
 
 2^n - 2 = Usable Address
 n = number of host bits
 
-CIDR PRACTICE!
+## Cidr Practice!
 
 203.0.113.0/25
 
@@ -86,12 +84,12 @@ which has 16 hosts / group (2 * 4 bits = 16) - 2 Reserved IPs for Network and Br
 
 ---
 
-SUBNETTING CHEATSHEET:
+### **Subnetting Cheatsheet**
 
 | Group Size | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Subnet Mask | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 |
-| CIDR | /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 |
+## | Cidr | /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 |
 | 3rd Octet | /17 | /18 | /19 | /20 | /21 | /22 | /23 | /24 |
 | 2nd Octet | /9 | /10 | /11 | /12 | /13 | /14 | /15 | /16 |
 | 1st Octet | /1 | /2 | /3 | /4 | /5 | /6 | /7 | /8 |
@@ -192,7 +190,7 @@ Second Octet = Magic
 Address Group Size = 64
 256 - 64 = 192
 
-Subnet = 255.192.0.0
+## Subnet = 255.192.0.0
 
 75 / 64 = 1 + remainder
 1 * 64 = 64 (Base Network #)

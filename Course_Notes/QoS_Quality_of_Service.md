@@ -1,6 +1,6 @@
-# 47. QoS (Quality of Service) : PART 2
+# 47. QoS (Quality of Service) : Part 2
 
-CLASSIFICATION / MARKING
+## Classification / Marking
 
 - The purpose of QoS is to give certain kinds of NETWORK TRAFFIC priority over other during congestion
 - CLASSIFICATION organizes network TRAFFIC (PACKETS) into TRAFFIC CLASSES (CATEGORIES)
@@ -16,7 +16,7 @@ CLASSIFICATION / MARKING
 
 ---
 
-PCP / CoS
+## Pcp / Cos
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2d2037b6-6992-4758-a1cb-5df0f939b153)
 
@@ -26,15 +26,15 @@ PCP / CoS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/af191e31-082d-43c0-ab76-225d4dd2e354)
 
-- PCP VALUE 0:
+- **Pcp Value 0:**
     - “BEST EFFORT” DELIVERY means there is no guarantee that data is delivered or that it meets ANY QoS Standard. This is REGULAR TRAFFIC - NOT HIGH PRIORITY
 
-- PCP VALUE 3 and 5:
+- **Pcp Value 3 and 5:**
     - IP PHONES MARK call signaling TRAFFIC (used to establish calls) as PCP3
         - They MARK the actual VOICE TRAFFIC as PCP5
 
 - Because PCP is found in the dot1q header, it can only be used over the following connections:
-    - TRUNK LINKS
+- Trunk Links
     - ACCESS LINKS with a VOICE VLAN
     
 - In the diagram below, TRAFFIC between R1 and R2, or between R2 and EXTERNAL DESTINATIONS will not have a dot1q tag. So, traffic over those links PCP cannot be marked with a PCP value.
@@ -43,7 +43,7 @@ PCP / CoS
 
 ---
 
-THE IP ToS BYTE
+## The IP Tos Byte
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3323ff23-96a5-45f4-abde-893d72a4021f)
 
@@ -53,33 +53,33 @@ THE IP ToS BYTE
 
 ---
 
-IP PRECEDENCE (OLD)
+## IP Precedence (Old)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1b0ca3ca-fc8d-4225-9368-64c8ff9587da)
 
-- Standard IPP markings are similar to PCP:
+- **Standard Ipp Markings Are Similar to Pcp:**
     - 6 and 7 are reserved to ‘network control traffic’ (ie: OSPF Messages between ROUTERS)
-    - 5 = VOICE
-    - 4 = VIDEO
-    - 3 = VOICE SIGNALLING
-    - 0 = BEST EFFORT
+- 5 = Voice
+- 4 = Video
+- 3 = Voice Signalling
+- 0 = Best Effort
 - With 6 and 7 reserved, 6 possible values remain
 - Although 6 values is sufficient for many NETWORKS, the QoS REQUIREMENTS of some NETWORKS demand more flexibility
 
 ---
 
-DSCP (CURRENT)
+## Dscp (Current)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/48a63948-81b9-43d5-a108-34525a381533)
 
 - RFC 2474 (1998) defines the DSCP field, and other ‘DiffServ’ RFCs elaborate on its use
 - With IPP updated to DSCP, new STANDARD MARKINGS had to be decided on
-    - By having generally agreed upon STANDARD MARKINGS for DIFFERENT KINDS of TRAFFIC:
+    - **By Having Generally Agreed Upon Standard Markings for Different Kinds of Traffic:**
         - QoS DESIGN and IMPLEMENTATION is simplified.
         - QoS works better between ISPs and ENTERPRISES
         - etc.
 
-- You should be AWARE of the FOLLOWING STANDARD MARKINGS:
+- **You Should Be Aware of The Following Standard Markings:**
     - DEFAULT FORWARDING (DF) - Best Effort TRAFFIC
     - EXPEDITED FORWARDING (EF) - Low Loss / Latency / Jitter TRAFFIC (usually voice)
     - ASSURED FORWARDING (AF) - A set of 12 STANDARD VALUES
@@ -87,16 +87,16 @@ DSCP (CURRENT)
 
 ---
 
-DF / EF
+## Df / Ef
 
-DEFAULT FORWARDING (DF)
+## Default Forwarding (Df)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/26f6bc76-6b33-40f0-9327-022b4816d280)
 
 - Used for BEST EFFORT TRAFFIC
 - The DSCP marking for DF is 0
 
-EXPEDITED FORWARDING (EF)
+## Expedited Forwarding (Ef)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/12cf77c0-f139-494c-ab8b-d765a73a92f4)
 
@@ -105,7 +105,7 @@ EXPEDITED FORWARDING (EF)
 
 ---
 
-ASSURED FORWARDING (AF)
+## Assured Forwarding (Af)
 
 - Defines FOUR TRAFFIC CLASSES
 - ALL PACKETS in a CLASS have the same PRIORITY
@@ -115,7 +115,7 @@ ASSURED FORWARDING (AF)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/407ab29c-678d-4a38-8e8e-2a6f904b4d94)
 
-EXAMPLES:
+### **Examples**
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d6b2dac7-fefc-409b-8136-f34df165dd23)
 
@@ -136,7 +136,7 @@ EXAMPLES:
 
 ---
 
-CLASS SELECTOR (CS)
+## Class Selector (Cs)
 
 - Defines EIGHT DSCP values for backward compatibility with IPP
 - The THREE BITS that were added for DSCP are set to 0, and the original IPP bits are used to make 8 values
@@ -145,25 +145,25 @@ CLASS SELECTOR (CS)
 
 ---
 
-RFC 4954
+## Rfc 4954
 
 - RFC 4954 was developed with help of Cisco to bring ALL of these VALUES together and STANDARDIZE their use
 
 - The RFC offers MANY specific recommendations, but here are a few KEY ones:
-    - VOICE TRAFFIC : EF
+- Voice Traffic : Ef
     - INTERACTIVE VIDEO : AF4x
     - STREAMING VIDEO : AF3x
     - HIGH PRIORITY DATA : AF2x
-    - BEST EFFORT : DF
+- Best Effort : Df
 
 ---
 
-TRUST BOUNDARIES
+## Trust Boundaries
 
 - The TRUST BOUNDARY of a NETWORK defines where the DEVICE TRUST / DON’T TRUST the QoS MARKINGS of received messages
-- If the MARKINGS are TRUSTED:
+- **If The Markings Are Trusted:**
     - DEVICE will forward the message without changing the MARKINGS
-- If the MARKINGS are NOT TRUSTED:
+- **If The Markings Are Not Trusted:**
     - DEVICE will change the MARKINGS according to configured POLICY
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cdcdc302-9dbe-4dd8-9184-72d1f501bc1a)
@@ -176,7 +176,7 @@ TRUST BOUNDARIES
 
 ---
 
-QUEUING / CONGESTION MANAGEMENT
+## Queuing / Congestion Management
 
 - When a NETWORK DEVICE receives TRAFFIC at a FASTER PACE than it can FORWARD out of the appropriate INTERACE, PACKETS are placed in that INTERFACE’S QUEUE as they wait to be FORWARDED
 - When a QUEUE becomes FULL, PACKETS that don’t FIT in the QUEUE are dropped (Tail Drop)
@@ -194,9 +194,9 @@ QUEUING / CONGESTION MANAGEMENT
 ![image](https://github.com/psaumur/CCNA/assets/106411237/56bfe184-5bdf-4b8f-8851-756766456bf9)
 
 - A COMMON scheduling method is *WEIGHTED ROUND-ROBIN*
-    - ROUND-ROBIN:
+- **Round-Robin:**
         - PACKETS taken from each QUEUE in order, cyclically
-    - WEIGHTED:
+- **Weighted:**
         - More DATA taken from HIGH PRORITY QUEUES each time the SCHEDULER reaches that QUEUE
 
 ---
@@ -227,7 +227,7 @@ QUEUING / CONGESTION MANAGEMENT
 
 ---
 
-SHAPING / POLICING
+## Shaping / Policing
 
 - TRAFFIC SHAPING and POLICING are both used to control the RATE of TRAFFIC
 - SHAPING

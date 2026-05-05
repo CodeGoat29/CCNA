@@ -1,6 +1,6 @@
-# 60. JSON, XML, AND YAML
+# 60. JSON, XML, and YAML
 
-DATA SERIALIZATION
+## Data Serialization
 
 - DATA SERIALIZATION is the process of converting DATA into a standardized format/structure that can be stored (in a file) or transmitted (over a network) and reconstructed later (ie: by a different application)
     - This allows the DATA to be communicated between applications in a way both APPLICATIONS understand.
@@ -11,7 +11,7 @@ DATA SERIALIZATION
 
 ---
 
-JSON (JAVASCRIPT OBJECT NOTATION)
+## JSON (Javascript Object Notation)
 
 - JSON (JAVASCRIPT OBJECT NOTATION) **is an open standard FILE FORMAT and DATA INTERCHANGE FORMAT that uses human-readable text to store and transmit data objects
 
@@ -32,7 +32,7 @@ JSON (JAVASCRIPT OBJECT NOTATION)
 
 ---
 
-JSON PRIMITIVE DATA TYPES:
+### **JSON Primitive Data Types**
 
 - A STRING is a text value. It is surrounded by double quotes “ “
     - “Hello”
@@ -52,7 +52,7 @@ JSON PRIMITIVE DATA TYPES:
 
 ---
 
-JSON STRUCTURED DATA TYPES:
+### **JSON Structured Data Types**
 
 - An OBJECT is an unordered list of *key-value pairs* (variables)
     - Sometimes called a DICTIONARY
@@ -78,7 +78,7 @@ JSON STRUCTURED DATA TYPES:
 
 ---
 
-XML (EXTENSIBLE MARKUP LANGUAGE)
+## XML (Extensible Markup Language)
 
 - XML (EXTENSIBLE MARKUP LANGUAGE) was developed as a MARKUP language, but is now used as a general data serialization language
     - Markup languages (ie: HTML) are used to format text (font, size, color, headings, etc)
@@ -93,7 +93,7 @@ XML (EXTENSIBLE MARKUP LANGUAGE)
 
 ---
 
-YAML (YAML AIN’T MARKUP LANGUAGE)
+## YAML (YAML Ain’T Markup Language)
 
 - YAML originally meant *YET ANOTHER MARKUP LANGUAGE* but to distinguish its purpose as a data-serialization language rather than a markup language, it was repurposed to *YAML AINT MARKUP LANGUAGE*
 - YAML is used by the network automation tool ANSIBLE (covered later in the course)

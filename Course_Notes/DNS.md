@@ -1,6 +1,6 @@
 # 38. DNS (Domain Name System)
 
-THE PURPOSE OF DNS
+## The Purpose of DNS
 
 - DNS is used to *resolve* human-readable names (google.com) to IP ADDRESSES
 - Machines such as PCs don’t use names, they use ADDRESSES (ie: IPv4/IPv6)
@@ -11,7 +11,7 @@ THE PURPOSE OF DNS
 
 ---
 
-BASIC FUNCTIONS OF DNS
+## Basic Functions of DNS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/059c6fa4-674c-47ce-a08e-0714b21cb39e)
 
@@ -39,7 +39,7 @@ Command `ipconfig /flushdns` (Clears DNS cache)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f8608c2f-840c-477d-9284-7060838f1f3e)
 
-HOSTS Files
+## Hosts Files
 
 WINDOWS HOSTS location
 
@@ -49,7 +49,7 @@ WINDOWS HOSTS location
 
 ---
 
-CONFIGURING DNS IN CISCO IOS
+## Configuring DNS in Cisco IOS
 
 - For HOSTS in a NETWORK to use DNS, you don’t need to configure DNS on the ROUTERS.
     - They will simply FORWARD the DNS messages like any other packets
@@ -75,6 +75,6 @@ Command `ip name-server` and `ip domain lookup`
 
 ---
 
-COMMAND REVIEW:
+### **Command Review**
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6c3e7873-04c4-407e-a851-cb74a9f78eb9)

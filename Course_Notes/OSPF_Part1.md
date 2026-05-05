@@ -1,8 +1,8 @@
-# 26.  OSPF : PART 1 (IGP : LINK STATE)
+# 26.  OSPF : Part 1 (Igp : Link State)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f58477d1-f574-4195-8f6c-851823dedfbf)
 
-LINK STATE ROUTING PROTOCOLS
+## Link State Routing Protocols
 
 - When using a LINK STATE ROUTING PROTOCOL, every ROUTER creates a ‘connectivity map’ of the NETWORK
 - To allow this, each ROUTER ADVERTISES information about its INTERFACES (connected NETWORKS) to its NEIGHBOURS. These ADVERTISEMENTS are passed along to the other ROUTERS, until all ROUTERS in the NETWORK develop the same map of the NETWORK
@@ -12,7 +12,7 @@ LINK STATE ROUTING PROTOCOLS
 
 ---
 
-BASIC OSPF OPERATIONS
+## Basic OSPF Operations
 
 - Stands for **Open Shortest Path First**
 - Uses the **Shortest Path First** algorithm
@@ -30,7 +30,7 @@ THREE Versions:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2a6a126b-74f1-49e2-96be-fc411c8812fd)
 
-💡 LSA’s have an AGING TIMER of 30 Minutes, by Default). The LSA will be FLOODED again after the timer expires
+> **Note:** LSA’s have an AGING TIMER of 30 Minutes, by Default). The LSA will be FLOODED again after the timer expires
 
 In OSPF, there are THREE MAIN STEPS in the process of sharing LSAs and determining the BEST ROUTE to each DESTINATION in the network
 
@@ -42,7 +42,7 @@ In OSPF, there are THREE MAIN STEPS in the process of sharing LSAs and determini
 
 ---
 
-OSPF AREAS
+## OSPF Areas
 
 - OSPF uses **AREAS** to divide up the NETWORK
 - SMALL NETWORKS can be *single-area* without any negative effects on performance
@@ -53,7 +53,7 @@ OSPF AREAS
     - Small changes in NETWORK cause every ROUTER to FLOOD LSAs and run the SPF algorithm again
 - By dividing up a large OSPF NETWORK into several SMALLER ***areas***, you can avoid the above NEGATIVE effects (sounds similar to VLANs re: broadcast domains)
 
-WHAT IS AN OSPF AREA?
+## What Is an OSPF Area?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0f5084fe-f7fb-4b33-a8d0-2ed0155d7502)
 
@@ -63,11 +63,11 @@ WHAT IS AN OSPF AREA?
 - ROUTERS with INTERFACES in MULTIPLE AREAS are called **AREA BORDER ROUTERS** (ABRs)
     
 
-💡 ABRs maintain a SEPARATE LSDB for each AREA they are connected to.
+> **Note:** ABRs maintain a SEPARATE LSDB for each AREA they are connected to.
 
-💡 It is recommended that you connect an ABR to a MAXIMUM of TWO AREAS.
+> **Note:** It is recommended that you connect an ABR to a MAXIMUM of TWO AREAS.
 
-💡 Connecting an ABR to 3+ AREAS can overburden the ROUTER
+> **Note:** Connecting an ABR to 3+ AREAS can overburden the ROUTER
 
 - ROUTERS connected to the BACKBONE AREA (Area 0) are called **BACKBONE ROUTERS**
 - An **INTRA-AREA ROUTE** is a ROUTE to a DESTINATION inside the same OSPF AREA
@@ -75,16 +75,16 @@ WHAT IS AN OSPF AREA?
 
 --- 
 
-OSPF RULES
+## OSPF Rules
 
 - OSPF AREAS should be CONTIGUOUS (no split AREAS)
 - All OSPF AREAS must have *at least* ONE ABR connected to the BACKBONE AREA
 - OSPF INTERFACES in the SAME SUBNET *must* be in the SAME AREA
 
 ---
-BASIC OSPF CONFIGURATION
+## Basic OSPF Configuration
 
-OSPF AREA 0
+## OSPF Area 0
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ad9648f4-736a-43b5-96de-8a30f6f800c8)
 

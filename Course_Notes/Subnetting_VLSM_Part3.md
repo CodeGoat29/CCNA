@@ -1,8 +1,8 @@
-# 15. SUBNETTING (VLSM) : PART 3
+# 15. Subnetting (VLSM) : Part 3
 
 The process of subnetting Class A, Class B, and Class C is identical.
 
-SUBNETTING CLASS A NETWORKS
+## Subnetting Class a Networks
 
 Given a 10.0.0.0/8 network, you must create 2000 subnets which will distributed to various enterprises. What prefix length must you use?
 
@@ -25,7 +25,7 @@ How many hosts per subnet? There are 13 host bits remaining so:
 
 ---
 
-VARIABLE-LENGTH SUBNET MASKS (VLSM)
+## Variable-Length Subnet Masks (VLSM)
 
 - Until now, we have practiced subnetting using FLSM (Fixed-Length Subnet Masks).
 - This means that all of the subnets use the same prefix length (ie: Subnetting a Class C network into 4 subnets using /26)
@@ -38,13 +38,12 @@ VARIABLE-LENGTH SUBNET MASKS (VLSM)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/dc006342-4bd9-40d4-b1c5-9ac7a670ed96)
 
-
 So, in order:
 ```
-TOKYO LAN A (110 HOSTS)
-TORONTO LAN B (45 HOSTS)
-TORONTO LAN A (29 HOSTS)
-TOKYO LAN B (8 HOSTS)
+## Tokyo LAN a (110 Hosts)
+## Toronto LAN B (45 Hosts)
+## Toronto LAN a (29 Hosts)
+## Tokyo LAN B (8 Hosts)
 and
 THE POINT TO POINT CONNECTION (between the two ROUTERS)
 ```
@@ -68,24 +67,24 @@ Converting remaining Host Bits to 1s:
 192.168.1.127/25 is the Broadcast Address
 ```
 ---
-TOKYO LAN A
+## Tokyo LAN a
 ```
-NETWORK ADDRESS: 192.168.1.0/25
-BROADCAST ADDRESS: 192.168.1.127/25
-FIRST USABLE: 192.168.1.1/25
-LAST USABLE: 192.168.1.126/25
-TOTAL NUMBER OF USABLE HOSTS: 126 (2^7 -2)
+## Network Address: 192.168.1.0/25
+## Broadcast Address: 192.168.1.127/25
+## First Usable: 192.168.1.1/25
+## Last Usable: 192.168.1.126/25
+## Total Number of Usable Hosts: 126 (2^7 -2)
 
 Since TOKYO LAN A is 192.168.1.127, the next Subnet (TOKYO LAN B) starts at 192.168.1.128 (Network Address)
 ```
 ---
-TORONTO LAN B
+## Toronto LAN B
 ```
-NETWORK ADDRESS: 192.168.1.128 / 26
-BROADCAST ADDRESS: 192.168.1.191 / 26
-FIRST USABLE: 192.168.1.129 /26
-LAST USABLE: 192.168.1.190 / 26
-TOTAL NUMBER OF USABLE HOSTS: 62 (2^6 -2)
+## Network Address: 192.168.1.128 / 26
+## Broadcast Address: 192.168.1.191 / 26
+## First Usable: 192.168.1.129 /26
+## Last Usable: 192.168.1.190 / 26
+## Total Number of Usable Hosts: 62 (2^6 -2)
 ```
 
 We need to borrow to get enough for 45 hosts.
@@ -104,7 +103,7 @@ We need to borrow to get enough for 45 hosts.
 ```
 ---
 
-TORONTO LAN A
+## Toronto LAN a
 
 We need to borrow to get enough for 29 hosts.
 
@@ -120,15 +119,15 @@ We need to borrow to get enough for 29 hosts.
 
 192.168.1.224 (Broadcast address)
 
-NETWORK ADDRESS: 192.168.1.192 / 27
-BROADCAST ADDRESS: 192.168.1.223 / 27
-FIRST USABLE: 192.168.1.193 /27
-LAST USABLE: 192.168.1.222 / 27
-TOTAL NUMBER OF USABLE HOSTS: 30 hosts (2^5 - 2)
+## Network Address: 192.168.1.192 / 27
+## Broadcast Address: 192.168.1.223 / 27
+## First Usable: 192.168.1.193 /27
+## Last Usable: 192.168.1.222 / 27
+## Total Number of Usable Hosts: 30 Hosts (2^5 - 2)
 ```
 ---
 
-TOKYO LAN B
+## Tokyo LAN B
 We need to borrow to get enough for 8 hosts. Remember total usable hosts is equal to x - 2.
 
 |128|64|32|16|8|4|2|1|
@@ -143,15 +142,15 @@ We need to borrow to get enough for 8 hosts. Remember total usable hosts is equa
 
 192.168.1.239 (Broadcast address)
 
-NETWORK ADDRESS: 192.168.1.224 / 28
-BROADCAST ADDRESS: 192.168.1.239 / 28
-FIRST USABLE: 192.168.1.225 /28
-LAST USABLE: 192.168.1.238 / 28
-TOTAL NUMBER OF USABLE HOSTS: 14 hosts (2^4 - 2)
+## Network Address: 192.168.1.224 / 28
+## Broadcast Address: 192.168.1.239 / 28
+## First Usable: 192.168.1.225 /28
+## Last Usable: 192.168.1.238 / 28
+## Total Number of Usable Hosts: 14 Hosts (2^4 - 2)
 ```
 ---
 
-POINT TO POINT CONNECTIONS
+## Point to Point Connections
 
 We need to borrow to get enough for 4 hosts. Remember total usable hosts is equal to x - 2.
 |128|64|32|16|8|4|2|1|
@@ -166,15 +165,15 @@ We need to borrow to get enough for 4 hosts. Remember total usable hosts is equa
 
 192.168.1.243 (Broadcast address)
 
-NETWORK ADDRESS: 192.168.1.240 / 30
-BROADCAST ADDRESS: 192.168.1.243 / 30
-FIRST USABLE: 192.168.1.241 / 30
-LAST USABLE: 192.168.1.242 / 30
-TOTAL NUMBER OF USABLE HOSTS: 2 hosts (2^2 - 2)
+## Network Address: 192.168.1.240 / 30
+## Broadcast Address: 192.168.1.243 / 30
+## First Usable: 192.168.1.241 / 30
+## Last Usable: 192.168.1.242 / 30
+## Total Number of Usable Hosts: 2 Hosts (2^2 - 2)
 ```
 ---
 
-ADDITIONAL PRACTICE FOR SUBNETTING
+## Additional Practice for Subnetting
 
 [http://www.subnettingquestions.com](http://www.subnettingquestions.com/)
 [http://subnetting.org](http://subnetting.org/)

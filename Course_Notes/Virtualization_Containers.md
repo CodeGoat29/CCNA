@@ -1,6 +1,6 @@
-# 54. VIRTUALIZATION (CONTAINERS): PART 2
+# 54. Virtualization (Containers): Part 2
 
-REVIEW OF VIRTUAL MACHINES (TYPE 1 and TYPE2 HYPERVISORS)
+## Review of Virtual Machines (Type 1 and Type2 Hypervisors)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bfc801ca-a603-4957-a67c-316fb72e25cb)
 
@@ -24,7 +24,7 @@ REVIEW OF VIRTUAL MACHINES (TYPE 1 and TYPE2 HYPERVISORS)
 
 ---
 
-CONTAINERS
+## Containers
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4f350818-f030-46fe-8850-f2e633d22bfa)
 
@@ -42,7 +42,7 @@ CONTAINERS
 
 ---
 
-VIRTUAL MACHINES vs. CONTAINERS
+## Virtual Machines Vs. Containers
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/98a4075d-ab70-4579-ba10-c129e935ca22)
 

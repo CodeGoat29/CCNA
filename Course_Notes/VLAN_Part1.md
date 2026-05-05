@@ -1,10 +1,10 @@
-# 16. VLANS : PART 1
+# 16. Vlans : Part 1
 
-WHAT IS A LAN ? 
+## What Is a LAN ? 
 
 - A LAN is a single BROADCAST DOMAIN, including all devices in that broadcast domain.
 
-BROADCAST DOMAINS
+## Broadcast Domains
 
 - A BROADCAST DOMAIN is the group of devices which will receive a BROADCAST FRAME (Destination MAC : FFFF.FFFF.FFFF) sent by any one of the members.
 
@@ -12,18 +12,15 @@ Image of LAN with FOUR BROADCAST DOMAINS (192.168.1.0 / 24)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/de712483-e881-41f5-9525-576216186498)
 
-
 Performance :
 
 Lots of unnecessary BROADCAST traffic can reduce network performance.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a807fdc5-27b9-4735-8b8d-51bdc0c91a8c)
 
-
 BROADCAST FRAME flooding all our subnets with unnecessary traffic.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fcd03904-a193-4423-8940-09be1df1bd2c)
-
 
 Security :
 
@@ -33,9 +30,9 @@ Even within the same office, you want to limit who has access to what. You can a
 
 ---
 
-WHAT IS A VLAN ? 
+## What Is a VLAN ? 
 
-VLANS:
+### **Vlans**
 
 - logically separate end-hosts at LAYER 2
 - are configured on Layer 2 SWITCHES on a per-interface basis.
@@ -43,7 +40,7 @@ VLANS:
 
 ---
 
-PURPOSE OF VLANs:
+## Purpose of Vlans:
 
 Network Performance :
 
@@ -55,30 +52,25 @@ Network Security :
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fae2f1ed-ffc3-4d91-adf7-16a67c2dc5aa)
 
-
 SWITCHES do not forward traffic directly between HOSTS in different VLANS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2e5834e9-9096-46eb-bb96-ba8459338107)
 
-
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3046f727-fad4-421e-85ef-63a73e109f83)
-
 
 Sending Packets to another VLAN (Routed through R1)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7090ef6d-ce8c-454f-b80d-f6dfd82745c8)
 
-
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b7237602-5b46-4c31-bd75-2e50e0fb1017)
 
 ---
 
-HOW TO CONFIGURE VLANS ON CISCO SWITCHES
+## How to Configure Vlans On Cisco Switches
 
 #show vlan brief
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/13ce8382-6aea-484e-9580-d91c98189522)
-
 
 Shows which VLANS that exist on the SWITCH and what INTERFACES are in each VLAN
 
@@ -86,10 +78,9 @@ VLANs 1 (DEFAULT), 1002-1005 exist by default and **cannot be deleted (5 VLANs)*
 
 ---
 
-HOW TO ASSIGN INTERFACES TO A VLAN
+## How to Assign Interfaces to a VLAN
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ed31145d-7949-4c68-b88a-97716beaf074)
-
 
 1) Use the “interface range” command to select all the interfaces at once
 
@@ -97,7 +88,7 @@ HOW TO ASSIGN INTERFACES TO A VLAN
 
 ---
 
-WHAT IS AN ACCESS PORT?
+## What Is an Access Port?
 
 - An ACCESS PORT is a SWITCHPORT which belongs to a single VLAN, and usually connects to end hosts like PCs.
 
@@ -107,7 +98,6 @@ SWITCHPORTS which carry multiple VLANs are called “TRUNK PORTS” (more info o
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b1bdb937-3707-496f-bc49-445df354d16b)
 
-
 Use “#vlan <#>” to enter **Configuration Mode** for a given VLAN (this can also create a VLAN)
 
 Use “#name <name>” to configure a NAME for your VLAN
@@ -115,7 +105,6 @@ Use “#name <name>” to configure a NAME for your VLAN
 To check your VLAN configuration, use “#show vlan brief”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2f7d26d8-9b2a-43a3-b213-fec4f984a309)
-
 
 Testing VLAN 10
 

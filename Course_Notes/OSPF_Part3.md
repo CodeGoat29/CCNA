@@ -1,6 +1,6 @@
-# 28. OSPF : PART 3 (IGP: LINK STATE)
+# 28. OSPF : Part 3 (Igp: Link State)
 
-LOOPBACK INTERFACES
+## Loopback Interfaces
 
 - A LOOPBACK INTERFACE is a virtual INTERFACE in the ROUTER
 - It is ALWAYS UP/UP - unless you manually shut it down
@@ -11,29 +11,26 @@ LOOPBACK INTERFACES
 
 ---
 
-OSPF NETWORK TYPES
+## OSPF Network Types
 
 - The OSPF “NETWORK TYPE” refers to the TYPES of connection between OSPF neighbors (Ethernet, etc.)
 
-- There are THREE MAIN OSPF NETWORK TYPES:
+- **There Are Three Main OSPF Network Types:**
 
-- BROADCAST :
+- **Broadcast :**
     - Enabled by DEFAULT on **ETHERNET** and **FDDI** (Fiber Distributed Data Interfaces) INTERFACES
 
-- POINT TO POINT :
+- **Point to Point :**
     - Enabled by DEFAULT on **PPP** (Point-to-Point) and **HDLC** (High-Level Data Link Control) INTERFACES
 
-- NON-BROADCAST :
+- **Non-Broadcast :**
     - Enabled by DEFAULT on **FRAME RELAY** and **X.25** INTERFACES
 
-<aside>
-💡  CCNA focuses on BROADCAST and POINT-TO-POINT types
-
-</aside>
+> **Note:** CCNA focuses on BROADCAST and POINT-TO-POINT types
 
 ---
 
-OSPF BROADCAST NETWORK TYPE
+## OSPF Broadcast Network Type
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8f99053d-3501-4d1d-86a2-f859c62c160d)
 
@@ -54,24 +51,15 @@ The DR / BDR election order of priority:
 
 “Second Place” because the BDR
 
-<aside>
-💡 DEFAULT OSPF INTERFACE PRIORITY is “1” on ALL INTERFACES!
-
-</aside>
+> **Note:** DEFAULT OSPF INTERFACE PRIORITY is “1” on ALL INTERFACES!
 
 The command to change the OSPF PRIORITY of an INTERFACE is :
 
-<aside>
-💡 R2(config-if)# ip ospf priority <priority number>
-
-</aside>
+> **Note:** R2(config-if)# ip ospf priority <priority number>
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cd98b06f-3730-4b2d-8dfe-a6387fdb66a1)
 
-<aside>
-💡 IF an OSPF PRIORITY is set to “0”, the ROUTER CANNOT be the DR / BDR for the SUBNET!
-
-</aside>
+> **Note:** IF an OSPF PRIORITY is set to “0”, the ROUTER CANNOT be the DR / BDR for the SUBNET!
 
 The DR / DBR ELECTION is “non-preemptive”.
 
@@ -86,10 +74,7 @@ Once the DR / DBR are selected, they will keep their role until OSPF is:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/82eb1f11-4aed-456b-b2b1-1679cae06743)
 
-<aside>
-💡 In the BROADCAST NETWORK TYPE, ROUTERS will only form a FULL OSPF ADJACENCY with the DR and the BDR of the SEGMENT!
-
-</aside>
+> **Note:** In the BROADCAST NETWORK TYPE, ROUTERS will only form a FULL OSPF ADJACENCY with the DR and the BDR of the SEGMENT!
 
 Therefore, ROUTERS only exchange LSAs with the DR and BDR.
 
@@ -97,10 +82,7 @@ DROthers will NOT exchange LSAs with each other.
 
 ALL ROUTERS will still have the same LSDB but THIS reduces the amount of LSAs flooding the NETWORK
 
-<aside>
-💡 MESSAGES to the DR / BDR are MULTICAST to 224.0.0.6
-
-</aside>
+> **Note:** MESSAGES to the DR / BDR are MULTICAST to 224.0.0.6
 
 The DR and BDR will form a FULL ADJACENCY with ALL ROUTERS in the SUBNET
 
@@ -110,7 +92,7 @@ DROthers will form a FULL ADJACENCY ONLY with the DR / BDR !
 
 ---
 
-OSPF POINT-TO-POINT NETWORK TYPE
+## OSPF Point-to-Point Network Type
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/51d7d486-a810-4a69-8be2-804f667fca03)
 
@@ -123,9 +105,9 @@ OSPF POINT-TO-POINT NETWORK TYPE
 
 ---
 
-(ASIDE)
+## (Aside)
 
-SERIAL INTERFACES
+## Serial Interfaces
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/02f6f3a8-dcbb-46cd-bb2e-47ceb84d10cc)
 
@@ -147,29 +129,28 @@ R1 and R2 sharing the SAME Encapsulation Type
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6f934097-30fb-4605-935d-08a29e53a476)
 
-
-SERIAL INTERFACES SUMMARY
+## Serial Interfaces Summary
 
 - The DEFAULT encapsulation is HDLC
-- You can configure PPP encapsulation with this command:
+- **You Can Configure Ppp Encapsulation With This Command:**
     
     <aside>
-    💡 R1(config-if)# **encapsulation ppp**
+> **Note:** R1(config-if)# **encapsulation ppp**
     
     </aside>
     
 - One side is DCE, other side is DTE
-- Identify which side is DCE / DTE :
+- **Identify Which Side Is Dce / Dte :**
     
     <aside>
-    💡 R1# **show controllers** *interface-id*
+> **Note:** R1# **show controllers** *interface-id*
     
     </aside>
     
-- You must configure the CLOCK RATE on the DCE side:
+- **You Must Configure The Clock Rate On The Dce Side:**
     
     <aside>
-    💡 R1(config-if)# clock rate *bits-per-second*
+> **Note:** R1(config-if)# clock rate *bits-per-second*
     
     </aside>
     
@@ -180,12 +161,9 @@ SERIAL INTERFACES SUMMARY
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/232c8658-d129-49f4-9a37-76139ebe857e)
 
-- You can configure the OSPF NETWORK TYPE on an INTERFACE with :
+- **You Can Configure The OSPF Network Type On an Interface With :**
 
-<aside>
-💡 R1(config-if)# ip ospf network <network type>
-
-</aside>
+> **Note:** R1(config-if)# ip ospf network <network type>
 
 For example, if TWO ROUTES are directly connected with an ETHERNET link, there is no need for a DR / DBR. You can configure the POINT-TO-POINT NETWORK type in this case
 
@@ -193,16 +171,13 @@ NOTE: Not all NETWORK TYPES work on ALL LINK TYPES (for example, a serial link c
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8688e7ef-d166-4433-9f65-b918917f385f)
 
-<aside>
-💡 NON-BROADCAST NETWORK type Default Timers : Hello 30, Dead 120
-
-</aside>
+> **Note:** NON-BROADCAST NETWORK type Default Timers : Hello 30, Dead 120
 
 ---
 
-OSPF NEIGHBOUR / ADJACENCY REQUIREMENTS
+## OSPF Neighbour / Adjacency Requirements
 
-1) AREA NUMBER MUST MATCH
+### **1) Area Number Must Match**
 
 2) INTERFACES must be in the SAME SUBNET
 
@@ -220,7 +195,7 @@ OSPF NEIGHBOUR / ADJACENCY REQUIREMENTS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/06cab926-a458-4978-b754-b2253ee74762)
 
-*** SPECIAL REQUIREMENTS *** 
+## *** Special Requirements *** 
 
 7) IP MTU settings must MATCH
 
@@ -233,15 +208,15 @@ OSPF NEIGHBOUR / ADJACENCY REQUIREMENTS
 
 ---
 
-OSPF LSA TYPES
+## OSPF Lsa Types
 
 - The OSPF LSDB is made up of LSAs
-- There are 11 types of LSA but there are only 3 you should be aware of for the CCNA:
+- **There Are 11 Types of Lsa But There Are Only 3 You Should Be Aware of for The CCNA:**
     - Type 1 (Router LSA)
     - Type 2 (Network LSA)
     - Type 5 (AS External LSA)
 
-TYPE 1 (Router LSA)
+## Type 1 (Router Lsa)
 
 - Every OSPF ROUTER generates this type of LSA
 - It identifies the ROUTER using it’s ROUTER ID

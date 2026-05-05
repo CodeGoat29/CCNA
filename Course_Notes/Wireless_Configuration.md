@@ -1,6 +1,6 @@
-# 58. WIRELESS CONFIGURATION
+# 58. Wireless Configuration
 
-TOPOLOGY INTRODUCTION
+## Topology Introduction
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1e8ed6b8-1183-42e7-9584-d5504c52987a)
 
@@ -14,7 +14,7 @@ REACHING External GUEST PC  via DEFAULT GATEWAY + Internal and External CAPWAP t
 
 ---
 
-LAYER 3 SWITCH CONFIGURATION (SW1)
+## Layer 3 Switch Configuration (Sw1)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/eae43f12-aa95-41a3-8a5d-26ffc5e83262)
 
@@ -24,7 +24,7 @@ Note DHCP “Option 43”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ade4dc29-3017-4d79-99d2-d895968bf741)
 
-WLC SETUP
+## WLC Setup
 
 This helps set up the WLC to allow GUI configuration
 
@@ -40,7 +40,7 @@ Why Jeremy chose FRANCE for Country Code (has to do with regulatory domain of eq
 
 ---
 
-ACCESSING THE WLC GUI
+## Accessing The WLC Gui
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a5b44611-af07-4bf6-94b3-957ee342bb24)
 
@@ -54,33 +54,33 @@ ACCESSING THE WLC GUI
 
 ---
 
-WLC CONFIGURATION
+## WLC Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fbc3b9fd-c0db-48f3-9ce8-270812e00008)
 
-WLC PORTS
+## WLC Ports
 
 - WLC PORTS are the PHYSICAL PORTS that cables connect to
 - WLC INTERFACES are the logical interfaces within the WLC (ie: SVIs on a SWITCH)
-- WLCs have a few different PORTS:
-    - SERVICE PORT
+- **Wlcs Have a Few Different Ports:**
+- Service Port
         - A dedicated MANAGEMENT PORT
         - Used for OUT-OF-BAND management
         - Must connected to a SWITCH ACCESS PORT because it only supports one VLAN
         - This PORT can be used to connect to the DEVICE while it is booting, performing system recovery, etc.
-    - DISTRIBUTION SYSTEM PORT
+- Distribution System Port
         - These are the standard NETWORK PORTS that connect to the “DISTRIBUTION SYSTEM” (WIRED NETWORK) and are used for DATA traffic.
         - These PORTS usually connect to SWITCH TRUNK PORTS, and if multiple distribution PORTS are used they can form a LAG
-    - CONSOLE PORT
+- Console Port
         - This is a standard CONSOLE PORT, either RJ45 or USB
-    - REDUNDANCY PORT
+- Redundancy Port
         - This PORT is used to connect to another WLC to form a HIGH AVAILABILITY (HA) pair
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cec94d93-d58b-43b1-8e5e-f4c07ee430fd)
 
 ---
 
-WLC INTERFACES
+## WLC Interfaces
 
 - MANAGEMENT INTERFACES
     - Used for management traffic such as TELNET, SSH, HTTP, HTTPS, RADIUS authentication, NTP, SYSLOG, etc.
@@ -97,14 +97,14 @@ WLC INTERFACES
 
 - DYNAMIC INTERFACE
     - These are the INTERFACES used to map a WLAN to a VLAN
-    - For example :
+    - **for Example :**
         - TRAFFIC from the “INTERNAL” WLAN will be sent to the WIRED NETWORK from the WLCs “INTERNAL” DYNAMIC INTERFACE
 
 ---
 
-WLAN CONFIGURATION
+## Wlan Configuration
 
-Click “NEW”
+## Click “New”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b20dbb39-fac6-4cf3-926b-869e75c04e15)
 
@@ -163,7 +163,7 @@ Change the PSK FORMAT to “ASCII” and enter a PASSWORD (at least 8 chars in l
 
 ---
 
-QoS
+## QoS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/957336a3-d81c-4914-b35f-99925a316ad3)
 
@@ -171,7 +171,7 @@ Default QoS setting is “SILVER” (Best Effort). This can be changed depending
 
 ---
 
-ADVANCED SETTINGS
+## Advanced Settings
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ed70b1b9-b0b6-4b37-b4a5-4492a0cb9120)
 
@@ -179,7 +179,7 @@ ADVANCED SETTINGS
 
 ---
 
-CONFIGURING A NEW WLAN (GUEST)
+## Configuring a New Wlan (Guest)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4782e82e-4545-458e-917c-42d40e08748d)
 
@@ -204,7 +204,7 @@ To SEE a list of the CLIENTS connected, click the left-hand side “CLIENTS” t
 
 ---
 
-ADDTIONAL WLC FEATURES
+## Addtional WLC Features
 
 WIRELESS tab showing a list of the APs currently in the NETWORK
 

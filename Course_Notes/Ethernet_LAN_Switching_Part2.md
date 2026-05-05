@@ -1,11 +1,10 @@
-# 6. ETHERNET LAN SWITCHING : PART 2
+# 6. Ethernet LAN Switching : Part 2
 
 An ETHERNET FRAME looks like:
 
 Ethernet Header --- DATA (Packet) --- Ethernet Trailer
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/27c1877f-57d7-44ea-8c64-b0ec2b308ad0)
-
 
 The Ethernet Header contains 5 Fields:
 
@@ -38,10 +37,9 @@ When a PC wants to send a packet to a destination, with a known IP address but a
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e2d0e5d2-7c98-4671-b356-903132fd7525)
 
-
 - ARP stands for 'Address Resolution Protocol'.
 - It is used to discover the Layer 2 address (MAC address) of a known Layer 3 address (IP address)
-- Consists of two messages:
+- **Consists of Two Messages:**
     - ARP REQUEST (Source message)
     - ARP REPLY (Destination message)
 - ARP REQUEST is BROADCAST = sent to all hosts on network, except the one it received the request from.
@@ -64,18 +62,17 @@ ARP REPLY is a known UNICAST frame = Sent only to the host that sent the ARP REQ
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/914cdf2a-c631-47e5-80f9-46e32ebed311)
 
-
 ---
 
-PING
+## Ping
 
 - A network utility that is used to test reachability
 - Measures round-trip time
-- Uses two messages:
+- **Uses Two Messages:**
     - ICMP Echo REQUEST
     - ICMP Echo REPLY
 - Is UNICAST
-- Command to use ping:
+- **Command to Use Ping:**
     - ping <ip-address>
 
 By Default, a CISCO IOS sends 5 ICMP requests/replies
@@ -92,13 +89,11 @@ PC1# show arp // shows hosts ARP table
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/da199d21-4f41-485e-8917-ca8e3d789617)
 
-
 ---
 
 SW1#show mac address-table // show the switches MAC table
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c1cd95dd-7742-4703-9487-946652c95485)
-
 
 Will show:
 
@@ -109,7 +104,6 @@ Vlan --- MAC Address --- Type --- Ports(interfaces)
 ---
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/657b054b-a90c-4e5f-8544-2a51082cb631)
-
 
 SW1# clear mac address-table dynamic <optional MAC address>
 

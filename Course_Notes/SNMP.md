@@ -1,6 +1,6 @@
 # 40. SNMP (Simple Network Management Protocol)
 
-SNMP OVERVIEW
+## SNMP Overview
 
 - SNMP is an INDUSTRY-STANDARD FRAMEWORK and PROTOCOL that was originally released in 1988
 
@@ -14,37 +14,37 @@ RFC 1067 - A simple network management protocol
 
 - Don’t let the ‘Simple’ in the name fool you !
 - SNMP can be used to monitor the STATUS of DEVICES, make CONFIGURATION CHANGES, etc.
-- There are TWO MAIN TYPES of DEVICES in SNMP:
-    - MANAGED DEVICES
+- **There Are Two Main Types of Devices in SNMP:**
+- Managed Devices
         - These are the DEVICES being managed using SNMP
             - Ex: ROUTERS, SWITCHES
-    - NETWORK MANAGEMENT STATION (NMS)
+- Network Management Station (Nms)
         - The DEVICE / DEVICES managing the MANAGED DEVICES
         - THIS is the SNMP ‘SERVER’
 
 ---
 
-SMNP OPERATIONS
+## Smnp Operations
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bfa13793-5bc7-4344-8592-f38ef3a64784)
 
 ---
 
-SMNP COMPONENTS
+## Smnp Components
 
-OVERVIEW
+## Overview
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/632a83c5-27c8-4adc-8b08-079030c5f52c)
 
-NMS
+## Nms
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/aa59534d-01d5-404c-bdf6-e0fd92cf9d98)
 
-MANAGED DEVICES
+## Managed Devices
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/656e27b1-86a4-42c7-a1a1-94309aa19610)
 
-SNMP OIDs
+## SNMP Oids
 
 - SNMP Object IDs are ORGANIZED in a HIERARCHICAL STRUCTURE
 
@@ -52,7 +52,7 @@ SNMP OIDs
 
 ---
 
-SNMP VERSIONS
+## SNMP Versions
 
 - Many versions of SNMP have been proposed/developed, however, only three major versions have achieved wide-spread use:
 
@@ -65,30 +65,28 @@ SNMP VERSIONS
     - A much more SECURE version of SNMP that supports STRONG ENCRYPTION and AUTHENTICATION.
         
         <aside>
-        💡 WHENEVER POSSIBLE, this version should be used!
+> **Note:** WHENEVER POSSIBLE, this version should be used!
         
         </aside>
         
 
 ---
 
-SNMP MESSAGES
+## SNMP Messages
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/25b15c81-931a-41a6-8033-dff07bfb5f15)
 
-1) SNMP READ
+### **1) SNMP Read**
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e7d671f6-f2b0-468a-95a2-6678a52945c4)
 
-2) SMNP WRITE
+### **2) Smnp Write**
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d8679ff7-5103-4e01-8f2e-25bb1bd25734)
 
-
-3) SNMP NOTIFICATION
+### **3) SNMP Notification**
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fe9266fc-12b8-41d3-8d8f-95f3f7b52ef6)
-
 
 SNMP AGENT listens for MESSAGES on UDP Port 161
 
@@ -102,11 +100,11 @@ SNMPv2c CONFIGURATION (Basic)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/caf4624e-9ca2-4c8e-82fe-53db2499a38f)
 
-WHAT HAPPENS WITH R1’s G0/1 INTERFACE GOES DOWN?
+## What Happens With R1’S G0/1 Interface Goes Down?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/96341ab3-1ed3-4dd4-903c-fa57ab1f83be)
 
-NOTE:
+### **Note**
 
 UDP message sent to Destination Port 162 (SNMP Manager)
 
@@ -120,7 +118,7 @@ variable-bindings : contains the OID sent to identify the issue.
 
 ---
 
-SNMP SUMMARY
+## SNMP Summary
 
 - SNMP helps MANAGE DEVICES over a NETWORK
 - MANAGED DEVICES are the devices being managed using SNMP (such as ROUTERS, SWITCHES, FIREWALLS)
@@ -134,7 +132,7 @@ SNMP SUMMARY
 Main SNMP versions : SNMPv1, SNMPv2c, SNMPv3
 
 ```
-SNMP MESSAGES : 
+## SNMP Messages : 
 * Get / GetNext / GetBulk
 * Set
 * Trap

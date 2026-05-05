@@ -1,26 +1,26 @@
-# 54. VIRTUALIZATION AND CLOUD: PART 1
+# 54. Virtualization and Cloud: Part 1
 
-VIRTUAL SERVERS
+## Virtual Servers
 
 - Although Cisco is more known for their networking DEVICES (ROUTERS, SWITCHES, FIREWALLS), they also offer HARDWARE SERVERS such as UCS (Unified Computing System)
 - The largest vendors of HARDWARE SERVERS include Dell, EMC, HPE, and IBM
 
 ---
 
-SERVERS BEFORE VIRTUALIZATION
+## Servers Before Virtualization
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/365cde17-88c6-4149-91f2-d67c79590aec)
 
 - Before VIRTUALIZATION, there was a one-to-one relationship between a PHYSICAL SERVER and OPERATION SYSTEM
 - In that OPERATING SYSTEM, apps providing SERVICES (such as a WEB SERVER, EMAIL SERVER, etc) would run
 - One PHYSICAL SERVER would be used for the WEB SERVER, one for the EMAIL SERVER, one for the DATABASE SERVER, etc.
-- This is inefficient for multiple reasons:
+- **This Is Inefficient for Multiple Reasons:**
     - Each PHYSICAL SERVER is expensive and takes up space, power, etc.
     - The RESOURCES on each PHYSICAL SERVER (CPU, RAM, STORAGE, NIC) are typically under-utilized
 
 ---
 
-VIRTUALIZATION (TYPE 1 HYPERVISOR)
+## Virtualization (Type 1 Hypervisor)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/62a40737-7451-4b38-a5bd-abd9367cbd40)
 
@@ -36,7 +36,7 @@ VIRTUALIZATION (TYPE 1 HYPERVISOR)
 
 ---
 
-VIRTUALIZATION (TYPE 2 HYPERVISOR)
+## Virtualization (Type 2 Hypervisor)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/25a29935-a56d-4ffe-b9e4-15c5c50bca46)
 
@@ -49,27 +49,27 @@ VIRTUALIZATION (TYPE 2 HYPERVISOR)
 
 ---
 
-WHY VIRTUALIZATION?
+## Why Virtualization?
 
-- PARTITIONING :
+- **Partitioning :**
     - Run multiple OS’s on ONE PHYSICAL MACHINE
     - Divide system resources between VIRTUAL MACHINES
     
-- ISOLATION :
+- **Isolation :**
     - Provide FAULT and SECURITY ISOLATION at the hardware level
     - Preserve performance with advanced resource controls
-- ENCAPSULATION :
+- **Encapsulation :**
     - Save the entire state of a virtual machine to files
     - Move and copy virtual machines as easily as moving and copying files
 
-- HARDWARE INDEPENDENCE :
+- **Hardware Independence :**
     - Provision or migrate any virtual machine to any physical server
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f0f5f886-7924-46fc-addf-6916f0d2b2c9)
 
 ---
 
-VIRTUAL NETWORKS
+## Virtual Networks
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7bf3f22c-a7b8-41bf-bc1e-8c128a41f20f)
 
@@ -79,15 +79,15 @@ VIRTUAL NETWORKS
 
 ---
 
-INTRO TO CLOUD COMPUTING
+## Intro to Cloud Computing
 
-- Traditional IT infrastructure deployments were some combination of the following:
-    - ON-PREMISES
+- **Traditional It Infrastructure Deployments Were Some Combination of The Following:**
+- On-Premises
         - All SERVERS, NETWORK DEVICES, and other infrastructure are located on company property
         - All equipment is purchased and owned by the company using it
         - The company is responsible for the necessary space, power, and cooling
     
-    - CO-LOCATION
+- Co-Location
         - Data centers that rent out space for customers to put their infrastructure (SERVERS, NETWORK DEVICES)
         - The data center provides the space, electricity, and cooling
         - The SERVERS, NETWORK DEVICES, etc are still the responsibility of the end customer, although they are not located on the customer’s premises
@@ -97,20 +97,20 @@ INTRO TO CLOUD COMPUTING
 
 ---
 
-CLOUD SERVICES
+## Cloud Services
 
 - The American NIST (National Institute of Standards and Technology) defined cloud computing in SP (Special Publication) 800-145
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/746a4f38-01b9-49cf-8dd9-5522b4cabf7b)
 
 - To understand what the CLOUD is, let’s look at the following outlined in SP 800-145:
-    - FIVE ESSENTIAL CHARACTERISTICS
-    - THREE SERVICE MODELS
-    - FOUR DEPLOYMENT MODELS
+- Five Essential Characteristics
+- Three Service Models
+- Four Deployment Models
 
 ---
 
-THE FIVE ESSENTIAL CHARACTERISTICS OF CLOUD
+## The Five Essential Characteristics of Cloud
 
 - ON-DEMAND SELF-SERVICE
     - The CUSTOMER is able to use the SERVICE (or stop the SERVICE) freely (via a web portal) without direct communication to the SERVICE PROVIDER
@@ -126,14 +126,14 @@ THE FIVE ESSENTIAL CHARACTERISTICS OF CLOUD
 
 ---
 
-THE THREE SERVICE MODELS OF THE CLOUD
+## The Three Service Models of The Cloud
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a3f0e08a-3207-4a69-aa81-d4142d6735a3)
 
 - In CLOUD COMPUTING, everything is provided on a “SERVICE” model
 - For example: rather than the END USER buying a PHYSICAL SERVER, mounting it on a rack, installing the hypervisor, creating the VM, etc. the SERVICE PROVIDER offers all of this as a SERVICE
 - There are a variety of SERVICES referred to as “___________ as a SERVICE” or “__aaS”
-- The THREE SERVICE MODELS of CLOUD COMPUTING are:
+- **The Three Service Models of Cloud Computing Are:**
     
     SOFTWARE as a SERVICE (SaaS) - Example : MS Office 365
     
@@ -150,11 +150,11 @@ THE THREE SERVICE MODELS OF THE CLOUD
 
 ---
 
-DEPLOYMENT MODELS
+## Deployment Models
 
 - Most people assume that “CLOUD” means PUBLIC CLOUD PROVIDERS like AWS, AZURE, and GCP
 - Although “PUBLIC CLOUD” is the most common deployment model, it’s not the ONLY one
-- The FOUR DEPLOYMENT MODELS of CLOUD COMPUTING are:
+- **The Four Deployment Models of Cloud Computing Are:**
 
 - PRIVATE CLOUD
 
@@ -179,9 +179,9 @@ DEPLOYMENT MODELS
 ![image](https://github.com/psaumur/CCNA/assets/106411237/94e9c895-9538-4664-93db-085f013ee9fb)
 
 - The most common CLOUD deployment
-- Popular PUBLIC CLOUD service providers include:
-    - AWS
-    - MS AZURE
+- **Popular Public Cloud Service Providers Include:**
+- Aws
+- Ms Azure
     - GCP (Google Cloud Platform)
     - OCI (Oracle Cloud Infrastructure)
     - IBM Cloud
@@ -196,7 +196,7 @@ DEPLOYMENT MODELS
 
 ---
 
-BENEFITS OF CLOUD COMPUTING
+## Benefits of Cloud Computing
 
 - COST
     - CapEx (Capital Expense) of buying HARDWARE and SOFTWARE, setting up DATA CENTERS, etc. are reduced or eliminated
@@ -213,6 +213,6 @@ BENEFITS OF CLOUD COMPUTING
 
 ---
 
-CONNECTION TO PUBLIC CLOUDS
+## Connection to Public Clouds
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/671747bb-6908-47bb-b9c8-47f2df82c821)

@@ -1,12 +1,12 @@
-# 35. EXTENDED ACCESS CONTROL LISTS (EACL)
+# 35. Extended Access Control Lists (Eacl)
 
-ANOTHER WAY TO CONFIGURE NUMBERED ACLs
+## Another Way to Configure Numbered Acls
 
 - In DAY 34, you learned that numbered ACLs are configured in Global Config mode:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d5bbb9d7-5499-43e0-9ac8-b173e5bb5c50)
 
-- You learned that named ACLs are configured with subcommands in a separate config mode:
+- **You Learned That Named Acls Are Configured With Subcommands in a Separate Config Mode:**
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/73104e31-0630-4b2a-a328-29adc5ceb418)
 
@@ -18,7 +18,7 @@ ANOTHER WAY TO CONFIGURE NUMBERED ACLs
 
 ---
 
-ADVANTAGES OF NAMED ACL CONFIG MODE
+## Advantages of Named Acl Config Mode
 
 - You can easily DELETE individual entries in the ACL with NO *entry-number*
 - You can easily DELETE individual entries in the ACL with NO *sequence-number*
@@ -35,7 +35,7 @@ This doesn’t work with NUMBERED access lists
 
 ---
 
-RESEQUENCING ACLs
+## Resequencing Acls
 
 - There is a *resequencing* function that helps edit ACLs
 - The command is  `R1(config)#ip access-list resequence *acl-id starting-seq-num increment*`
@@ -44,42 +44,33 @@ RESEQUENCING ACLs
 
 ---
 
-EXTENDED NUMBERS AND NAMED ACLs
+## Extended Numbers and Named Acls
 
 - EXTENDED ACLs function mostly the same as STANDARD ACLs
 - They can be NUMBERED or NAMED, just like STANDARD ACLs
     - NUMBERED ACLs use the following ranges: **100 - 199, 2000 - 2699**
 - Processed from TOP to BOTTOM, just like STANDARD ACLs
 - However, they can match traffic based on MORE PARAMETERS, so they are more PRECISE (and more complex) than STANDARD ACLs
-- We will focus on matching based on these main parameters:
+- **We Will Focus On Matching Based On These Main Parameters:**
     - **LAYER 4 protocol / port**
     - **Source Address**
     - D**estination Address**
 
 ---
 
-EXTENDED NUMBERED ACL
+## Extended Numbered Acl
 
-<aside>
-💡 `R1(config)# access-list *number* [permit | deny] *protocol src-ip dest-ip*`
+> **Note:** `R1(config)# access-list *number* [permit | deny] *protocol src-ip dest-ip*`
 
-</aside>
+## Extended Named Acl
 
-EXTENDED NAMED ACL
+> **Note:** `R1(config)# ip access-list extended {name | number}`
 
-<aside>
-💡 `R1(config)# ip access-list extended {name | number}`
-
-</aside>
-
-<aside>
-💡 `R1(config-ext-nacl)# {seq-num} {permit | deny} *protocol src-ip dest-ip*`
-
-</aside>
+> **Note:** `R1(config-ext-nacl)# {seq-num} {permit | deny} *protocol src-ip dest-ip*`
 
 ---
 
-MATCHING THE PROTOCOL
+## Matching The Protocol
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f6337620-5eb1-4ddc-837c-ae242a718f29)
 
@@ -87,24 +78,21 @@ IP Protocol Number is the number used in the IPv4 Header Protocol field
 
 Examples: (1) ICMP, (6) TCP, (17) UDP, (88) EIGRP, (89) OSPF
 
-MATCHING THE SOURCE / DESTINATION IP ADDRESS
+## Matching The Source / Destination IP Address
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bbb38418-3276-485b-ba6b-5c4c7097d56f)
 
 This command:
 
-<aside>
-💡 `R1(config-ext-nacl)#deny tcp any 10.0.0.0 0.0.0.255`
-
-</aside>
+> **Note:** `R1(config-ext-nacl)#deny tcp any 10.0.0.0 0.0.0.255`
 
 Deny ALL PACKETS that encapsulate a TCP segment from ANY source to DESTINATION 10.0.0.0/24
 
 ---
 
-PRACTICE QUESTIONS:
+### **Practice Questions**
 
-1) ALLOW ALL TRAFFIC
+### **1) Allow All Traffic**
 
 `R1(config-ext-nacl)# permit ip any any` (ip is used for “all protocols”)
 
@@ -116,7 +104,7 @@ PRACTICE QUESTIONS:
 
 `R1(config-ext-nacl)# deny icmp host 172.16.1.1 192.168.0.0 0.0.0.255`
 
-MATCHING THE TCP /  UDP PORT NUMBERS
+## Matching The TCP /  UDP Port Numbers
 
 - When matching TCP / UDP, you can optionally specify the SOURCE and/or DESTINATION PORT NUMBERS to match
 
@@ -140,7 +128,7 @@ You can use either the PORT NUMBER or the specific TYPE (that has a KNOWN PORT N
 
 ---
 
-PRACTICE QUESTIONS 2:
+### **Practice Questions 2**
 
 1) ALLOW TRAFFIC from 10.0.0.0/16 to access the server at 2.2.2.2/32 using HTTPS
 
@@ -154,13 +142,13 @@ PRACTICE QUESTIONS 2:
 
 `R1(config-ext-nacl)# permit tcp 172.16.1.0 0.0.0.255 gt 9999 host 4.4.4.4 neq 23`
 
-EXAMPLE NETWORK
+## Example Network
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ddb40c27-b195-49fe-a12a-49e078166e30)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/692f4a58-13d3-4c0a-8513-3dc76b014b65)
 
-REQUIREMENTS:
+### **Requirements**
 
 - Hosts in 192.168.1.0/24 can’t use HTTPS to access SRV1
 - Hosts in 192.168.2.0/24 can’t access 10.0.2.0/24
@@ -209,6 +197,6 @@ What the EXTENDED ACLs look like
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cda064f2-b1ce-45ee-a660-04cdceb3514b)
 
-HOW TO SEE WHICH EXTENDED ACL’s ARE APPLIED TO AN INTERFACE
+## How to See Which Extended Acl’S Are Applied to an Interface
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f596bca6-c06a-445e-84a3-8f8eb0c6baaf)

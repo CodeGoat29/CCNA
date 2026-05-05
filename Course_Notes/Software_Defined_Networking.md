@@ -1,6 +1,6 @@
-# 62. SOFTWARE DEFINED NETWORKING (SDN)
+# 62. Software Defined Networking (Sdn)
 
-SD REVIEW
+## Sd Review
 
 - SOFTWARE DEFINED NETWORKING (SDN) is an approach to networking that centralizes the control plane into an application called a *controller*
 - Traditional control planes use a distributed architecture
@@ -9,13 +9,13 @@ SD REVIEW
 - The SBI (South Bound Interface) is used for communications between the controller and the network device it controls
 - The NBI (North Bound Interface) is what allows us to interact with the controller with our scripts and applications
 
-SDN ARCHITECTURE
+## Sdn Architecture
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9d7e1a89-3537-48cc-a410-cef352b6a2cb)
 
 ---
 
-CISCO SD-ACCESS
+## Cisco Sd-Access
 
 - Cisco SD-ACCESS is Cisco’s SDN solution for automating campus LANs
     - ACI (Application Centric Infrastructure) is their SDN solution for automating data center networks
@@ -39,10 +39,10 @@ CISCO SD-ACCESS
 
 ---
 
-SD-ACCESS UNDERLAY
+## Sd-Access Underlay
 
 - The UNDERLAY’s purpose is to support the VXLAN tunnels of the OVERLAY
-- There are THREE different ROLES for switches in SD-ACCESS:
+- **There Are Three Different Roles for Switches in Sd-Access:**
     - EDGE NODES : Connect to End HOSTS
     - BORDER NODES : Connect to devices outside of the SD-ACCESS Domain ; ie: WAN routers
     - CONTROL NODES : Uses LISP (Locator ID Separation Protocol) to perform various control plane functions
@@ -62,7 +62,7 @@ SD-ACCESS UNDERLAY
 
 ---
 
-SD-ACCESS OVERLAY
+## Sd-Access Overlay
 
 - LISP (Locator ID Separation Protocol) provides the control plane of SD-ACCESS
     - A list of mappings of EIDs (endpoint identifiers) to RLOCs (routing locators) is kept
@@ -82,9 +82,9 @@ SD-ACCESS OVERLAY
 
 ---
 
-CISCO DNA CENTER
+## Cisco Dna Center
 
-- Cisco DNA Center has TWO MAIN ROLES:
+- **Cisco Dna Center Has Two Main Roles:**
     - The SDN Controller in SD-ACCESS
     - A network manager in a traditional network (non-SD-ACCESS)
 - DNA Center is an application installed on Cisco UCS server hardware
@@ -98,7 +98,7 @@ CISCO DNA CENTER
     - The intent of entries is forgotten with time and as engineers leave and new engineers take over
 
 - DNA Center allows the engineer to specify the intent of the policy
-    - Examples :
+    - **Examples :**
         - THIS group of users can’t communicate with THAT group
         - THIS group can access THIS server but not THAT server
     - DNA CENTER will take care of the exact details of implementing this policy
@@ -111,7 +111,7 @@ CISCO DNA CENTER
 
 ---
 
-DNA CENTER NETWORK MANAGEMENT VS. TRADITIONAL
+## Dna Center Network Management Vs. Traditional
 
 Traditional Management :
 

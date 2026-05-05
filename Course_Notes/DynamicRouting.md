@@ -1,6 +1,6 @@
-# 24. DYNAMIC ROUTING
+# 24. Dynamic Routing
 
-WHAT IS DYNAMIC ROUTING?
+## What Is Dynamic Routing?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8acc17ee-5d4b-4725-b5e4-18dc5743340e)
 
@@ -10,12 +10,11 @@ WHAT IS DYNAMIC ROUTING?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/deb9abf6-6e21-4c94-a407-bfc501a1d739)
 
-
-💡 A NETWORK ROUTE :  A ROUTE to a NETWORK or SUBNET (Mask Length < /32)
+> **Note:** A NETWORK ROUTE :  A ROUTE to a NETWORK or SUBNET (Mask Length < /32)
 
 Ex: **10.0.12.0/30** and **10.0.13.0/30** (above) are NETWORK ROUTES
 
-💡 A HOST ROUTE : A ROUTE to a specific HOST (/32 Mask)
+> **Note:** A HOST ROUTE : A ROUTE to a specific HOST (/32 Mask)
 
 Ex: **10.0.12.1/32** and **10.0.13.1/32** (above) are HOST ROUTES
 
@@ -23,7 +22,7 @@ These two ROUTES were AUTOMATICALLY added to R1’s G0/0 and G1/0s INTERFACES
 
 ---
 
-HOW DYNAMIC ROUTING WORKS ?
+## How Dynamic Routing Works ?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9d2d7f88-a325-461f-99fd-0dc88ee23749)
 
@@ -57,7 +56,7 @@ Because of COST !  This is similar to how SPANNING-TREE works (with SWITCHES)
 
 ---
 
-INTRODUCTION TO DYNAMIC ROUTING PROTOCOLS
+## Introduction to Dynamic Routing Protocols
 
 - ROUTERS can use DYNAMIC ROUTING PROTOCOLS to ADVERTISE information about the ROUTES they know to OTHER ROUTES
 - They form ‘ADJACENCIES’ / ‘NEIGHBOR RELATIONSHIPS’ / ‘NEIGHBORSHIPS’ with ADJACENT ROUTERS to exchange this information
@@ -65,20 +64,20 @@ INTRODUCTION TO DYNAMIC ROUTING PROTOCOLS
 
 ---
 
-TYPES OF DYNAMIC ROUTING PROTOCOLS
+## Types of Dynamic Routing Protocols
 
 DYNAMIC ROUTING PROTOCOLS can be divided into TWO main categories:
 
 - IGP (Interior Gateway Protocol)
 - EGP (Exterior Gateway Protocol)
 
-IGP
+## Igp
 
 - Used to SHARE ROUTES within a single *autonomous system* (AS), which is a single organization (ie: a company)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/06af6c77-3a03-44fa-8c55-9382347d3f5e)
 
-EGP
+## Egp
 
 - Used to SHARE ROUTES *between* different *autonomous systems (AS)*
 
@@ -88,17 +87,17 @@ Algorithms used for IGP and EGP and the PROTOCOL for each
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/36729569-0e56-4eb2-91ee-e7cd25a8c234)
 
-💡 YOU MUST MEMORIZE WHICH ALGORITHM IS USED FOR EACH PROTOCOL FOR THE CCNA!
+> **Note:** YOU MUST MEMORIZE WHICH ALGORITHM IS USED FOR EACH PROTOCOL FOR THE CCNA!
 
 ---
 
-DISTANCE VECTOR ROUTING PROTOCOLS
+## Distance Vector Routing Protocols
 
 - Called DISTANCE VECTOR because the ROUTERS only learn the ‘distance’ (METRIC) and ‘vector’ (DIRECTION, NEXT-HOP ROUTER) of each ROUTE
 
 - DISTANCE VECTOR PROTOCOLS were invented before LINK STATE PROTOCOLS
 - Early examples are RIPv1 and Cisco’s IGRP (which was updated to EIGRP)
-- DISTANCES VECTOR PROTOCOLS operate by sending the following to their directly connection neighbors:
+- **Distances Vector Protocols Operate By Sending The Following to Their Directly Connection Neighbors:**
     - Their KNOWN DESTINATION networks
     - Their METRIC to reach their KNOWN DESTINATION networks
 - This METHOD of sharing ROUTE information is often called ***‘routing by rumor’***
@@ -108,7 +107,7 @@ DISTANCE VECTOR ROUTING PROTOCOLS
 
 ---
 
-DYNAMIC ROUTING PROTOCOL METRICS
+## Dynamic Routing Protocol Metrics
 
 - A ROUTER’S ROUTE TABLE contains the BEST ROUTE to each DESTINATION NETWORK it knows about
 
@@ -130,9 +129,9 @@ What if BOTH connections were GigabyteEthernet? (ie: the same METRIC value)
 
 BOTH ROUTES are added to the ROUTE TABLE
 
-So …
+## So …
 
-💡 If a ROUTER learns TWO (or more) ROUTES via the same ****ROUTING PROTOCOL to the same DESTINATION (same network address, same subnet mask) with the same METRIC, both will be added to the routing table. Traffic will be LOAD-BALANCED over both ROUTES
+> **Note:** If a ROUTER learns TWO (or more) ROUTES via the same ****ROUTING PROTOCOL to the same DESTINATION (same network address, same subnet mask) with the same METRIC, both will be added to the routing table. Traffic will be LOAD-BALANCED over both ROUTES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/79662f99-a847-457b-8080-76f77c25c5e6)
 
@@ -143,20 +142,19 @@ So …
 - the “3” part is the METRIC.
 - the “110” part is ADMINISTRATIVE DISTANCE (covered later)
 
-
-💡 Since BOTH ROUTES share the same METRIC, this is called ECMP (EQUAL COST MULTI-PATH)
+> **Note:** Since BOTH ROUTES share the same METRIC, this is called ECMP (EQUAL COST MULTI-PATH)
 
 You can have ECMP with STATIC ROUTES, as well (they don’t use METRIC, however)
 
 ---
 
-SUMMARY OF DIFFERENT METRICS
+## Summary of Different Metrics
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7b8390aa-46d4-49d3-83a4-03ba095bf927)
 
 (IS-IS won’t be covered in detail)
 
-EXAMPLE
+## Example
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d0c6c9f2-3526-46b2-b520-1f4b6b28ea8f)
 
@@ -170,7 +168,7 @@ To let the ROUTER select the BEST ROUTE to the DESTINATION
 
 ---
 
-ADMINISTRATIVE DISTANCE
+## Administrative Distance
 
 - In MOST cases, a company will only use a single IGP - usually OSPF or EIGRP
 - However, in some RARE cases, they might use TWO.
@@ -186,13 +184,13 @@ ADMINISTRATIVE DISTANCE
 
 ---
 
-ADMINISTRATIVE DISTANCE NUMBERS
+## Administrative Distance Numbers
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0f5ea405-d321-41bc-b2c0-2185874d07db)
 
-(USE THE FLASHCARDS TO MEMORIZE THESE)
+## (Use The Flashcards to Memorize These)
 
-💡 IF the ADMINISTRATIVE DISTANCE is 255, the ROUTER does not believe the SOURCE of that ROUTE and does not install the ROUTE in the ROUTING TABLE!
+> **Note:** IF the ADMINISTRATIVE DISTANCE is 255, the ROUTER does not believe the SOURCE of that ROUTE and does not install the ROUTE in the ROUTING TABLE!
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/33dbbe2b-7471-4c17-ae27-4d363d115a4c)
 
@@ -205,15 +203,15 @@ Therefore, the BEST ROUTE is :
 “next hop 192.168.3.1, learned via OSPF (lower AD than RIP), metric 10”
 
 - You can CHANGE the AD of a ROUTING PROTOCOL (This will be demonstrated in the lecture for OSPF CONFIGURATION)
-- You can also change the AD of a STATIC ROUTE:
+- **You Can Also Change The Ad of a Static Route:**
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ec167f95-e5d7-49c8-aff7-1957e51934b1)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/db6bef3b-ed82-49f0-b094-804c82f67f8d)
 
-WHY WOULD YOU WANT TO DO THIS?
+## Why Would You Want to Do This?
 
-FLOATING STATIC ROUTES
+## Floating Static Routes
 
 - By CHANGING the AD of a STATIC ROUTE, you can make it less preferred than ROUTES learned by a DYNAMIC ROUTING PROTOCOL to the same DESTINATION (make sure the AD is HIGHER than the ROUTING PROTOCOL’s AD!)
 - This kind of ROUTE is called a ‘FLOATING STATIC ROUTE’
@@ -222,7 +220,7 @@ FLOATING STATIC ROUTES
 
 ---
 
-LINK STATE ROUTING PROTOCOLS
+## Link State Routing Protocols
 
 - When using a LINK STATE ROUTING PROTOCOL, every ROUTER creates a ‘connectivity map’ of the NETWORK
 - To allow this, each ROUTER ADVERTISES information about its INTERFACES (connected NETWORKS) to its NEIGHBOURS. These ADVERTISEMENTS are passed along to the other ROUTERS, until all ROUTERS in the NETWORK develop the same map of the NETWORK

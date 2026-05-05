@@ -1,6 +1,6 @@
-# 61. REST APIS
+# 61. Rest APIs
 
-API REVIEW
+## API Review
 
 - An API (Application Programming Interface) is a software interface that allows two applications to communicate with each other.
 - APIs are essential not just for network automation but for all kinds of applications
@@ -10,23 +10,23 @@ API REVIEW
 
 ---
 
-CRUD OPERATIONS AND HTTP VERBS
+## Crud Operations and Http Verbs
 
 - CRUD ( CREATE, READ, UPDATE, DELETE) refers to the operations we perform using REST APIs
 
-- CREATE :
+- **Create :**
     - Used to CREATE new variables and set their initial values
         - Example:  create a variable “ip_address” and set the value to “10.1.1.1”
 
-- READ :
+- **Read :**
     - Used to READ the value of a variable
         - Example: Read the value of variable “ip_address” (”10.1.1.1”)
 
-- UPDATE :
+- **Update :**
     - Used to CHANGE / UPDATE the value of a variable
         - Example: Change the value of “ip_address” from “10.1.1.1” to “10.2.3.4”
     
-- DELETE :
+- **Delete :**
     - Used to DELETE variables
         - Example: Delete variable “ip_address”
 
@@ -37,7 +37,7 @@ CRUD OPERATIONS AND HTTP VERBS
 
 ---
 
-HTTP REQUEST :
+### **Http Request **
 
 - When an HTTP client sends a request to an HTTP server, the HTTP header includes information like this:
     - An HTTP Verb (ie: GET)
@@ -66,10 +66,10 @@ Check the list at  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
 
 ---
 
-HTTP RESPONSE :
+### **Http Response **
 
 - The server’s response will include a STATUS CODE indicating if the request succeeded or failed, as well as other details
-- The FIRST digit indicates the class of the response:
+- **The First Digit Indicates The Class of The Response:**
     - 1xx : Informational - request was received, continuing process
     - 2xx : Successful - request was successfully received, understood, and accepted
     - 3xx : Redirection - further action needs to be taken in order to complete the request
@@ -99,13 +99,13 @@ Examples of each HTTP Response class:
 
 ---
 
-REST APIs
+## Rest APIs
 
 - REST stands for Representational State Transfer
 - REST APIs are also know as REST-based APIs or RESTful APIs
     - REST isn’t a specific API. Instead it describes a set of rules about how the API should work
     
-- The SIX constraints of RESTful architecture are:
+- **The Six Constraints of Restful Architecture Are:**
     - Stateless
     - Layered system
     - Uniform Interface
@@ -146,17 +146,17 @@ REST: Cacheable or Non-Cacheable
 
 - REST APIs must support caching of data
 - *Caching* refers to storing data for future use
-    - Example :
+    - **Example :**
         - Your computer might cache many elements of a web page so it doesn’t have to retrieve the entire page every time you visit. This improves performance for the client and reduces load on the server
 - Not all resources have to be cacheable but cacheable resources MUST be declared as cacheable
 
-FOR THE CCNA
+## for The CCNA
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d3747417-a936-498c-99d3-f508d436d451)
 
 ---
 
-REST API CALLS USING CISCO DEVNET
+## Rest API Calls Using Cisco Devnet
 
 - “Cisco DevNet is Cisco’s developer program to help developers and IT professionals who want to write applications and develop integrations with Cisco products, platforms, and API’s”
 
@@ -169,7 +169,7 @@ REST API CALLS USING CISCO DEVNET
     - Postman is a platform for building an using APIs
 ---
 
-TO START:
+### **to Start**
 
 - Make an account on [developer.cisco.com](http://developer.cisco.com) (Used my NetAcademy login)
 - Make an accounts on [postman.com](http://postman.com) and download the desktop app (https://www.postman.com/downloads) - Used my [gmail.com](http://gmail.com) account

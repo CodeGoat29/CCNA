@@ -1,4 +1,4 @@
-# 52. LAN ARCHITECTURES
+# 52. LAN Architectures
 
 - You have studied various NETWORK technologies: ROUTING, SWITCHING, STP, ETHERCHANNEL, OSPF, FHRPs, SWITCH SECURITY FEATURES, etc.
     - Now, let’s look at some BASIC NETWORK DESIGN / ARCHITECTURE
@@ -10,7 +10,7 @@
 
 ---
 
-COMMON TERMINOLOGIES
+## Common Terminologies
 
 - STAR
     - When several DEVICES all connect to ONE CENTRAL DEVICE, we can draw them in a “STAR” shape like below, so this is often called a “STAR TOPOLOGY”
@@ -29,11 +29,11 @@ COMMON TERMINOLOGIES
 
 ---
 
-2-TIER AND 3-TIER LAN ARCHITECTURE
+## 2-Tier and 3-Tier LAN Architecture
 
-- The TWO-TIER LAN DESIGN consists of TWO Hierarchical Layers:
-    - ACCESS LAYER
-    - DISTRIBUTION LAYER
+- **The Two-Tier LAN Design Consists of Two Hierarchical Layers:**
+- Access Layer
+- Distribution Layer
 - Also called a “COLLAPSED CORE” DESIGN because it omits a layer that is found in the THREE TIER DESIGN : THE CORE LAYER
 - ACCESS LAYER
     - The LAYER that END HOSTS connect to (PCs, Printers, Cameras, etc)
@@ -57,7 +57,7 @@ COMMON TERMINOLOGIES
 
 ---
 
-THREE-TIER CAMPUS LAN DESIGN
+## Three-Tier Campus LAN Design
 
 - In large NETWORKS with many DISTRIBUTION LAYER SWITCHES (for example in separate buildings), the number of connections required between DISTRIBUTION LAYER SWITCHES grows rapidly
 
@@ -69,12 +69,12 @@ THREE-TIER CAMPUS LAN DESIGN
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d5c1a677-38ff-425f-b91a-65a8fa37c377)
 
-- The THREE-TIER LAN DESIGN consists of THREE HIERARCHICAL LAYERS:
-    - ACCESS LAYER
-    - DISTRIBUTION LAYER
-    - CORE LAYER
+- **The Three-Tier LAN Design Consists of Three Hierarchical Layers:**
+- Access Layer
+- Distribution Layer
+- Core Layer
 
-- CORE LAYER:
+- **Core Layer:**
     - Connects DISTRIBUTION LAYERS together in large LAN NETWORKS
     - The focus is SPEED (”FAST TRANSPORT”)
     - CPU-INTENSIVE OPERATIONS, such as SECURITY, QoS Markings / Classification, etc. should be avoided at this LAYER
@@ -86,7 +86,7 @@ THREE-TIER CAMPUS LAN DESIGN
 
 ---
 
-SPINE-LEAF ARCHITECTURE (DATA CENTER)
+## Spine-Leaf Architecture (Data Center)
 
 - CISCO ACI ARCHITECTURE (Application Centric Infrastructure) uses this architecture
 - DATA CENTERS are dedicated spaces / buildings used to STORE COMPUTER SYSTEMS such as SERVERS and NETWORK DEVICES
@@ -99,7 +99,7 @@ SPINE-LEAF ARCHITECTURE (DATA CENTER)
 - The traditional THREE-TIER ARCHITECTURE led to bottlenecks in the BANDWIDTH as well as VARIABILITY in the SERVER-TO-SERVER latency depending on the PATH the TRAFFIC takes
 - To SOLVE this, SPINE-LEAF ARCHITECTURE (also called CLOS ARCHITECTURE) has become prominent in DATA CENTERS
 
-RULES FOR SPINE-LEAF ARCHITECTURE
+## Rules for Spine-Leaf Architecture
 
 - Every LEAF SWITCH is connected to every SPINE SWITCH
 - Every SPINE SWITCH is connected to every LEAF SWITCH
@@ -114,18 +114,18 @@ RULES FOR SPINE-LEAF ARCHITECTURE
 
 ---
 
-SOHO (SMALL OFFICE / HOME OFFICE)
+## Soho (Small Office / Home Office)
 
 - SMALL OFFICE / HOME OFFICE (SOHO) refers to the office of a small company, or a small home office with few DEVICES
     - Doesn’t have to be an actual home “office”; if your home has a NETWORK connected to the INTERNET it is considered a SOHO NETWORK
 
 - SOHO NETWORKS don’t have complex needs, so all NETWORKING functions are typically provided by a SINGLE DEVICE, often called a “HOME ROUTER” or “WIRELESS ROUTER”
-- The one DEVICE can serve as a:
-    - ROUTER
-    - SWITCH
-    - FIREWALL
-    - WIRELESS ACCESS POINT
-    - MODEM
+- **The One Device Can Serve As a:**
+- Router
+- Switch
+- Firewall
+- Wireless Access Point
+- Modem
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c9edf179-f333-4fec-9e95-ee291b5eb84c)
 

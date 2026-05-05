@@ -1,6 +1,6 @@
-# 23. ETHERCHANNEL
+# 23. Etherchannel
 
-WHAT IS ETHERCHANNEL?
+## What Is Etherchannel?
 
 ETHERCHANNEL allows you to GROUP multiple physical INTERFACES into a group which operates as a SINGLE LOGICAL INTERFACE - so they BEHAVE as if they are a single INTERFACE
 
@@ -18,7 +18,7 @@ Some OVERSUBSCRIPTION is acceptable, but too much will cause congestion.
 
 - If you connect TWO SWITCHES together with multiple links, ALL except ONE will be DISABLED by SPANNING TREE PROTOCOL (Green Lights vs. Orange Lights above on ASW1)
 
-WHY?
+## Why?
 
 - If ALL of ASW1s INTERFACES were FORWARDING, LAYER 2 LOOPS would form between ASW1 and DSW1, leading to a BROADCAST STORM (Bad!)
 - Other links will be unused unless the active link fails. In that case, one of the inactive link will start forwarding.
@@ -45,7 +45,7 @@ Some other names for an ETHERCHANNEL are:
 
 ---
 
-HOW DOES AN ETHERCHANNEL LOAD-BALANCE?
+## How Does an Etherchannel Load-Balance?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bc257ff8-bf91-4744-a6cb-8f603ee9d294)
 
@@ -54,12 +54,12 @@ HOW DOES AN ETHERCHANNEL LOAD-BALANCE?
 - FRAMES in the same “flow” will be FORWARDED using the SAME physical INTERFACE
 - If FRAMES in the same “flow” were FORWARDED using different physical INTERFACES, some FRAMES may arrive at the DESTINATION out of order/sequence, which can cause problems.
 - You can CHANGE the INPUTS used in the INTERFACE SELECTION calculation (for “flows”)
-    - INPUTS that can be used:
-        - SOURCE MAC ADDRESS
-        - DESTINATION MAC ADDRESS
+    - **Inputs That Can Be Used:**
+- Source Mac Address
+- Destination Mac Address
         - SOURCE and DESTINATION MAC ADDRESS
-        - SOURCE IP ADDRESS
-        - DESTINATION IP ADDRESS
+- Source Ip Address
+- Destination Ip Address
         - SOURCE and DESTINATION IP ADDRESS
 
 How to see the configuration for LOAD-BALANCING method
@@ -74,7 +74,7 @@ How to CHANGE the LOAD-BALANCING method
 
 ---
 
-HOW TO CONFIGURE LAYER 2 / LAYER 3 ETHERCHANNELS
+## How to Configure Layer 2 / Layer 3 Etherchannels
 
 There are THREE methods of ETHERCHANNEL configuration on Cisco SWITCHES
 
@@ -83,10 +83,9 @@ There are THREE methods of ETHERCHANNEL configuration on Cisco SWITCHES
 - Cisco proprietary protocol
 - Dynamically negotiates the creation/maintenance of the ETHERCHANNEL (like DTP does for trunks)
 
-💡 **LACP (Link Aggregation Control Protocol)**
+> **Note:** **LACP (Link Aggregation Control Protocol)**
 - Industry standard protocol (IEEE 802.3ad)
 - Dynamically negotiates the creation/maintenance of the ETHERCHANNEL (like DTP does for trunks)
-
 
 **Static EtherChannel**
 
@@ -98,18 +97,17 @@ Up to 8 INTERFACES can be formed into a single ETHERCHANNEL (LACP allows up to 1
  
 ---
 
-PAgP CONFIGURATION
+## Pagp Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d0c734e2-79ad-43ad-a50b-c17ced608021)
 
-💡 NOTE that “auto” and “desirable” are the ONLY available modes for PAgP
+> **Note:** NOTE that “auto” and “desirable” are the ONLY available modes for PAgP
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9eabb76a-1846-48d3-abb1-bd6898a432e7)
 
 PAgP negotiations to form an ETHERCHANNEL
 
-
-💡 AWS1(config-if-range)# channel-group 1 mode desirable.
+> **Note:** AWS1(config-if-range)# channel-group 1 mode desirable.
 Creating a port-channel interface Port-channel1
 
 Shows up in the interface as “Port-channel1”
@@ -120,15 +118,15 @@ The “channel-group” number has to MATCH for member INTERFACES on the same SW
 
 It DOESN’T have to MATCH the “channel-group” number on the OTHER SWITCH!
 
-💡 (channel-group 1 on AWS1 can form an ETHERCHANNEL with channel-group 2 on DSW1)
+> **Note:** (channel-group 1 on AWS1 can form an ETHERCHANNEL with channel-group 2 on DSW1)
 
 ---
 
-LACP CONFIGURATION
+## Lacp Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ba4adcf6-dec5-456f-b8d7-ab4e6b722cbf)
 
-💡 NOTE that “active” and “passive” are the ONLY available modes for LACP
+> **Note:** NOTE that “active” and “passive” are the ONLY available modes for LACP
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0a314613-d398-49f1-a4d3-1b50fb96ab7d)
 
@@ -138,15 +136,15 @@ The “channel-group” number has to MATCH for member INTERFACES on the same SW
 
 It DOESN’T have to MATCH the “channel-group” number on the OTHER SWITCH!
 
-💡 (channel-group 1 on AWS1 can form an ETHERCHANNEL with channel-group 2 on DSW1)
+> **Note:** (channel-group 1 on AWS1 can form an ETHERCHANNEL with channel-group 2 on DSW1)
 
 ---
 
-STATIC ETHERCHANNEL CONFIGURATION
+## Static Etherchannel Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/92db26e7-21ae-40c6-89ee-abe0197ed8ad)
 
-💡 NOTE that “on” is the ONLY available mode for STATIC ETHERCHANNEL
+> **Note:** NOTE that “on” is the ONLY available mode for STATIC ETHERCHANNEL
 
 ON mode only works with ON Mode
 
@@ -156,11 +154,11 @@ ON + active = DOES NOT WORK
 
 ---
 
-HOW TO MANUALLY CONFIGURE THE NEGOTIATION PROTOCOL
+## How to Manually Configure The Negotiation Protocol
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/83ef9bc8-4bd4-4dd3-b28e-83439ba96860)
 
-TWO OPTIONS: 
+## Two Options: 
 
 - LACP Protocol
 - PAgP Protocol
@@ -171,9 +169,9 @@ TWO OPTIONS:
 
 ---
 
-AFTER CONFIGURING THE ETHERCHANNEL MODE
+## After Configuring The Etherchannel Mode
 
-CONFIGURING THE PORT INTERFACE
+## Configuring The Port Interface
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c485cdf1-f0ed-44b8-8c91-c0553bf6d82d)
 
@@ -181,11 +179,11 @@ CONFIGURING THE PORT INTERFACE
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6adda3dd-6408-445f-bb3f-61847b3920b6)
 
-💡 NOTE the PHYSICAL INTERFACES (g0/0-g0/3) were auto-configured by the Port-channel1 configuration!
+> **Note:** NOTE the PHYSICAL INTERFACES (g0/0-g0/3) were auto-configured by the Port-channel1 configuration!
 
 ---
 
-IMPORTANT NOTES ABOUT ETHERCHANNEL CONFIGURATION
+## Important Notes About Etherchannel Configuration
 
 - Member INTERFACES must have matching CONFIGURATIONS
     - Same DUPLEX (Full / Half)
@@ -197,9 +195,9 @@ IMPORTANT NOTES ABOUT ETHERCHANNEL CONFIGURATION
 
 ---
 
-VERIFYING STATUS OF ETHERCHANNEL
+## Verifying Status of Etherchannel
 
-💡 “show etherchannel summary”
+> **Note:** “show etherchannel summary”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9e0edb15-2806-4d51-afc9-ad67ed465a97)
 
@@ -209,11 +207,11 @@ Protocol = What protocol the Etherchannel is using (in this case, LACP)
 
 “Ports” = the list of interfaces in the EtherChannel (P = bundled in port-channel)
 
-OTHER FLAGS
+## Other Flags
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/23d92ae1-9cc6-4f3a-9ddf-2ead59705c1c)
 
-“D” = Down
+## “D” = Down
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b1b3ce70-d9a6-4bd2-be4d-976077438c85)
 
@@ -221,17 +219,17 @@ Changing one of the Member interfaces using “switchport mode access” has mad
 
 Another useful command
 
-💡 “show etherchannel port-channel”
+> **Note:** “show etherchannel port-channel”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/61731b0c-1cc5-4a7e-b92c-d0afbea0ac2d)
 
-💡 “show spanning-tree” will show the single EtherChannel port interface
+> **Note:** “show spanning-tree” will show the single EtherChannel port interface
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/df0b9cc8-0448-4bbd-aefa-62fadf2b6089)
 
 ---
 
-LAYER 3 ETHERCHANNELS
+## Layer 3 Etherchannels
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c553ad64-1d8e-4a2a-a741-3102c89dc030)
 
@@ -239,11 +237,11 @@ HOW TO CONFIGURE A LAYER 3 ETHERCHANNEL (from a clean configuration)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c4520b2f-1e3b-49b8-85b1-458cdb6fc865)
 
-💡 “show running-config”
+> **Note:** “show running-config”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8638f32d-47c3-4c64-b68e-a9e2e0070ac9)
 
-NOTE : No SWITCHPORT and NO IP INTERFACE.
+## Note : No Switchport and No IP Interface.
 
 Where do we configure the IP Address?  Directly on the PORT INTERFACE !
 
@@ -257,7 +255,7 @@ Where do we configure the IP Address?  Directly on the PORT INTERFACE !
 
 ---
 
-COMMANDS LEARNED IN THIS CHAPTER
+## Commands Learned in This Chapter
 ```
 SW(config) port-channel load-balance *mode*
 ```

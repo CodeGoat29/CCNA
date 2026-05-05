@@ -1,12 +1,12 @@
-# 3. OSI MODEL & TCP/IP SUITE
+# 3. Osi Model & TCP/IP Suite
 
-## What is a networking model?
+## What Is a Networking Model?
 
 Networking models categorize and provide a structure for networking protocols and standards.
 
 (Protocols are a set of logical rules defining how network devices and software should work)
 
-## OSI MODEL
+## Osi Model
 
 - Open Systems Interconnection Model
 - Conceptual model that categorizes and standardizes the different functions in a network.
@@ -28,10 +28,9 @@ Mnemonic to help remember the Data Layer Names / Order
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/01f532f6-b636-4b7c-99d0-a67f7e483a99)
 
+### The Layers Are :
 
-### The layers are :
-
-### 7 - APPLICATION
+### 7 - Application
 
 - This Layer is closest to end user.
 - Interacts with software applications.
@@ -44,13 +43,13 @@ Functions of Layer 7 include:
 
 ---
 
-### 6 - PRESENTATION
+### 6 - Presentation
 
 - Translates data to the appropriate format (between Application and Network formats) to be sent over the network.
 
 ---
 
-### 5 - SESSION
+### 5 - Session
 
 - Controls dialogues (sessions) between communicating hosts.
 - Establishes, manages, and terminates connections between local application and the remote application.
@@ -62,7 +61,7 @@ Application developers work with the top layers of the OSI model to connect thei
 
 ---
 
-### 4 - TRANSPORT
+### 4 - Transport
 
 - Segments and reassembles data for communication between end hosts.
 - Breaks large pieces of data into smaller segments which can be more easily sent over the network and are less likely to cause transmission problems if errors occur.
@@ -70,13 +69,13 @@ Application developers work with the top layers of the OSI model to connect thei
 
 When Data from Layer 7-5 arrives, it receives a Layer 4 Header in the Transport layer.
 
-<< DATA + L4 Header >>
+## << Data + L4 Header >>
 
 This is called a SEGMENT.
 
 ---
 
-### 3 - NETWORK
+### 3 - Network
 
 - Provides connectivity between end hosts on different networks (ie: outside of the LAN).
 - Provides logical addressing (IP Addresses).
@@ -91,7 +90,7 @@ This is called a **PACKET**.
 
 ---
 
-### 2 - DATA LINK
+### 2 - Data Link
 
 - Provides NODE-TO-NODE connectivity and data transfer (for example, PC to Switch, Switch to Router, Router to Router)
 - Defines how data is formatted for transmission over physical medium (for example, copper UTP cables)
@@ -110,7 +109,7 @@ When the frame is sent to the receiver, it then goes through the reverse process
 
 ---
 
-### 1 - PHYSICAL
+### 1 - Physical
 
 - Defines physical characteristics of the medium used to transfer data between devices. For example : voltage levels, maximum transmission distances, physical connectors, cable specs.
 - Digital bits are converted into electrical (for wired connections) or radio (for wireless connections) signals.
@@ -118,15 +117,15 @@ When the frame is sent to the receiver, it then goes through the reverse process
 
 ---
 
-### OSI MODEL - PDU's
+### Osi Model - Pdu'S
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9b885a51-91cd-4fe6-b1be-e7fa7aa220b5)
 
 A PDU is a Protocol Data Unit. Each step of the process is a PDU.
 
-| OSI LAYER # | PDU NAME | PROTOCOL DATA ADDED |
+## | Osi Layer # | Pdu Name | Protocol Data Added |
 | --- | --- | --- |
-| 7-5 | DATA | Data |
+## | 7-5 | Data | Data |
 | 4 | SEGMENT | Layer 4 Header Added |
 | 3 | PACKET | Layer 3 Header Added |
 | 2 | FRAME | Layer 2 Trailer and Header Added |
@@ -147,13 +146,11 @@ A PDU is a Protocol Data Unit. Each step of the process is a PDU.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e9593c06-46a3-4ff9-aa01-863e0aeb5df3)
 
-
 ---
 
 ### Layer Interactions
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/372c45a0-bb3e-4342-af2b-79d3606384ec)
-
 
 Adjacent-Layer Interactions:
 

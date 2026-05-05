@@ -1,21 +1,21 @@
-# 51. DYNAMIC ARP INSPECTION
+# 51. Dynamic ARP Inspection
 
-WHAT IS DYNAMIC ARP INSPECTION (DAI) ?
+## What Is Dynamic ARP Inspection (Dai) ?
 
-ARP REVIEW
+## ARP Review
 
 - ARP is used to learn the MAC ADDRESS of another DEVICE with a known IP ADDRESS
     - For example, a PC will use ARP to learn the MAC ADDRESS of its DEFAULT GATEWAY to communicate with external NETWORKS
 - Typically, it is a TWO MESSAGE EXCHANGE :  ARP REQUEST and ARP REPLY
 
-GRATUITOUS ARP
+## Gratuitous ARP
 
 - A GRATUITOUS ARP MESSAGE is an ARP REPLY that is sent without receiving an ARP REQUEST
 - It is SENT to the BROADCAST MAC ADDRESS
 - It allows other DEVICES to learn the MAC ADDRESS of the sending DEVICE without having to send ARP REQUESTS.
 - Some DEVICES automatically send GARP MESSAGES when an INTERFACE is enabled, IP ADDRESS is changed, MAC address is changed, etc.
 
-DYNAMIC ARP INSPECTION
+## Dynamic ARP Inspection
 
 - DAI is a SECURITY FEATURE of SWITCHES that is used to filter ARP MESSAGES received on  *UNTRUSTED PORTS*
 - DAI only filters ARP MESSAGES. Non-ARP MESSAGES are NOT affected
@@ -30,7 +30,7 @@ DYNAMIC ARP INSPECTION
 
 ---
 
-ARP POISONING (MAN IN THE MIDDLE)
+## ARP Poisoning (Man in The Middle)
 
 - Similar to DHCP POISONING, ARP POISONING involved an ATTACKER manipulating TARGET’S ARP TABLES so TRAFFIC is sent to the ATTACKER
 - To do this, the ATTACKER can send GRATUITOUS ARP MESSAGES using another DEVICE’S IP ADDRESS
@@ -38,7 +38,7 @@ ARP POISONING (MAN IN THE MIDDLE)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/aae80c8f-2673-4c04-a206-9b646f5c1f08)
 
-DYNAMIC ARP INSPECTION OPERATIONS
+## Dynamic ARP Inspection Operations
 
 - DAI inspects the SENDER MAC and SENDER IP fields of ARP MESSAGES received on UNTRUSTED PORTS and checks that there is a matching entry in the DHCP SNOOPING BINDING TABLE
     - If there is a MATCH, the ARP MESSAGE is FORWARDED
@@ -59,7 +59,7 @@ DYNAMIC ARP INSPECTION OPERATIONS
 
 ---
 
-DYNAMIC ARP INSPECTION CONFIGURATION
+## Dynamic ARP Inspection Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4a91bd7b-626a-4d64-b69a-308d65bbdda4)
 
@@ -69,11 +69,11 @@ Command : `show ip arp inspection interfaces`
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e64a568e-e5c6-442b-98f7-4fe829ff7519)
 
-DAI RATE LIMITING
+## Dai Rate Limiting
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6400e059-2c8c-4369-827d-7774fddd57eb)
 
-DAI OPTIONAL CHECKS
+## Dai Optional Checks
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0e6b780a-16ef-466a-bfd3-8dd2cdace4ad)
 
@@ -83,7 +83,7 @@ DAI OPTIONAL CHECKS
 
 ARP ACLs (Beyond Scope of CCNA)
 
-CREATE AN ARP ACL FOR SRV1
+## Create an ARP Acl for Srv1
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cf121a75-45b2-4e2d-a35f-320e3f5491fa)
 
@@ -99,6 +99,6 @@ Shows a summary of the DAI configuration and statistics
 
 ---
 
-COMMAND REVIEW
+## Command Review
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4cb7dc28-b09d-4a98-8d43-aca2cdf6180b)

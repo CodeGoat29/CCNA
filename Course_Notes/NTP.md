@@ -1,6 +1,6 @@
 # 37. NTP
 
-WHY IS TIME IMPORTANT FOR NETWORK DEVICES?
+## Why Is Time Important for Network Devices?
 
 - All DEVICES have an INTERNAL CLOCK (ROUTERS, SWITCHES, PCs, etc)
 - In CISCO IOS, you can view the time with the `show clock` command
@@ -20,13 +20,13 @@ Command: `show logging`
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/33632e20-a4e9-40fd-aba0-527498cfb886)
 
-Note : R3’s time stamp is completely different than R2’s !!!
+> **Note:** R3’s time stamp is completely different than R2’s !!!
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7d0464c2-1abe-460a-93fb-dd4368c905a7)
 
 ---
 
-MANUAL TIME CONFIGURATION
+## Manual Time Configuration
 
 - You can manually configure the TIME on the DEVICE with the `clock set` command
 
@@ -36,7 +36,7 @@ MANUAL TIME CONFIGURATION
 
 ---
 
-HARDWARE CLOCK (CALENDAR) CONFIGURATION
+## Hardware Clock (Calendar) Configuration
 
 - You can MANUALLY configure the HARDWARE CLOCK with the `calendar set` command
 
@@ -52,13 +52,13 @@ HARDWARE CLOCK (CALENDAR) CONFIGURATION
 
 ---
 
-CONFIGURING THE TIME ZONE
+## Configuring The Time Zone
 
 - You can configure the time zone with the `clock timezone` command
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d9ef5a95-a102-4306-bc3d-269fc5fd1d9e)
 
-DAYLIGHT SAVING TIME (SUMMER TIME)
+## Daylight Saving Time (Summer Time)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/591491d1-a5bd-4f99-b518-02e722f41e1a)
 
@@ -71,13 +71,13 @@ Full command :
 This covers the START of Daylight Savings and the end of Daylight Savings
 ---
 
-SUMMARY OF COMMANDS
+## Summary of Commands
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/33557221-c045-4063-8ca0-9e8fb045ce52)
 
 ---
 
-NTP BASICS
+## NTP Basics
 
 - Manually configuring the time on DEVICES is NOT Scalable
 - The manually configured clocks will “drift”, resulting in inaccurate time
@@ -87,12 +87,9 @@ NTP BASICS
 - NTP allows accuracy of TIME with ~1 millisecond if the NTP SERVER is in the same LAN - OR within ~50 milliseconds if connecting to the NTP SERVER over a WAN / the INTERNET
 - Some NTP SERVERS are ‘better’ than others. The ‘distance’ of an NTP SERVER from the original **reference clock** is called **stratum**
 
-<aside>
-💡 NTP uses UDP port 123 to communicate
+> **Note:** NTP uses UDP port 123 to communicate
 
-</aside>
-
-REFERENCE CLOCK
+## Reference Clock
 
 - A REFERENCE CLOCK is usually a VERY accurate time device like an ATOMIC CLOCK or GPS CLOCK
 - REFERENCE CLOCKS are **stratum 0** within the NTP hierarchy
@@ -110,7 +107,7 @@ REFERENCE CLOCK
 
 ---
 
-NTP CONFIGURATION
+## NTP Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6ee32d55-a33d-419c-9286-d1683f250d37)
 
@@ -148,7 +145,7 @@ When the SYSTEM is restarted, the HARDWARE CLOCK is used to INITIALIZE the SOFTW
 
 ---
 
-CONFIGURE A LOOPBACK INTERFACE FOR AN NTP SERVER
+## Configure a Loopback Interface for an NTP Server
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/21cac8d8-7c7f-41e1-8f0a-bfb6418c6085)
 
@@ -170,7 +167,7 @@ NOTE : R1 has PREFERENCE because it’s STRATUM TIER is HIGHER than R2s
 
 ---
 
-CONFIGURING NTP SERVER MODE
+## Configuring NTP Server Mode
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/038c5e31-587e-4a54-ae80-cc290a0ff805)
 
@@ -184,7 +181,7 @@ CONFIGURING NTP SERVER MODE
 
 ---
 
-CONFIGURING NTP SYMMETRIC ACTIVE MODE
+## Configuring NTP Symmetric Active Mode
 
 Command to configure NTP SYMMETRIC MODE 
 `R2(config)#ntp peer <peer ip address>`
@@ -195,11 +192,11 @@ Command to configure NTP SYMMETRIC MODE
 
 ---
 
-CONFIGURE NTP AUTHENTICATION
+## Configure NTP Authentication
 
 - NTP AUTHENTICATION can be configured, although it is OPTIONAL
 - It allows NTP CLIENTS to ensure they only sync to the intended SERVERS
-- To CONFIGURE NTP AUTHENTICATION:
+- **to Configure NTP Authentication:**
     - `ntp authenticate` (Enables NTP AUTHENTICATION)
     - `ntp authenticate-key *key-number* md5 *key*` (Create the NTP AUTHENTICATION Key(s))
     - `ntp trusted-key *key-number`* (Specify the Trusted Key(s))
@@ -207,12 +204,12 @@ CONFIGURE NTP AUTHENTICATION
 
  
 
-EXAMPLE CONFIGURATIONS
+## Example Configurations
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d8f54d79-8975-4dfe-b0c0-e4e2b44f7b31)
 
 ---
 
-NTP COMMAND REVIEW
+## NTP Command Review
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2888ef4e-f53a-4ca3-ad34-0b04742edfd9)

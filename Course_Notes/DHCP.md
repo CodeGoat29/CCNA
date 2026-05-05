@@ -1,6 +1,6 @@
 # 39. DHCP (Dynamic Host Configuration Protocol)
 
-THE PURPOSE OF DHCP
+## The Purpose of DHCP
 
 - DHCP is used to allow HOSTS to automatically / dynamically learn various aspects of their NETWORK configuration; without MANUAL / STATIC configuration
 - It is an ESSENTIAL part of modern NETWORKS
@@ -12,7 +12,7 @@ THE PURPOSE OF DHCP
 
 ---
 
-BASIC FUNCTIONS OF DHCP
+## Basic Functions of DHCP
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/81b1e260-d669-4944-aa7b-5b7e6a505233)
 
@@ -24,7 +24,7 @@ BASIC FUNCTIONS OF DHCP
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bd292766-0a22-4c0a-ac96-0262ba03d720)
 
-Note: ALL the IPs are the same because this is Jeremy’s Home ROUTER (it provides all these services)
+> **Note:** ALL the IPs are the same because this is Jeremy’s Home ROUTER (it provides all these services)
 
 Command `ipconfig /release`
 
@@ -48,7 +48,7 @@ Renewing Process has FOUR messages:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/94febcd6-cd2b-4f6d-97db-69e33b1c1c4d)
 
-1) DHCP DISCOVER
+### **1) DHCP Discover**
 
 - Are there any DHCP Servers in this NETWORK? I need an IP ADDRESS ?
 
@@ -65,26 +65,26 @@ NOTE the use of DHCP Reserved Ports 67 and 68
 - The DHCP OFFER message can be either BROADCAST or UNICAST
 - NOTE OPTIONS at the bottom : Message Type, Server ID, Lease Time, Subnet, etc.
 
-3) DHCP REQUEST
+### **3) DHCP Request**
 
 - I want to use the IP ADDRESS that was offered
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3023a977-2477-42ec-8890-283ef326bad1)
 
-4) DHCP ACK
+### **4) DHCP Ack**
 
 - Okay! You may use THAT ADDRESS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/543c77e8-326b-45c6-a149-2f3668dac3ff)
 
 ---
-DHCP RENEW PROCESS SUMMARY
+## DHCP Renew Process Summary
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a2f5cc4e-c949-4a8d-a985-29c6631c635e)
 
 ---
 
-DHCP RELAY
+## DHCP Relay
 
 - Some NETWORK engineers might choose to configure each ROUTER to act as the DHCP SERVER for its connected LANS
 - However, large enterprises often choose to use a CENTRALIZED DHCP SERVER
@@ -98,7 +98,7 @@ DHCP RELAY
 
 ---
 
-CONFIGURING DHCP IN CISCO IOS
+## Configuring DHCP in Cisco IOS
 
 Commands for configuring DHCP SERVERS in Cisco IOS
 
@@ -112,20 +112,20 @@ Command `show ip dhcp binding`
 
 ---
 
-DHCP RELAY AGENT CONFIGURATION IN IOS
+## DHCP Relay Agent Configuration in IOS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d1e1df72-85ef-4323-87f4-26cf14132bda)
 
-RELAY AGENT MUST HAVE CONNECTIVITY WITH DHCP SERVER
+## Relay Agent Must Have Connectivity With DHCP Server
 
 ---
 
-DHCP CLIENT CONFIGURATION IN IOS
+## DHCP Client Configuration in IOS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/353e553c-b4a5-4f18-818f-3d7a395491b3)
 
 ---
 
-COMMANDS SUMMARY
+## Commands Summary
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/41e4ab84-7d5d-42e6-93d7-4b982976dd16)

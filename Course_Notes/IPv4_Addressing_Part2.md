@@ -1,6 +1,6 @@
-# 8. IPv4 ADDRESSING : PART 2
+# 8. Ipv4 Addressing : Part 2
 
-MAXIMUM HOSTS PER NETWORK
+## Maximum Hosts Per Network
 
 Let's take a Class C Network:
 
@@ -16,7 +16,7 @@ HOWEVER, since the Network Address (Network ID)
 
 192.168.1.0 is Reserved
 
-AND
+## and
 
 192.168.1.255 (BROADCAST ADDRESS) is ALSO reserved.
 
@@ -44,7 +44,7 @@ Maximum hosts per network = 2^24-2 = 16,777,214 hosts
 
 ---
 
-THEREFORE:
+### **Therefore**
 
 The formula for calculating the number of HOSTS on a network is:
 
@@ -54,63 +54,63 @@ where N = number of HOST bits
 
 ---
 
-FIRST / LAST USABLE ADDRESSES
+## First / Last Usable Addresses
 
 Class C Network
 
-192.168.1.0/24 (NETWORK ADDRESS)
+## 192.168.1.0/24 (Network Address)
 
 Add 1 so the Host Portion = 00000001
 
-192.168.1.1/24 = FIRST USABLE ADDRESS
+## 192.168.1.1/24 = First Usable Address
 
 ---
 
-192.168.1.255/24 (BROADCAST ADDRESS)
+## 192.168.1.255/24 (Broadcast Address)
 
 Subtract 1 from the BROADCAST ADDRESS = 11111110
 
-192.168.1.254/24 = LAST USABLE ADDRESS
+## 192.168.1.254/24 = Last Usable Address
 
 ---
 
 Class B Network
 
-172.16.0.0/16 (NETWORK ADDRESS)
+## 172.16.0.0/16 (Network Address)
 
 Add 1 to Host portion so 0000 0000 0000 0001
 
-172.16.0.1/16 is the FIRST USABLE ADDRESS
+## 172.16.0.1/16 Is The First Usable Address
 
 ---
 
-172.16.255.255/16 (BROADCAST ADDRESS)
+## 172.16.255.255/16 (Broadcast Address)
 
 Subtract 1 to Broadcast Address so 1111 1111 1111 1110
 
-172.16.255.254/16 is the LAST USABLE ADDRESS
+## 172.16.255.254/16 Is The Last Usable Address
 
 ---
 
 Class A Network
 
-10.0.0.0/8 (NETWORK ADDRESS)
+## 10.0.0.0/8 (Network Address)
 
 Add 1 to Host portion so 00000000 00000000 00000001
 
-10.0.0.1/8 is the FIRST USABLE ADDRESS
+## 10.0.0.1/8 Is The First Usable Address
 
 ---
 
-10.255.255.255/8 (BROADCAST ADDRESS)
+## 10.255.255.255/8 (Broadcast Address)
 
 Subtract 1 to Broadcast Address so 1111 1111 1111 1110
 
-10.255.255.254/16 is the LAST USABLE ADDRESS
+## 10.255.255.254/16 Is The Last Usable Address
 
 ---
 
-CISCO CLI DEVICE CONFIGURATION
+## Cisco CLI Device Configuration
 
 R1> enable
 R1# show ip interface brief
@@ -125,7 +125,7 @@ IP Addresses
 
 - Self explanatory. What IP Address is assigned.
 
-Method
+## Method
 
 - What method was the IP address assigned?
 
@@ -144,12 +144,11 @@ Protocol (Layer 2 Status)
   
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fa113ff0-a8ee-410b-ab3e-64684654cac6)
 
-
 ---
 
 // configure terminal cmd
 
-R1# conf t
+## R1# Conf T
 
 // This enters interface configuration mode
 
@@ -158,7 +157,6 @@ R1(config)# interface gigabitethernet 0/0
 This can be shortened to 'g0/0' like they are listed in physical network maps.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/df83bf09-c391-45b7-b1b4-41db061b84f4)
-
 
 // This sets the IP ADDRESS and SUBNET MASK of device
 
@@ -184,7 +182,6 @@ More 'show' CLI Commands
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bdc1152e-1946-4ddb-ae72-1e23b9c9defa)
 
-
 'show interfaces <interface name>'
 
 - Shows Layer 1 and Layer 2 information about the interface and some Layer 3.
@@ -208,4 +205,4 @@ This sets the 'Description' column to display:
 
 Interface 				Description
 
-Gi0/0                   ## to SW1 ##
+## Gi0/0                   ## to Sw1 ##

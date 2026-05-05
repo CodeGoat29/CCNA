@@ -1,40 +1,35 @@
-# 20. SPANNING TREE PROTOCOL (STP) : PART 1
+# 20. Spanning Tree Protocol (Stp) : Part 1
 
-REDUNDANCY IN NETWORKS
+## Redundancy in Networks
 
 - Essential in network design
 - Modern networks are expected to run 24/7/265; even a short downtime can be disastrous for business.
 - If one network component fails, you must ensure that other components will take over with little or no downtime.
 - As much as possible, you must implement REDUNDANCY at every possible point in the network
 
-AN EXAMPLE OF A POORLY DESIGNED NETWORK
+## an Example of a Poorly Designed Network
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b3b76af5-11e6-495b-8c40-40eb5800704b)
 
-
 NOTE the many single-point failures that could occur (single connections)
 
-A BETTER NETWORK DESIGN
+## a Better Network Design
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/01c20d92-2cf6-4d1f-a193-ded7753aeb38)
 
-
-UNFORTUNATELY : 
+## Unfortunately : 
 
 - Most PCS only have a single network interface card (NIC), so they can only be plugged into a single SWITCH. However, important SERVERS typically have multiple NICs, so they can be plugged into multiple SWITCHES for redundancy!
 
 So HOW can all this redundancy be a BAD thing?
 
-BROADCAST STORMS
+## Broadcast Storms
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a0bf91be-a463-45df-bfc5-df471d0544b5)
 
-
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d13b6ab5-5298-4166-bdfa-3315f05a2961)
 
-
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f719de69-df9e-4549-b3cb-914d7c5aabc4)
-
 
 FLOODED WITH ARP REQUESTS (Red = Clockwise Loops // Purple = Counter-Clockwise Loops)
 
@@ -52,7 +47,7 @@ SPANNING TREE PROTOCOL is one solution
 
 ---
 
-STP (SPANNING TREE PROTOCOL) : 802.1D
+## Stp (Spanning Tree Protocol) : 802.1d
 
 - “Classic Spanning Tree Protocol” is IEEE **802.1D**
 - SWITCHES from ALL vendors run STP by Default
@@ -60,15 +55,13 @@ STP (SPANNING TREE PROTOCOL) : 802.1D
 - These INTERFACES act as backups that can enter a FORWARDING state if an active (=currently forwarding) INTERFACE fails.
 - INTERFACES in a BLOCKING state only send or receive STP messages (called BPDUs = Bridge Protocol Data Units)
 
-💡 SPANNING TREE PROTOCOL still uses the term “BRIDGE”. However, when use the term “BRIDGE”, we really mean “SWITCH”. BRIDGES are not used in modern networks.
+> **Note:** SPANNING TREE PROTOCOL still uses the term “BRIDGE”. However, when use the term “BRIDGE”, we really mean “SWITCH”. BRIDGES are not used in modern networks.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f253770d-22fa-4e3f-91b0-8f2b4c2f1a61)
-
 
 ORANGE INTERFACE is “BLOCKED” causing a break in the loops
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/45125471-da23-4753-b5b1-16c23a2bfeff)
-
 
 If changes occur in the connections, the traffic will adjust the topology.
 
@@ -80,7 +73,7 @@ If changes occur in the connections, the traffic will adjust the topology.
 
 ---
 
-WHAT ARE BPDUs USED FOR?
+## What Are Bpdus Used for?
 
 - SWITCHES use one field in the STP BPDU, the BRIDGE ID field, to elect a ROOT BRIDGE for the NETWORK
 - The SWITCH with the lowest BRIDGE ID becomes the ROOT BRIDGE
@@ -92,24 +85,21 @@ WHAT ARE BPDUs USED FOR?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bb49a034-9f6d-4e92-9ea0-8bc71c4f2ec8)
 
-
 To REDUCE the BRIDGE PRIORITY, we can only change it in units of 4096 !
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/39fe6239-1217-4885-b07b-8f368dad0e28)
 
-
 In THIS TOPOLOGY, SW1 becomes the ROOT BRIDGE due to it’s MAC ADDRESS being LOWEST
 
-(Hex “A” = 10)
+## (Hex “a” = 10)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b1e1a69d-4b9c-46bf-9b77-f30b9f7c3933)
 
-
 ALL INTERFACES on the ROOT BRIDGE are DESIGNATED PORTS.
 
-DESIGNATED PORTS ARE IN A FORWARDING STATE!
+## Designated Ports Are in a Forwarding State!
 
-ROOT BRIDGE
+## Root Bridge
 
 - When a SWITCH is powered on, it assumes it is the ROOT BRIDGE
 - It will only give up its position if it receives a “SUPERIOR” BPDU (lower BRIDGE ID)
@@ -118,40 +108,38 @@ ROOT BRIDGE
 
 ---
 
-SPANNING TREE PROTOCOL STEPS
+## Spanning Tree Protocol Steps
 
 1) One SWITCH is elected as ROOT BRIDGE. All PORTS on the ROOT BRIDGE are DESIGNATED PORTS (FORWARDING STATE)
 
-- ROOT BRIDGE selection order:
+- **Root Bridge Selection Order:**
     - 1) Lowest BRIDGE ID
     - 2) Lowest MAC Address (in case of Bridge ID tie)
 
 2) Each remaining SWITCH will select ONE of its INTERFACES to be it’s ROOT PORT (FORWARDING STATE). PORTS across from the ROOT PORT are always DESIGNATED PORTS.
 
-- ROOT PORT selection order:
+- **Root Port Selection Order:**
     - 1) LOWEST ROOT COST (see STP COST CHART)
-    - 2) LOWEST NEIGHBOUR BRIDGE ID
-    - 3) LOWEST NEIGHBOUR PORT ID
+- 2) Lowest Neighbour Bridge Id
+- 3) Lowest Neighbour Port Id
 
 3) Each remaining COLLISION DOMAIN will select ONE INTERFACE to be a DESIGNATION PORT (FORWARDING STATE). The other PORT in the COLLISION DOMAIN will NON-DESIGNATED (BLOCKING)
 
-- DESIGNATED PORT SELECTION:
+- **Designated Port Selection:**
     - 1) INTERFACE on SWITCH with LOWEST ROOT COST
     - 2) INTERFACE on SWITCH with LOWEST BRIDGE ID
 
 ---
 
-STP COST CHART
+## Stp Cost Chart
 
-💡 Only OUTGOING INTERFACES toward the ROOT BRIDGE have a STP COST; not RECEIVING INTERFACES. Add up all the OUTGOING PORT costs until you reach the ROOT BRIDGE
+> **Note:** Only OUTGOING INTERFACES toward the ROOT BRIDGE have a STP COST; not RECEIVING INTERFACES. Add up all the OUTGOING PORT costs until you reach the ROOT BRIDGE
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0ee95883-aed8-42a3-ba82-11209ef8cd40)
-
 
 SW1 is the ROOT BRIDGE so has a STP COST of 0 on ALL INTERFACES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/35037ae9-3430-44ac-be6d-c8d2a2a42c24)
-
 
 The PORTS connected to another SWITCH’s ROOT PORT MUST be DESIGNATED (D). 
 
@@ -161,29 +149,25 @@ STP PORT ID (in case of a tie-breaker)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/63d2fb87-31fa-4b57-a2c3-a203feded8ba)
 
-
 NEIGHBOUR SWITCH PORT ID (in case of a tie-breaker)
 
-(D) = DESIGNATED PORT
+## (D) = Designated Port
 
-(R) = ROOT PORT
+## (R) = Root Port
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c3fcc32b-e95f-4d4b-a241-f9f3080e858f)
 
-
-HOW TO DETERMINE WHICH PORT WILL BE BLOCKED TO PREVENT LAYER 2 LOOPS
+## How to Determine Which Port Will Be Blocked to Prevent Layer 2 Loops
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1b69a092-4150-44c3-b605-5916fdea91d6)
 
-
-QUIZ
+## Quiz
 
 Identify the ROOT BRIDGE and the ROLE of EACH INTERFACE on the NETWORK (ROOT / DESIGNATED / NON-DESIGNATED)
 
 #1
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/62bcf349-dd89-48be-92f6-d6a184edeb6f)
-
 
 ALL SWITCHES have the same PRIORITY NUMBER (32769)
 
@@ -202,7 +186,6 @@ The remaining interfaces on SW2 become NON-DESIGNATED because it has the HIGHEST
 #2
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ae382ec2-9c0f-4673-94b5-5d1411c8db6b)
-
 
 SW4 has the LOWEST Priority Number so it is designated ROOT BRIDGE
 

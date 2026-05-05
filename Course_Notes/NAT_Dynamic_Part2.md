@@ -1,6 +1,6 @@
-# 45. NAT (DYNAMIC): PART 2
+# 45. NAT (Dynamic): Part 2
 
-MORE ABOUT STATIC NAT
+## More About Static NAT
 
 - STATIC NAT involves statically configuring one-to-one mappings of PRIVATE IP ADDRESSES to PUBLIC IP ADDRESSES
 - When traffic from the INTERNAL HOST is sent to the OUTSIDE NETWORK, the ROUTER will translate the SOURCE ADDRESS
@@ -13,7 +13,7 @@ MORE ABOUT STATIC NAT
 
 ---
 
-DYNAMIC NAT
+## Dynamic NAT
 
 - In DYNAMIC NAT, the ROUTER dynamically maps INSIDE LOCAL ADDRESSES to INSIDE GLOBAL ADDRESSES, as needed
 - An ACL is used to identify WHICH traffic should be translated
@@ -21,7 +21,7 @@ DYNAMIC NAT
     - If the SOURCE IP is DENIED; the SOURCE IP will NOT be translated
         
         <aside>
-        💡 However, Packet Traffic will NOT be dropped
+> **Note:** However, Packet Traffic will NOT be dropped
         
         </aside>
         
@@ -37,7 +37,7 @@ DYNAMIC NAT
     - The HOST will be unable to access OUTSIDE NETWORKS until one of the INSIDE GLOBAL IP ADDRESSES becomes available
     - DYNAMIC NAT entries will time out automatically if not used, or you can clear them manually
 
-NAT POOL EXHAUSTION
+## NAT Pool Exhaustion
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/59c01575-b42f-475b-9502-2f9ed490ca8d)
 
@@ -45,7 +45,7 @@ NAT POOL EXHAUSTION
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/59e68f3b-8acc-4d7e-8d8e-f930dec3be5f)
 
-DYNAMIC NAT CONFIGURATION
+## Dynamic NAT Configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6694689a-4880-497c-a1f6-838003810f0c)
 
@@ -59,7 +59,7 @@ DYNAMIC NAT CONFIGURATION
 
 ---
 
-DYNAMIC PAT (NAT OVERLOAD)
+## Dynamic Pat (NAT Overload)
 
 - PAT (NAT OVERLOAD) translates BOTH the IP ADDRESS and the PORT NUMBER (if necessary)
 - By using a unique PORT NUMBER for each communication flow, a single PUBLIC IP ADDRESS can be used by many different INTERNAL HOSTS
@@ -68,7 +68,7 @@ DYNAMIC PAT (NAT OVERLOAD)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8f720b58-9700-4908-bd8d-a1846191854b)
 
-PAT CONFIGURATION (POOL)
+## Pat Configuration (Pool)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2a1acc30-658c-4479-9984-9c620b5e6ce3)
 
@@ -76,7 +76,7 @@ PAT CONFIGURATION (POOL)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/088db6f4-a695-4765-b435-2f20a5e16c9e)
 
-PAT CONFIGURATION (INTERFACE)
+## Pat Configuration (Interface)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8a3990ff-c58e-44a9-928d-e534f0cff690)
 
@@ -88,6 +88,6 @@ PAT CONFIGURATION (INTERFACE)
 
 ---
 
-COMMAND REVIEW
+## Command Review
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fe0655bb-4020-4ddc-bec4-b2fb198e2314)

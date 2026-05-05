@@ -1,13 +1,13 @@
-# 46. QoS (Voice VLANs) : PART 1
+# 46. QoS (Voice Vlans) : Part 1
 
-IP PHONES / VOICE LANS
+## IP Phones / Voice Lans
 
 - Traditional phones operate over the *public switched telephone network* (PSTN)
     - Sometimes, this is called POTS (Plain Old Telephone System)
 - IP PHONES use VoIP (Voice Over IP) technologies to enable phone calls over an IP NETWORK, such as the INTERNET
 - IP PHONES are connected to a SWITCH, just like any other end HOST
 
-IP PHONES
+## IP Phones
 
 - Have an internal 3-PORT SWITCH
     - 1 PORT is the “UPLINK” to the EXTERNAL SWITCH
@@ -29,7 +29,7 @@ IP PHONES
 
 ---
 
-POWER OVER ETHERNET (PoE)
+## Power Over Ethernet (Poe)
 
 - PoE allows Power Sourcing Equipment (PSE) to provide POWER to Powered Devices (PD) over an ETHERNET cable
 - Typically, the PSE is a SWITCH and the PDs are IP PHONES, IP CAMERAS, WIRELESS ACCESS POINTS, etc.
@@ -57,7 +57,7 @@ POWER OVER ETHERNET (PoE)
 
 ---
 
-INTRO TO QUALITY OF SERVICE (QoS)
+## Intro to Quality of Service (QoS)
 
 - VOICE traffic and DATA traffic used to use entirely separate NETWORKS
     - VOICE TRAFFIC used the PSTN
@@ -73,28 +73,28 @@ INTRO TO QUALITY OF SERVICE (QoS)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8909efdb-bbbd-4f50-b412-7abe12a3bcef)
 
-QUALITY OF SERVICE (QoS)
+## Quality of Service (QoS)
 
 - QoS is used to manage the following characteristics of NETWORK TRAFFIC
-    - BANDWIDTH
+- Bandwidth
         - Overall CAPACITY of the LINK (measured in *bits per second*)
         - QoS TOOLS allow you to RESERVE a certain amount of a link’s BANDWIDTH for specific kinds of traffic
-    - DELAY
+- Delay
         - One-Way Delay = Time it takes traffic to go from SOURCE to DESTINATION
         - Two-Way Delay = Time it takes traffic to go from SOURCE to DESTINATION and return
         
 ![image](https://github.com/psaumur/CCNA/assets/106411237/29ed6306-a6aa-46ba-af2f-5ebcd383d1d7)
         
     
-    - JITTER
+- Jitter
         - The variation in ONE-WAY DELAY between PACKETS SENT by the same APPLICATION
         - IP PHONES have a ‘jitter buffer’ to provide a FIXED DELAY to audio PACKETS
-    - LOSS
+- Loss
         - The % of PACKETS sent that DO NOT reach their DESTINATION
         - Can be caused by FAULTY CABLES
         - Can also be caused when a DEVICE’S PACKET QUEUES get full and the DEVICE starts discarding PACKETS
     
-- The FOLLOWING STANDARDS are recommended for ACCEPTABLE INTERACTIVE AUDIO quality:
+- **The Following Standards Are Recommended for Acceptable Interactive Audio Quality:**
     - ONE-WAY DELAY : 150 milliseconds or less
     - JITTER : 30 milliseconds or less
     - LOSS : 1% or less
@@ -103,7 +103,7 @@ QUALITY OF SERVICE (QoS)
     
     
 
-QoS QUEUING
+## QoS Queuing
 
 - If a NETWORK DEVICE receives messages FASTER than it can FORWARD them out of the appropriate INTERFACE, the MESSAGES are placed in the QUEUE
 - By default, the QUEUED MESSAGES will be FORWARDED in a FIRST IN FIRST OUT (FIFO) manner

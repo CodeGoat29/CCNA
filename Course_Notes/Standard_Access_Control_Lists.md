@@ -1,27 +1,25 @@
-# 34. STANDARD ACCESS CONTROL LISTS (ACL)
+# 34. Standard Access Control Lists (Acl)
 
-WHAT ARE ACLs
+## What Are Acls
 
 - ACLs (Access Control Lists) have multiple uses
 - In DAY 34 and DAY 35, we will focus on ACL’s from a security perspective
 - ACLs function as a “packet filter” - instructing the ROUTER to ALLOW or DENY specific traffic
-- ACLs can filter traffic based on:
-    - SOURCE / DESTINATION IP ADDRESSES
-    - SOURCE / DESTINATION LAYER 4 PORTS
+- **Acls Can Filter Traffic Based On:**
+- Source / Destination Ip Addresses
+- Source / Destination Layer 4 Ports
     - etc.
 
 ---
 
-HOW ACLs WORK
+## How Acls Work
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/92d663ec-33a8-4ba4-b0a7-5d3942a9b67e)
 
-<aside>
-💡 REQUIREMENTS:
+> **Note:** REQUIREMENTS:
 
 - Hosts in 192.168.1.0/24 should have ACCESS to the 10.0.1.0/24 NETWORK
 - Hosts in 192.168.2.0/24 should not have ACCESS to the 10.0.1.0/24 NETWORK
-</aside>
 
 ACLs are configured GLOBALLY on the ROUTER (Global Config Mode)
 
@@ -42,7 +40,7 @@ ACLs are configured GLOBALLY on the ROUTER (Global Config Mode)
 
 ---
 
-IMPLICIT DENY
+## Implicit Deny
 
 - What will happen if a PACKET doesn’t match any of the entries in an ACL ?
 - There is an INPLICIT DENY at the end of ALL ACL’s
@@ -50,20 +48,20 @@ IMPLICIT DENY
 
 ---
 
-ACL TYPES
+## Acl Types
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4856845e-80b2-45dc-b30c-cc3b170db69c)
 
 ---
 
-STANDARD NUMBERED ACLs
+## Standard Numbered Acls
 
 - Match traffic based only on the SOURCE IP ADDRESS of the PACKET
 - Numbered ACLs are identified with a number (ie: ACL 1, ACL 2, etc.)
 - Different TYPES of ACLs have a different range of numbers that can be used
     
     <aside>
-    💡 STANDARD ACLs can use 1-99 and 1300-1999
+> **Note:** STANDARD ACLs can use 1-99 and 1300-1999
     
     </aside>
     
@@ -93,22 +91,19 @@ STANDARD NUMBERED ACLs
 Order is important. Lower Numbers are processed FIRST
 
 ---
-TO APPLY AN ACL TO AN INTERFACE
+## to Apply an Acl to an Interface
 
 `R1(config-if)# ip access-group *number* {in | out}`
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/eed38afa-f067-4153-80bb-b07c52a21e53)
 
-WHY WAS THIS RULE PLACED ON G0/2 OUT ? 
+## Why Was This Rule Placed On G0/2 Out ? 
 
-<aside>
-💡 STANDARD ACLs should be applied as CLOSE to the DESTINATION as possible!
-
-</aside>
+> **Note:** STANDARD ACLs should be applied as CLOSE to the DESTINATION as possible!
 
 ---
 
-STANDARD NAMED ACLs
+## Standard Named Acls
 
 - Standard ACLs match traffic based only on the SOURCE IP ADDRESS of the PACKET
 - NAMED ACLs are identified with a NAME (ie: ‘BLOCK_BOB’)
@@ -132,7 +127,7 @@ Note, however, how the order is when viewing the ACLs
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/74ad9dd4-d56f-4845-83b1-44366b4b94f6)
 
-WHY THE REORDERING?
+## Why The Reordering?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e5ed273d-1c24-4b78-884f-712e1cf6922a)
 

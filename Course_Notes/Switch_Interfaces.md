@@ -1,12 +1,10 @@
-# 9. SWITCH INTERFACES
+# 9. Switch Interfaces
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5d0d80dc-74d1-4656-841c-fcaa2b89c760)
 
-
-CISCO CLI for SWITCHES
+## Cisco CLI for Switches
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e3947ef5-9100-426f-8d62-fd4ce5224351)
-
 
 // enter Privileged EXEC mode
 
@@ -26,7 +24,6 @@ Unconnected devices will show as "down" and "down" (not connected to another dev
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e0fdc339-21d9-4313-b7d8-78303a7ba1ea)
 
-
 // Show the status of all interfaces on SW1
 
 SW1#show interfaces status
@@ -45,13 +42,11 @@ This will list:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/12a33be7-795f-467a-87a4-42c5b218960b)
 
-
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7b5953f7-77d3-4826-8efc-072498a7f9c0)
-
 
 ---
 
-INTERFACE RANGE
+## Interface Range
 
 Unused Interfaces can pose a security risk so it's a good idea to deactivate them.
 
@@ -62,7 +57,6 @@ Answer: No! There is a command to apply configurations to a range of interfaces.
 Inside Global Config Mode (config t):
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/06e2e267-1e07-48a1-8c8c-8edbd5bd48ae)
-
 
 SW1(config)#interface range f0/5 - 12   // Choose all interfaces from 0/5 to 0/12
 
@@ -78,13 +72,13 @@ Confirm with 'show interface status' in Privileged EXEC mode or if in CONFIG mod
 
 ---
 
-FULL / HALF DUPLEX
+## Full / Half Duplex
 
-HALF DUPLEX:
+### **Half Duplex**
 
 - Device cannot send / receive data at the same time. If it is receiving a frame, it must wait before sending a frame.
 
-FULL DUPLEX:
+### **Full Duplex**
 
 - Device CAN send / receive data at the same time. It does NOT have to wait.
 
@@ -102,7 +96,7 @@ All devices connected to a HUB are called a COLLISION DOMAIN.
 
 To DEAL with COLLISIONS, Ethernet devices use a mechanism called CSMA/CD.
 
-CSMA/CD = CARRIER SENSE MULTIPLE ACCESS with COLLISION DETECTION.
+## Csma/Cd = Carrier Sense Multiple Access With Collision Detection.
 
 - Before sending frames, devices 'listen' to the collision domain until they detect that other devices are not sending.
 - IF a collision occurs, the device sends a jamming signal to inform the other devices that a collision happened.
@@ -120,8 +114,7 @@ SWITCHES are Layer 2 Devices - Collisions RARELY occur.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/feff3816-1449-4282-bc44-71575333a1e0)
 
-
-SPEED / DUPLEX AUTONEGOTIATION
+## Speed / Duplex Autonegotiation
 
 - Interfaces that can run at different speeds (10/100 or 10/100/1000) have a default setting of SPEED AUTO and DUPLEX AUTO.
 - Interfaces 'advertise' their capabilities to the neighbouring device, and they negotiate the best SPEED and DUPLEX settings they are both capable of.
@@ -130,7 +123,6 @@ WHAT if AUTONEGOTIATION is DISABLED on the device connected to the SWITCH ?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/30519cf7-0a79-4996-a8d8-dfac689f4005)
 
-
 - SPEED: The SWITCH will try to send at the speed that the other device is operating at.
 If it fails to send the speed, it will use the slowest supported speed (ie: 10 Mbps on a 10/100/1000 interface).
 - DUPLEX: If the speed is 10 or 100 Mbps the SWITCH will use HALF DUPLEX.
@@ -138,7 +130,7 @@ If the speed is 1000 Mbps or great, it will use FULL DUPLEX.
 
 ---
 
-INTERFACE COUNTERS AND ERRORS
+## Interface Counters and Errors
 
 Show using the:
 
@@ -149,7 +141,6 @@ SW1#show interfaces <interface name>
 Error stats will be at the bottom.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/20d6affd-6014-427d-9ad9-c638ace358f8)
-
 
 **Packets Received / Total bytes received.**
 

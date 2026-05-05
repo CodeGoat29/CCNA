@@ -1,4 +1,4 @@
-# 2. INTERFACES AND CABLES
+# 2. Interfaces and Cables
 
 SWITCHES provide many PORTS for connectivity (usually 24)
 
@@ -6,7 +6,7 @@ These PORTS tend to be RJ-45 (Registered Jack) ports.
 
 ---
 
-WHAT IS ETHERNET?
+## What Is Ethernet?
 
 - Ethernet is a collection of network protocols/standards.
 
@@ -14,8 +14,6 @@ Why do we need network protocols and standards?
 
 - provide common communication standards over networks.
 - provide common hardware standards to allow connectivity between devices.
-
-
 
 Connections between devices operates at a set speed.
 
@@ -36,7 +34,7 @@ Ethernet standards are:
 - Defined in the IEEE 802.3 standard in 1983
 - IEEE = Institute of Electrical and Electronics Engineers
 
-ETHERNET STANDARDS (COPPER)
+## Ethernet Standards (Copper)
 
 | Speed | Common Name | Standard | Cable Type | Max Transmission Distance |
 | --- | --- | --- | --- | --- |
@@ -61,7 +59,6 @@ Most use 8 wires (4 pairs) however ...
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/00b27997-a78a-4e81-a878-7f8ab7e3279e)
 
-
 ---
 
 How do devices communicate via their connections?
@@ -69,7 +66,6 @@ How do devices communicate via their connections?
 Each ethernet cable has a RJ-45 plug with 8 pins on the ends.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/323930c9-3387-4bf9-aae1-f61db0fd9c04)
-
 
 - PCs Transmit(TX) data on Pins #1-2
 - Switches Receive(RX) data on Pins #1-2
@@ -83,7 +79,6 @@ This allows Full-Duplex transmission of data.
 What if a Router / Switch connect?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/907259d9-1837-4d53-8f45-a42934fb66f2)
-
 
 - Routers Transmit(TX) data on Pins #1-2
 - Routers Receive(RX) data on Pins #3,6
@@ -105,16 +100,15 @@ This cable swaps the pins on one end to allow connection to work.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d98646ad-366f-4e96-8c6f-f6b5f32f9bdc)
 
+## Pin#1 -----> Pin#3
+## Pin#2 -----> Pin#6
 
-PIN#1 -----> PIN#3
-PIN#2 -----> PIN#6
-
-PIN#3 -----> PIN#1
-PIN#6 -----> PIN#2
+## Pin#3 -----> Pin#1
+## Pin#6 -----> Pin#2
 
 ---
 
-| DEVICE TYPE | TRANSMIT (TX) PINS | RECEIVE (RX) PINS |
+## | Device Type | Transmit (Tx) Pins | Receive (Rx) Pins |
 | --- | --- | --- |
 | ROUTER | 1 and 2 | 3 and 6 |
 | FIREWALL | 1 and 2 | 3 and 6 |
@@ -131,7 +125,6 @@ Each wire pair is **bidirectional** so can transmit/receive much faster than 10/
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/763c841a-d7b5-4e87-8500-b54d623af620)
 
-
 ---
 
 Fiber-Optic Connections:
@@ -146,13 +139,11 @@ SFP Transceiver (Small Form-Factor Pluggable) allows fiber-optic cables to conne
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/70b81cde-265f-413b-815b-3e7184ea0586)
 
-
 There are TWO types of fiberoptic cable.
 
 Single-Mode:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d9a4b633-44c2-491d-92e4-329dd3b9074b)
-
 
 - Narrower than multimode
 - Lighter enters at a single angle (mode) from a laser-based transmitter.
@@ -162,7 +153,6 @@ Single-Mode:
 Multimode:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e73ec4d0-9aa1-4a75-848c-3af70e770dce)
-
 
 - Core is wider than Single-mode
 - Allows multiple angles (modes) of light waves to enter core
@@ -184,7 +174,7 @@ Fiber Optic Standards:
 
 UTP vs Fiber-Optic Cabling:
 
-UTP are:
+## Utp Are:
 
 - Lower cost than fiber-optic.
 - Shorter maximum distance than fiber-optic (~100m).

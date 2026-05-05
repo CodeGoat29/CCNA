@@ -1,6 +1,6 @@
-# 31. IPv6 : PART 1
+# 31. Ipv6 : Part 1
 
-HEXIDECIMAL (Review)
+## Hexidecimal (Review)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/df3e0c7f-5325-4c4c-9d88-197b588cdfe4)
 
@@ -14,7 +14,7 @@ What about the reverse (Hex to Binary) ???
 
 ---
 
-WHY IPv6?
+## Why Ipv6?
 
 - The **MAIN REASON** is that there are simply not enough IPv4 addresses available
 - There are 2^32 IPv4 Addresses available (4,294,967,296)
@@ -33,7 +33,7 @@ WHY IPv6?
 
 ---
 
-BASICS OF IPv6
+## Basics of Ipv6
 
 - An IPv6 ADDRESS is **128 bits (8 "groups", 16 bits per "group". Groups are separated by ':')**
 
@@ -57,7 +57,7 @@ EXPANDING (Abbreviating) IPv6 ADDRESSES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/934a089e-6ec1-4297-b0da-154b8240af35)
 
-FINDING the IPv6 PREFIX (GLOBAL UNICAST ADDRESSES)
+## Finding The Ipv6 Prefix (Global Unicast Addresses)
 
 - Typically, an Enterprise requesting IPv6 ADDRESSES from their ISP will receive a /48 BLOCK
 - Typically, IPv6 SUBNETS use a /64 PREFIX LENGTH
@@ -72,7 +72,7 @@ FINDING the IPv6 PREFIX (GLOBAL UNICAST ADDRESSES)
 
 **REMEMBER** : You can only remove the LEADING ZEROS !!!
 
-2001 : 0DB8 : 8B00 : 0001 : FB89 : 017B : 0020 : 0011  /93
+## 2001 : 0db8 : 8b00 : 0001 : Fb89 : 017b : 0020 : 0011  /93
 
 Because 93 lands in the middle of a 4 bit number, we need to convert the last digit to binary and borrow a “bit” from the first binary digit.
 
@@ -84,30 +84,24 @@ Because 93 lands in the middle of a 4 bit number, we need to convert the last di
 
 ---
 
-CONFIGURING IPv6 ADDRESSES
+## Configuring Ipv6 Addresses
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7ee88c71-617f-4bfc-8220-a4ef5bbe89e3)
 
 This allows the ROUTER to perform IPv6 ROUTING
 
-<aside>
-💡 R1(config) #ipv6 unicast-routing
-
-</aside>
+> **Note:** R1(config) #ipv6 unicast-routing
 
 Configuring an INTERFACE with an IPv6 Address
 
-<aside>
-💡 R1(config) #int g0/0
+> **Note:** R1(config) #int g0/0
 R1(config-if) #ipv6 address 2001:db8:0:0::1/64
 R1(config) #no shutdown
-
-</aside>
 
 You can also type out the full address (if necessary)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c83977d3-678f-4922-9be2-f52c6a679d64)
 
-NOTE ABBREVIATED IPv6 ADDRESSES SHOWN
+## Note Abbreviated Ipv6 Addresses Shown
 
 LINK-LOCAL ADDRESSES are automatically added when creating an IPv6 INTERFACE (Covered in IPv6 - PART 2 Lecture)

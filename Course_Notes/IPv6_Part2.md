@@ -1,6 +1,6 @@
-# 32. IPv6 : PART 2
+# 32. Ipv6 : Part 2
 
-IPv6 ADDRESS CONFIGURATION (EUI-64)
+## Ipv6 Address Configuration (Eui-64)
 
 - EUI stands for Extended Unique Identifier
 - (Modified) EUI-64 is a method of converting a MAC address (48-bits) into a 64-bit INTERFACE identifier
@@ -8,11 +8,11 @@ IPv6 ADDRESS CONFIGURATION (EUI-64)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bee8f7bf-3877-4307-9ca7-863af19aae6c)
 
-EUI-64 PRACTICE:
+### **Eui-64 Practice**
 ```
-782B CBAC 0867 >>> 782B CB  ||  AC 0867
+## 782b Cbac 0867 >>> 782b Cb  ||  Ac 0867
 
-782B CBFF  FEAC 0867 
+## 782b Cbff  Feac 0867 
 
 8 is the 7th bit so 1000 inverted becomes 1010 = A in hex
 
@@ -22,7 +22,7 @@ so the EUI-64 Interface Identifier is :  7A2B CBFF FEAC 0867
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d4e90146-8c71-4c6c-b5aa-a9077bde2caf)
 
 ---
-CONFIGURING IPv6 ADDRESSES with EUI-64
+## Configuring Ipv6 Addresses With Eui-64
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e6c6da0b-def4-4764-a0a1-3f64855f319f)
 
@@ -34,9 +34,9 @@ NOTE the “2001:DB8…” Address has “E” changed to “c”. This is the 7
 
 ---
 
-WHY INVERT THE 7th BIT ? 
+## Why Invert The 7th Bit ? 
 
-- MAC addresses can be divided into TWO TYPES:
+- **Mac Addresses Can Be Divided Into Two Types:**
     - UAA (Universally Administered Address)
         - Uniquely assigned to the device of the manufacturer
     - LAA (Locally Administered Address)
@@ -50,16 +50,16 @@ WHY INVERT THE 7th BIT ?
 
 ---
 
-IPv6 ADDRESS TYPES
+## Ipv6 Address Types
 
-1) GLOBAL UNICAST ADDRESSES
+### **1) Global Unicast Addresses**
 
 - **Global Unicast** IPv6 ADDRESSES are PUBLIC ADDRESSES which can be used over the INTERNET
 - Must REGISTER to use them.
 - They are PUBLIC ADDRESSES so need to be GLOBALLY UNIQUE
 
-💡 Originally defined as the 2000 :: /3 block
-(2000:: to 3FFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF)
+> **Note:** Originally defined as the 2000 :: /3 block
+## (2000:: to 3fff : Ffff : Ffff : Ffff : Ffff : Ffff : Ffff : Ffff)
 
 - NOW defined as ALL ADDRESSES which are not RESERVED for other purposes
 
@@ -69,7 +69,7 @@ Remember THESE THREE PARTS of a GLOBAL UNICAST ADDRESS
 
 ---
 
-2) UNIQUE LOCAL ADDRESSES 
+### **2) Unique Local Addresses **
 
 - **Unique Local** IPv6 ADDRESSES are PRIVATE ADDRESSES which cannot be used over the internet
 - You do NOT need to REGISTER to use them
@@ -77,11 +77,8 @@ Remember THESE THREE PARTS of a GLOBAL UNICAST ADDRESS
 - Do NOT need to be GLOBALLY UNIQUE (*)
 - CANNOT be ROUTED over the INTERNET
 
-<aside>
-💡 Uses the ADDRESS block FC00 ::/7
-(FC00:: to FDFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF)
-
-</aside>
+> **Note:** Uses the ADDRESS block FC00 ::/7
+## (Fc00:: to Fdff : Ffff : Ffff : Ffff : Ffff : Ffff : Ffff : Ffff)
 
 - A later UPDATE required the 8th bit to be set to 1 so the FIRST TWO DIGITS must be FD
 
@@ -91,22 +88,19 @@ Remember THESE THREE PARTS of a GLOBAL UNICAST ADDRESS
 
 ---
 
-3) LINK-LOCAL ADDRESSES
+### **3) Link-Local Addresses**
 
 - **Link-Local** IPv6 ADDRESSES are AUTOMATICALLY generated on IPv6-enabled INTERFACES
 - Use command `R1(config-if)# ipv6 enable` on an interface to enable IPv6 on an INTERFACE
 
-<aside>
-💡 Uses the ADDRESS block FE80::/10
-(FE80:: to FEBF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF)
-
-</aside>
+> **Note:** Uses the ADDRESS block FE80::/10
+## (Fe80:: to Febf : Ffff : Ffff : Ffff : Ffff : Ffff : Ffff : Ffff)
 
 - The STANDARD states that the 54-bits AFTER FE80/10 should be ALL 0’s so you won’t see Link-Local ADDRESSES beginning with FE9, FEA, or FEB - ONLY FE8(!)
 - The INTERFACE ID is generated using EUI-64 rules
 - Link-Local means that these addresses are used for communication within a single link (SUBNET)
     - ROUTER will not route PACKETS with a Link-Local DESTINATION IPv6 ADDRESS
-- Common uses of Link-Local Addresses:
+- **Common Uses of Link-Local Addresses:**
     - Routing Protocol Peerings (OSPFv3 uses Link-Local Addresses for Neighbour Adjacencies)
     - NEXT-HOP ADDRESS for STATIC ROUTES
     - Neighbor Discovery Protocol (NDP, IPv6’s replacement for ARP) uses Link-Local ADDRESSES to function
@@ -118,7 +112,7 @@ Remember THESE THREE PARTS of a GLOBAL UNICAST ADDRESS
 
 ---
 
-4) MULTICAST ADDRESSES
+### **4) Multicast Addresses**
 
 - **Unicast Addresses** are one-to-one
     - ONE SOURCE to ONE DESTINATION
@@ -127,21 +121,18 @@ Remember THESE THREE PARTS of a GLOBAL UNICAST ADDRESS
 - **Multicast** Addresses are one-to-many
     - ONE SOURCE to MULTIPLE DESTINATIONS (that have joined the specific ***multicast*** group)
 
-<aside>
-💡 IPv6 uses range FF00::/8 for multicast
-(FF00:: to FFFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF)
-
-</aside>
+> **Note:** IPv6 uses range FF00::/8 for multicast
+## (Ff00:: to Ffff : Ffff : Ffff : Ffff : Ffff : Ffff : Ffff : Ffff)
 
 - **IPv6 doesn’t use Broadcast** (there IS NO “Broadcast Address” in IPv6!)
 
-YOU MUST KNOW THE MULTICAST ADDRESS FOR EACH ROUTER TYPE
+## You Must Know The Multicast Address for Each Router Type
 
 NOTE that the IPv6 and IPv4 Addresses share the same last digit
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e5efcdd7-5d7d-4020-a179-07ba267bf5ab)
 
-MULTICAST ADDRESS SCOPES
+## Multicast Address Scopes
 
 - IPv6 defines multiple MULTICAST ‘scopes’ which indicate how far the PACKET should be forwarded
 - The ADDRESS in the previous slide all use the ‘link-local’ scope (FF02), which stays in the LOCAL SUBNET
@@ -167,7 +158,7 @@ MULTICAST ADDRESS SCOPES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5d5f2d6e-3e21-4ab7-bf8e-dec5d12b6eed)
 
-5) ANYCAST ADDRESS
+### **5) Anycast Address**
 
 - **ANYCAST is a NEW feature of IPv6**
 - ANYCAST is ‘one-to-one-of-many’

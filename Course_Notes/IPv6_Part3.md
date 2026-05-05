@@ -1,6 +1,6 @@
-# 33. IPv6 : PART 3
+# 33. Ipv6 : Part 3
 
-CORRECTION TO PRIOR LECTURES:
+### **Correction to Prior Lectures**
 
 RFC Requirements for IPv6 Address Representation
 
@@ -18,7 +18,7 @@ RFC Requirements for IPv6 Address Representation
 
 ---
 
-IPv6 HEADER
+## Ipv6 Header
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5bba7262-60aa-4348-9b7a-55dc354f4ed3)
 
@@ -63,7 +63,7 @@ Destination Address (128 bits)
 
 ---
 
-SOLICITED-NODE MULTICAST ADDRESS
+## Solicited-Node Multicast Address
 
 - An IPv6 SOLICITED-NODE Multicast Address is calculated from a UNICAST ADDRESS
 
@@ -77,38 +77,38 @@ Note the automatically joined group addresses for this IPv6 Interface
 
 ---
 
-NEIGHBOR DISCOVERY PROTOCOL (NDP)
+## Neighbor Discovery Protocol (Ndp)
 
 - NEIGHBOR DISCOVERY PROTOCOL (NDP) is a PROTOCOL used with IPv6
 - It has various functions and one of those functions is to replace ARP, which is no longer used in IPv6
 - The ARP-like function of NDP uses ICMPv6 and SOLICITED-MODE Multicast Addresses to learn the MAC ADDRESS of other HOSTS (ARP in IPv4 uses Broadcast Messages)
 
-- TWO MESSAGES types are used:
-    - 1) NEIGHBOR SOLICITATION (NS)
+- **Two Messages Types Are Used:**
+- 1) Neighbor Solicitation (Ns)
         - ICMPv6 Type 135
     
-    - 2) NEIGHBOR ADVERTISEMENT (NA)
+- 2) Neighbor Advertisement (Na)
         - ICMPv6 Type 136
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/88b9dde5-bc94-49ce-ba4a-b38c47f4670d)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cc9010cb-eb67-4fcb-8c6a-7a0aa11c7057)
 
-IPv6 NEIGHBOR TABLE
+## Ipv6 Neighbor Table
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/085bb9df-8015-4c2f-bfc8-2d6336436fe2)
 
 - Another function of NDP allows HOSTS to automatically discover ROUTERS on the LOCAL NETWORK
 
-- TWO MESSAGES are used for this process:
+- **Two Messages Are Used for This Process:**
   
-    - ROUTER SOLICITATION (RS)
+- Router Solicitation (Rs)
         - ICMPv6 Type 133
         - Sent to Multicast Address `FF02::2` (All Routers)
         - Asks ALL ROUTERS on the Local Link to identify themselves
         - Sent when an INTERFACE is enabled / HOST is connected to the NETWORK
         
-    - ROUTER ADVERTISEMENT (RA)
+- Router Advertisement (Ra)
         - ICMPv6 Type 134
         - Sent to Multicast Address `FF02::1` (All Nodes)
         - The ROUTER announces its presence, as well as other information about the link
@@ -121,7 +121,7 @@ IPv6 NEIGHBOR TABLE
 
 ---
 
-SLAAC
+## Slaac
 
 - Stands for **STATELESS ADDRESS AUTO-CONFIGURATION**
 - HOSTS use the RS / RA messages to learn the IPv6 Prefix of the LOCAL LINK (ie: 2000:db8:: /64) and then automatically generate an IPv6 Address
@@ -133,7 +133,7 @@ SLAAC
 
 ---
 
-DUPLICATE ADDRESS DETECTION (DAD)
+## Duplicate Address Detection (Dad)
 
 - One final point about NDP!
 - Duplicate Address Detection (DAD) allows HOSTS to check if other devices on the Local Link are using the same IPv6 Address
@@ -145,7 +145,7 @@ DUPLICATE ADDRESS DETECTION (DAD)
 
 ---
 
-IPv6 STATIC ROUTING
+## Ipv6 Static Routing
 
 - IPv6 ROUTING works the same as IPv4 ROUTING
 - However, the TWO processes are separate on the ROUTER, and the TWO routing tables are separate, as well.
@@ -174,10 +174,7 @@ DIRECTLY ATTACHED Static Route:
 - `ipv6 route destination / prefix-length exit-interface`
 - Example : `~~R1(config)# ipv6 route 2001:db8:0:3:: /64 g0/0~~`
 
-<aside>
-💡 In IPv6, you CANNOT use DIRECTLY ATTACHED Static Routes if the INTERFACE is an ETHERNET INTERFACE
-
-</aside>
+> **Note:** In IPv6, you CANNOT use DIRECTLY ATTACHED Static Routes if the INTERFACE is an ETHERNET INTERFACE
 
 RECURSIVE Static Route:
 
@@ -195,7 +192,7 @@ FULLY SPECIFIED Static Route:
 
 (NOTE THAT THESE ROUTES ARE ALL RECURSIVE : They specify the Next-Hop)
 
-NETWORK ROUTE:
+### **Network Route**
 
 `R1(config)# ipv6 route 2001:db8:0::/64 2001:db8:0:12::2`
 
@@ -203,7 +200,7 @@ This is a route to R3/PC2 NETWORK via R2’s G0/0 INTERFACE
 
 (We did this in Day 32’s Lab)
 
-HOST ROUTE:
+### **Host Route**
 
 `R2(config)# ipv6 route 2001:db8:0:1::100/128 2001:db8:0:12::1`
 
@@ -213,17 +210,17 @@ This is a route from R2 to PC1 and PC2 using the “next hop” ADDRESSES of R1 
 
 Note the /128 prefix. This is how SPECIFIC IPv6 ADDRESSES are written
 
-DEFAULT ROUTE:
+### **Default Route**
 
 `R3(config)# ipv6 route ::/0 2001:db8:0:23::1`
 
 ::/0 is the IPv6 equivalent of 0.0.0.0/0 in IPv4
 
-FLOATING STATIC ROUTES:
+### **Floating Static Routes**
 
 - Require you to increase the [AD] number HIGHER than the currently used NETWORK IGP AD value
 
-LINK-LOCAL NEXT HOPS:
+### **Link-Local Next Hops**
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/52cf09e2-2b37-4319-a2b9-15213524530c)
 

@@ -1,14 +1,14 @@
-# 44. NAT (STATIC): PART 1
+# 44. NAT (Static): Part 1
 
-PRIVATE IPv4 ADDRESSES (RFC 1918)
+## Private Ipv4 Addresses (Rfc 1918)
 
 - IPv4 doesn’t provide enough ADDRESSES for all DEVICES that need an IP ADDRESS in the modern world
 - The long-term solution is to switch to IPv6
-- There are THREE MAIN short-term solutions:
-    - CIDR
+- **There Are Three Main Short-Term Solutions:**
+- Cidr
     - PRIVATE IPv4 ADDRESS
-    - NAT
-- RFC 1918 specifies the following IPv4 ADDRESS RANGES as PRIVATE:
+- NAT
+- **Rfc 1918 Specifies The Following Ipv4 Address Ranges As Private:**
     
     ```
     10.0.0.0 /8       (10.0.0.0 to 10.255.255.255)             CLASS A 
@@ -22,7 +22,7 @@ PRIVATE IPv4 ADDRESSES (RFC 1918)
 
 ---
 
-INTRO TO NAT
+## Intro to NAT
 
 - NETWORK ADDRESS TRANSLATION (NAT) is used to modify the SOURCE and / or DESTINATION IP ADDRESSES of packets
 - There are various reasons to use NAT, but the MOST common reason is to ALLOW HOSTS with PRIVATE IP ADDRESSES to communicate with other HOSTS over the INTERNET
@@ -32,7 +32,7 @@ INTRO TO NAT
 
 ---
 
-STATIC NAT
+## Static NAT
 
 - STATIC NAT involves statically configuring ONE-TO-ONE MAPPINGS of PRIVATE IP ADDRESSES to PUBLIC ADDRESSES
 
@@ -42,15 +42,15 @@ STATIC NAT
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/daac56f4-5af8-482c-9d1d-63a0fb3bdcb1)
 
-PRIVATE IP CANNOT BE MAPPED TO THE SAME GLOBAL IP
+## Private IP Cannot Be Mapped to The Same Global IP
 
-THE SECOND MAPPING WILL BE REJECTED
+## The Second Mapping Will Be Rejected
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6dceb3c2-39d6-4299-b08d-90cbddb8d6b3)
 
 ---
 
-STATIC NAT CONFIGURATIONS
+## Static NAT Configurations
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1b0d6780-56d8-4ea0-870b-abb65d3a6e66)
 
@@ -66,6 +66,6 @@ Command `show ip nat statistics`
 
 ---
 
-COMMAND REVIEW
+## Command Review
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/061f4c43-e755-41e8-b8b4-9e31e0723a19)

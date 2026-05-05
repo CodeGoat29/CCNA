@@ -1,13 +1,13 @@
-# 7. IPv4 ADDRESSING : PART 1
+# 7. Ipv4 Addressing : Part 1
 
-OSI MODEL - NETWORK LAYER (Layer 3)
+## Osi Model - Network Layer (Layer 3)
 
 - Provides connectivity between end hosts on DIFFERENT networks (ie: outside of the LAN)
 - Provides logical addressing (IP addresses)
 - Provides path selection between SOURCE and DESTINATION
 - ROUTERS operate at LAYER 3
 
-ROUTING
+## Routing
 
 SWITCHES (Layer 2 Devices) do no separate different networks. They connect and EXPAND networks within the same LAN.
 
@@ -19,7 +19,6 @@ Example:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3d414956-cb53-46f6-b386-3fc9bba11802)
 
-
 ROUTERS have unique IP Addresses for EACH of their interface connections, depending on their location.
 
 The IP Address for the ROUTER's G0/0 Interface is:
@@ -29,7 +28,6 @@ The IP Address for the ROUTER's G0/1 Interface is:
 192.168.2.254/24
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6e593774-4113-4493-89bb-4d394cb29e1d)
-
 
 The IP Address depends on network address of the LAN it is connects to.
 
@@ -47,10 +45,9 @@ When a BROADCAST message hits a ROUTER, it does NOT continue onward. It stays wi
 
 ---
 
-IPv4 HEADER
+## Ipv4 Header
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4f4bd7da-1876-4000-8229-be4b8792a86d)
-
 
 IP (or Internet Protocol) is the primary Layer 3 protocol in use today. Version 4 is the version in use in most networks.
 
@@ -72,14 +69,13 @@ Since Binary is difficult to read for people, we use the Dotted Decimal format.
 
 ---
 
-REVIEW of DECIMAL and HEXADECIMAL
+## Review of Decimal and Hexadecimal
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e45f0ea9-a705-463b-bb9b-d81034cf130d)
 
-
 Decimal (base 10)
 
-Ex: 3294 = (3 * 1000) + (2 * 100) + (9 * 10) + (4 * 1)
+## Ex: 3294 = (3 * 1000) + (2 * 100) + (9 * 10) + (4 * 1)
 
 Hexadecimal (base 16)
 
@@ -98,7 +94,7 @@ The same way we convert to Hexadecimal.
 
 10001111
 
-So:
+## So:
 ```
 1 * 128 = 128
 1 * 8 = 8
@@ -172,7 +168,7 @@ We can take that number and start subtracting it from LEFT to RIGHT of our Binar
 ```
 This, then, allows us to the write out the BINARY number for 221.
 
-It is : 11011101
+## It Is : 11011101
 
 ---
 
@@ -187,7 +183,7 @@ Another example: 127
 3 - 2 is possible so 1 in "2"
 1 is possible so 1 in "1"
 ```
-So 127, in BINARY, is 0111 1111
+## So 127, in Binary, Is 0111 1111
 
 ---
 
@@ -204,7 +200,7 @@ The remainder, then, can be used to "find" where the 0's are in the binary numbe
 
 ---
 
-IPv4 ADDRESSES
+## Ipv4 Addresses
 
 So we now know that IP Addresses are the Dotted Decimal conversion of a series of BINARY NUMBERS (broken up into 4 OCTETS) like so:
 
@@ -214,7 +210,6 @@ But what does the /24 stand for?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/808fa7fa-0239-42fa-9706-79db87ea167e)
 
-
 It means the FIRST 24 BITS of this address represent the NETWORK portion of the address.
 
 192.168.1 is the NETWORK PORTION (the first 3 OCTETS)
@@ -222,7 +217,6 @@ It means the FIRST 24 BITS of this address represent the NETWORK portion of the 
 .254 is the HOST PORTION (the last OCTET)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2e7c64e1-5689-486a-bba0-9623f5e8de7d)
-
 
 ---
 
@@ -232,7 +226,7 @@ CONVERT this BINARY number into an IPv4 Address:
 
 10011010 . 01001110 . 01101111 . 00100000
 
-Octets:
+## Octets:
 
 1. 128 + 16 + 8 + 2 = 154
 2. 64 + 8 + 4 + 2 = 78
@@ -241,8 +235,8 @@ Octets:
 
 The IPv4 address is: 154.78.111.32/16
 
-154.78 is the NETWORK PORTION
-111.32 is the HOST PORTION
+## 154.78 Is The Network Portion
+## 111.32 Is The Host Portion
 
 Another Example:
 
@@ -250,7 +244,7 @@ Another Example:
 
 00001100 . 10000000 . 11111011 . 00010111
 
-Octets:
+## Octets:
 
 1. 8 + 4 = 12
 2. 128
@@ -259,30 +253,29 @@ Octets:
 
 The IPv4 address is: 12.128.251.23/8
 
-12 is the NETWORK PORTION
-128.251.23 is the HOST PORTION
+## 12 Is The Network Portion
+## 128.251.23 Is The Host Portion
 
 ---
 
-IPv4 ADDRESS CLASSES
+## Ipv4 Address Classes
 
 IPv4 ADDRESSES are split up into 5 different 'classes'.
 The class of an IPv4 is determined by the FIRST OCTET of the address.
 
-CLASS 		FIRST OCTET 		FIRST OCTET NUMBERIC RANGE
+## Class 		First Octet 		First Octet Numberic Range
 
 A 			 0xxxxxxx 				0-126 + 127 'loopback'
 B 			 10xxxxxx 				128-191
-C 			 110xxxxx 				192-223
-D 			 1110xxxx 				224-239
-E 			 1111xxxx 				240-255
+## C 			 110xxxxx 				192-223
+## D 			 1110xxxx 				224-239
+## E 			 1111xxxx 				240-255
 
 From the above chart, if the FIRST OCTECT STARTS with 0, the numeric RANGE of possible first DOTTED DECIMAL is between 0-127.
 
 The CLASSES we will be focusing on are CLASS A to CLASS C.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7cc286bf-ce76-4eee-af52-062a63dac2b4)
-
 
 D CLASS are reserved for 'MULTICAST' ADDRESSES
 
@@ -302,7 +295,6 @@ Because 127 is usually reserved for 'loopback addresses'
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/25f7db1a-f934-4c73-9926-66bb207fd292)
 
-
 The PREFIX LENGTH is the LENGTH of the NETWORK PORTION of the Address.
 
 From the examples above:
@@ -317,35 +309,32 @@ Because the NETWORK portion of CLASS C is so long, it means fewer potential Host
 
 ---
 
-NETMASK
+## Netmask
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/874c022f-9b8c-4862-a495-597682b014a4)
 
-
 A NETMASK is written like a Dotted Decimal IP Address
 
-CLASS A: /8 = 255.0.0.0
+## Class a: /8 = 255.0.0.0
 
-CLASS B: / 16 = 255.255.0.0
+## Class B: / 16 = 255.255.0.0
 
-CLASS C: /24 = 255.255.255.0
+## Class C: /24 = 255.255.255.0
 
 ---
 
-NETWORK ADDRESSES
+## Network Addresses
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/12178b46-2604-468b-a11c-2a94087b023d)
-
 
 If the HOST PORTION of an IP ADDRESS is ALL 0's, it means it is the NETWORK ADDRESS = the identifier of the network itself.
 
 Example: 192.168.1.0/24 = THIS is a NETWORK ADDRESS.
 
 A NETWORK ADDRESS cannot be assigned to a HOST.
-A NETWORK ADDRESS is the FIRST ADDRESS.
+## a Network Address Is The First Address.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/53eafb43-2a6f-422c-af19-866946d78efa)
-
 
 If the HOST PORTION of an IP ADDRESS is ALL 1's, it means it is the BROADCAST ADDRESS for the network.
 

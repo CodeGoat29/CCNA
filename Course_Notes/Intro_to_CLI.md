@@ -1,13 +1,13 @@
-# 4. INTRO TO THE CLI
+# 4. Intro to The CLI
 
-### What is a CLI?
+### What Is a CLI?
 
 - A "Command-line Interface"
 - The interface you use to configure Cisco devices
 
 A GUI is a "Graphical User Interface"
 
-### How do you connect to a Cisco Device?
+### How Do You Connect to a Cisco Device?
 
 - Console Port : When you first configure a device, you have to connect via the Console Port.
 
@@ -15,11 +15,11 @@ You can use a "Rollover cable" : DB9 serial connector to RJ45 OR a DB9 Serial to
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0527c007-d607-4bef-8ce1-7b18a177614d)
 
-### How do you actually access the CLI?
+### How Do You Actually Access The CLI?
 
 - You need to use a TERMINAL EMULATOR (Example: PuTTy is a popular choice) and connect via "Serial" (default settings)
 
-### Cisco Default Settings are:
+### Cisco Default Settings Are:
 
 Speed (baud) : 9600 bits/second
 Data bits: 8 data bits
@@ -31,7 +31,7 @@ Flow Control: None
 
 When you first enter the CLI you will DEFAULT be in what is called 'User EXEC' mode.
 
-USER EXEC MODE:
+### **User Exec Mode**
 
 (Hostname) >		// Prompt looks like THIS //
 
@@ -43,7 +43,7 @@ Using the 'enable' command, in User EXEC mode, switches you to 'Privileged EXEC'
 
 ---
 
-PRIVILEGED EXEC MODE:
+### **Privileged Exec Mode**
 
 - Provides complete access to view the device's configuration, restart the device, etc.
 - Cannot change the configuration, but can change the time on the device, save the configuration file, etc.
@@ -56,12 +56,11 @@ USE a Question Mark (?) to view the available commands in ANY mode. Combining ? 
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/52454e6f-d5b1-45f0-9a50-e412d356f6d2)
 
-
 USE the TAB key to complete partially entered commands IF the command exists.
 
 ---
 
-### GLOBAL CONFIGURATION MODE:
+### Global Configuration Mode:
 
 To enter Global Configuration Mode, enter the command, within Privileged EXEC mode
 
@@ -77,7 +76,7 @@ Type 'exit' to drop back into 'Privileged EXEC' mode.
 
 ---
 
-### To Enable Password for User EXEC mode:
+### to Enable Password for User Exec Mode:
 
 Router(config)# enable password (password)
 
@@ -121,7 +120,7 @@ To see the configuration files, inside 'Privileged EXEC' mode:
 
 Router# show running-config // for running config //
 
-OR
+## Or
 
 Router# show startup-config // for startup config //
 
@@ -131,18 +130,18 @@ To SAVE the Running configuration file, you can:
 
 Router# write
 Building configuration...
-[OK]
+## [Ok]
 
 Router# write memory
 Building configuration...
-[OK]
+## [Ok]
 
 Router# copy running-config startup-config
 
 Destination filename [startup-config]?
 
 Building configuration...
-[OK]
+## [Ok]
 
 ---
 
@@ -160,7 +159,6 @@ Future passwords will ALSO be *encrypted*
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/09c841fe-b5c0-4683-9082-baf060e24c03)
 
-
 Now you will see that the password is no longer in plaintext.
 
 “7” refers to the type of encryption used to encrypt the password. In this case, “7” uses Cisco’s proprietary encryption.
@@ -170,7 +168,6 @@ Now you will see that the password is no longer in plaintext.
 For BETTER / STRONGER encryption, use “enable secret”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/346f3015-9211-47a9-888f-4e02a013a728)
-
 
 “5” refers to MD5 encryption.
 
@@ -183,7 +180,6 @@ Once you use “enable secret” command, this will override “enable password�
 To CANCEL or delete a command you entered, use the “no” keyword
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2978d101-08d4-4ee3-8995-f36aa1c47d15)
-
 
 In this instance, disabling “service password-encryption”:
 

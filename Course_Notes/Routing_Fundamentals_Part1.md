@@ -1,11 +1,6 @@
-# 11. ROUTING FUNDAMENTALS : PART 1
+# 11. Routing Fundamentals : Part 1
 
-
-
-
-### WHAT IS ROUTING ?
-
-
+### What Is Routing ?
 
 ROUTING is the process that routers use to determine the path that IP packets should take over a network to reach their destination.
 
@@ -24,7 +19,6 @@ A ROUTE tells the ROUTER :
 - or if the Destination is the router’s own IP address, *receive the packet for yourself (don’t forward it).*
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8ceefb10-d70d-4530-969d-40347ed34297)
-
 
 WAN (Wide Area Network) = network that extends over a large geographic area.
 
