@@ -4,8 +4,7 @@
 
 A computer network is a digital telecommunications network allows NODES to share RESOURCES.
 
-A **Client** is a device that accesses a service made available by a SERVER.
-
+A CLIENT is a device that accesses a service made available by a SERVER.
 
 A SERVER is a device that provides functions or services for CLIENTS.
 
@@ -17,7 +16,7 @@ SWITCHES (Level 2):
 - Have many network interfaces/ports for End Hosts to connect to.
 - DO NOT provide connectivity between LANs/over the Internet.
 
-ROUTERS (Level 3):![alt text](image-1.png)
+ROUTERS (Level 3):
 
 - have fewer network interfaces than switches.
 - are used to provide connectivity BETWEEN LANs.
