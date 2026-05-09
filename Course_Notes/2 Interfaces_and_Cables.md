@@ -182,7 +182,7 @@ UTP vs Fiber-Optic Cabling:
 - RJ45 ports used with UTP are cheaper than SFP ports.
 - Emit (leak) a faint signal outside of cable, which can be copied (security risk).
 
-Fiber-Optic:
+## Fiber-Optic:
 
 - Higher cost than UTP.
 - Longer maximum distance than UTP.
