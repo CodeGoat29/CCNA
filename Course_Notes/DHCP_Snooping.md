@@ -9,9 +9,9 @@
     - Usually UPLINK PORTS are configured as TRUSTED PORTS, and DOWNLINK PORTS remain UNTRUSTED
     
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/9ed71d09-d94c-4fc9-ad87-1b31acfdd132)
+![image](remote_assets/9ed71d09-d94c-4fc9-ad87-1b31acfdd132.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/9d7d23a6-9d54-4234-a07e-a5caea136c94)
+![image](remote_assets/9d7d23a6-9d54-4234-a07e-a5caea136c94.png)
 
 ---
 
@@ -23,7 +23,7 @@
 - An ATTACKER uses spoofed MAC ADDRESSES to flood DHCP DISCOVER messages
 - The TARGET server’s DHCP POOL becomes full, resulting in a DoS to other DEVICES
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/33dfbb8b-2b78-4700-b4ab-0dd95fc03eed)
+![image](remote_assets/33dfbb8b-2b78-4700-b4ab-0dd95fc03eed.png)
 
 DHCP POISONING (Man-in-the-Middle)
 
@@ -35,9 +35,9 @@ DHCP POISONING (Man-in-the-Middle)
 - This will cause the CLIENT to send TRAFFIC to the ATTACKER instead of the legitimate DEFAULT GATEWAY
 - The ATTACKER can then examine / modify the TRAFFIC before forwarding it to the legitimate DEFAULT GATEWAY
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/d0cd7a5c-9ff4-4ab7-bec6-4edec4ea2646)
+![image](remote_assets/d0cd7a5c-9ff4-4ab7-bec6-4edec4ea2646.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/1573bcb7-6fa8-46d7-8cb8-46e30bac559d)
+![image](remote_assets/1573bcb7-6fa8-46d7-8cb8-46e30bac559d.png)
 
 ---
 
@@ -78,15 +78,15 @@ DHCP POISONING (Man-in-the-Middle)
 
 ## DHCP Snooping Configuration
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/729466dc-9432-47d2-8799-652fa064b058)
+![image](remote_assets/729466dc-9432-47d2-8799-652fa064b058.png)
 
 ## Switch 2’S Configuration
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/8d6cacb8-ffd8-4cf0-bd96-fe9978377989)
+![image](remote_assets/8d6cacb8-ffd8-4cf0-bd96-fe9978377989.png)
 
 ## Switch 1’S Configuration
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/bb11e4fd-a340-4dd3-a6f5-3cd280fc5a13)
+![image](remote_assets/bb11e4fd-a340-4dd3-a6f5-3cd280fc5a13.png)
 
 ## DHCP Snooping Rate-Limiting
 
@@ -94,13 +94,13 @@ DHCP POISONING (Man-in-the-Middle)
 - If the RATE of DHCP messages crosses the configured LIMIT, the INTERFACE is `err-disabled`
 - Like with PORT SECURITY, the interface can be manually re-enabled, or automatically re-enabled with `errdisable recovery`
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/6586df19-5a58-4ca3-a316-bd0aeb2ce67c)
+![image](remote_assets/6586df19-5a58-4ca3-a316-bd0aeb2ce67c.png)
 
 - You wouldn’t set the limit rate to 1 since it’s so low, it would shut the port immediately but this shows how RATE-LIMITING works
 
 `errdisable recovery cause dhcp-rate-limit`
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/83c324aa-baa0-4ae1-82ac-157e503e048a)
+![image](remote_assets/83c324aa-baa0-4ae1-82ac-157e503e048a.png)
 
 ## DHCP Option 82 (Information Option)
 
@@ -110,27 +110,27 @@ DHCP POISONING (Man-in-the-Middle)
 - With DHCP SNOOPING enabled, by default Cisco SWITCHES will add OPTION 82 to DHCP messages they receive from CLIENTS, even if the SWITCH isn’t acting as a DHCP RELAY AGENT
 - By DEFAULT, Cisco SWITCHES will drop DHCP MESSAGES with OPTION 82 that are received on an UNTRUSTED PORT
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/2efc6edd-21fd-4c1a-bb11-9c1f761e1d32)
+![image](remote_assets/2efc6edd-21fd-4c1a-bb11-9c1f761e1d32.png)
 
 THIS command disables OPTION 82 for SW1 but NOT SW2 
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/84f1c3f2-9ad1-4367-97f3-95dab053b30c)
+![image](remote_assets/84f1c3f2-9ad1-4367-97f3-95dab053b30c.png)
 
 TRAFFIC gets passed to R1 and is DROPPED because of “inconsistent relay information” (packet contains OPTION 82 but wasn’t dropped by SW2)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/5c4b547e-c588-4d62-8098-76902199a131)
+![image](remote_assets/5c4b547e-c588-4d62-8098-76902199a131.png)
 
 By ENABLING OPTION 82 on both SWITCHES…
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/dda50cf6-ae86-47ec-9b4f-104669697f64)
+![image](remote_assets/dda50cf6-ae86-47ec-9b4f-104669697f64.png)
 
 PC1’s DHCP DISCOVER message gets passed, through SW1 and SW2, to R1.
 R1 responds with an DHCP OFFER message, as normal
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/7e59cc5a-bf8e-482d-848d-5bfa0540c74b)
+![image](remote_assets/7e59cc5a-bf8e-482d-848d-5bfa0540c74b.png)
 
 ---
 
 ## Command Summary
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/308e32fa-52bd-4ee4-9356-f14e65416e17)
+![image](remote_assets/308e32fa-52bd-4ee4-9356-f14e65416e17.png)

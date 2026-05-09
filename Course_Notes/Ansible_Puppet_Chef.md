@@ -26,7 +26,7 @@
     - Templates
     - Variables
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/0c74b2a6-1ce7-4758-b6b8-340594d567c3)
+![image](remote_assets/0c74b2a6-1ce7-4758-b6b8-340594d567c3.png)
 
 ---
 
@@ -43,7 +43,7 @@
     - Check device configurations for compliance with defined standards
     - Compare configurations between devices, and between different versions of configurations on the same device
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f9eb7783-5e42-4cfe-aec8-8b57cd316f4d)
+![image](remote_assets/f9eb7783-5e42-4cfe-aec8-8b57cd316f4d.png)
 
 ---
 
@@ -73,7 +73,7 @@
         - These values are substituted into the templates to create complete configuration files.
         - Written in YAML
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/ba2a68b5-7661-4eff-bd5f-8c32bde354da)
+![image](remote_assets/ba2a68b5-7661-4eff-bd5f-8c32bde354da.png)
 
 ---
 
@@ -96,7 +96,7 @@
         - Similar to Ansible templates.
         - Used to generate MANIFESTS
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/ec26ad33-7534-4f15-93f0-4557337bfaec)
+![image](remote_assets/ec26ad33-7534-4f15-93f0-4557337bfaec.png)
 
 ---
 
@@ -121,10 +121,10 @@
 - **Run-List :**
         - An ordered list of RECIPES that are run to bring a device to the desired configuration state
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/eaf5be1b-3635-4806-bb7a-f397ffa1b411)
+![image](remote_assets/eaf5be1b-3635-4806-bb7a-f397ffa1b411.png)
 
 ---
 
 ## Memorize This Chart for The CCNA
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a4d212e6-df46-45d1-a2ca-3e55220c4b5c)
+![image](remote_assets/a4d212e6-df46-45d1-a2ca-3e55220c4b5c.png)

@@ -7,7 +7,7 @@
 
 - DATA SERIALIZATION languages allow us to represent *variables* with text
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f09eeeba-7779-40c8-af18-f1227bf0cf47)
+![image](remote_assets/f09eeeba-7779-40c8-af18-f1227bf0cf47.png)
 
 ---
 
@@ -62,19 +62,19 @@
     - The *key* and *value* are separated by a colon :
     - If there are multiple key-value pairs, each pair is separated by a comma
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/24a15571-bb9f-43b4-889f-69f23ffb91bc)
+![image](remote_assets/24a15571-bb9f-43b4-889f-69f23ffb91bc.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/b66f041d-2449-43f0-8a04-2c0da5391411)
+![image](remote_assets/b66f041d-2449-43f0-8a04-2c0da5391411.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/54d69eed-4369-4ef6-a437-6b5ecce14586)
+![image](remote_assets/54d69eed-4369-4ef6-a437-6b5ecce14586.png)
 
 - An ARRAY is a series of *values* separated by commas
     - Not *key-value pairs*
     - The values do NOT have to be the same DATA Type
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/3212f472-f966-49e5-9b9a-7bedcfe47487)
+![image](remote_assets/3212f472-f966-49e5-9b9a-7bedcfe47487.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f8075e93-2be7-4b2e-a2af-968961bbc5a7)
+![image](remote_assets/f8075e93-2be7-4b2e-a2af-968961bbc5a7.png)
 
 ---
 
@@ -87,9 +87,9 @@
     - Often used by REST APIs
     - <key> value </key> (similar to HTML)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f954b0ef-f563-4536-94c8-334b6d8f97c6)
+![image](remote_assets/f954b0ef-f563-4536-94c8-334b6d8f97c6.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/948dae9e-b59b-4607-8e6d-b39837baba70)
+![image](remote_assets/948dae9e-b59b-4607-8e6d-b39837baba70.png)
 
 ---
 
@@ -104,8 +104,8 @@
 - - is used to indicate a list
 - Keys and Values are represented as key : value
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/ecfa3659-4bc3-4596-9f11-10d2644eac1a)
+![image](remote_assets/ecfa3659-4bc3-4596-9f11-10d2644eac1a.png)
 
 COMPARISON BETWEEN JSON and YAML using the same DATA
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/16e0e98b-5653-4f8a-a388-1706f91a30d4)
+![image](remote_assets/16e0e98b-5653-4f8a-a388-1706f91a30d4.png)

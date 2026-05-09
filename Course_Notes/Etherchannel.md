@@ -8,13 +8,13 @@ A LAYER 2 ETHERCHANNEL is a group of SWITCH PORTS which operate as a SINGLE INTE
 
 A LAYER 3 ETHERCHANNEL is a group of ROUTED PORTS which operate as a SINGLE INTERFACE which you assign an IP ADDRESS to.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/86cecd4a-1554-4ece-8a88-6f97e24788f1)
+![image](remote_assets/86cecd4a-1554-4ece-8a88-6f97e24788f1.png)
 
 When the bandwidth of the INTERFACES connected to END HOSTS is greater than the bandwidth of the connection to the DISTRIBUTION SWITCH(es), this is called **OVERSUBSCRIPTION.** 
 
 Some OVERSUBSCRIPTION is acceptable, but too much will cause congestion.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/6ada996f-8fd4-4339-9ad7-d52e51a3553e)
+![image](remote_assets/6ada996f-8fd4-4339-9ad7-d52e51a3553e.png)
 
 - If you connect TWO SWITCHES together with multiple links, ALL except ONE will be DISABLED by SPANNING TREE PROTOCOL (Green Lights vs. Orange Lights above on ASW1)
 
@@ -25,12 +25,12 @@ Some OVERSUBSCRIPTION is acceptable, but too much will cause congestion.
 
 An ETHERCHANNEL (in network topology diagrams) is represented like THIS (circle around multi-connections)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/4c2cfcf8-57f2-4907-8322-2f26cc7dc7e4)
+![image](remote_assets/4c2cfcf8-57f2-4907-8322-2f26cc7dc7e4.png)
 
 - ETHERCHANNEL groups multiple channels together to act as a SINGLE INTERFACE
 - STP will treat this GROUP as a SINGLE INTERFACE
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a48bed14-11b4-42ba-965a-9724598d3b69)
+![image](remote_assets/a48bed14-11b4-42ba-965a-9724598d3b69.png)
 
 (All INTERFACES Green!)
 
@@ -47,7 +47,7 @@ Some other names for an ETHERCHANNEL are:
 
 ## How Does an Etherchannel Load-Balance?
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/bc257ff8-bf91-4744-a6cb-8f603ee9d294)
+![image](remote_assets/bc257ff8-bf91-4744-a6cb-8f603ee9d294.png)
 
 - ETHERCHANNEL load-balances based on **“flows”**
 - A “flow” is a communication between TWO NODES in the NETWORK
@@ -64,13 +64,13 @@ Some other names for an ETHERCHANNEL are:
 
 How to see the configuration for LOAD-BALANCING method
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/571623bf-b96b-4382-ada5-f14f93ec1a6a)
+![image](remote_assets/571623bf-b96b-4382-ada5-f14f93ec1a6a.png)
 
 How to CHANGE the LOAD-BALANCING method
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/5919f2fd-80bb-4b10-bfa0-ce403f52c710)
+![image](remote_assets/5919f2fd-80bb-4b10-bfa0-ce403f52c710.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/bc30e17e-716a-41cd-a57a-69a661b5d58e)
+![image](remote_assets/bc30e17e-716a-41cd-a57a-69a661b5d58e.png)
 
 ---
 
@@ -99,11 +99,11 @@ Up to 8 INTERFACES can be formed into a single ETHERCHANNEL (LACP allows up to 1
 
 ## Pagp Configuration
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/d0c734e2-79ad-43ad-a50b-c17ced608021)
+![image](remote_assets/d0c734e2-79ad-43ad-a50b-c17ced608021.png)
 
 > **Note:** NOTE that “auto” and “desirable” are the ONLY available modes for PAgP
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/9eabb76a-1846-48d3-abb1-bd6898a432e7)
+![image](remote_assets/9eabb76a-1846-48d3-abb1-bd6898a432e7.png)
 
 PAgP negotiations to form an ETHERCHANNEL
 
@@ -112,7 +112,7 @@ Creating a port-channel interface Port-channel1
 
 Shows up in the interface as “Port-channel1”
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/bc0c1190-9e39-4ea2-923c-b29e03e9d40a)
+![image](remote_assets/bc0c1190-9e39-4ea2-923c-b29e03e9d40a.png)
 
 The “channel-group” number has to MATCH for member INTERFACES on the same SWITCH.
 
@@ -124,11 +124,11 @@ It DOESN’T have to MATCH the “channel-group” number on the OTHER SWITCH!
 
 ## Lacp Configuration
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/ba4adcf6-dec5-456f-b8d7-ab4e6b722cbf)
+![image](remote_assets/ba4adcf6-dec5-456f-b8d7-ab4e6b722cbf.png)
 
 > **Note:** NOTE that “active” and “passive” are the ONLY available modes for LACP
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/0a314613-d398-49f1-a4d3-1b50fb96ab7d)
+![image](remote_assets/0a314613-d398-49f1-a4d3-1b50fb96ab7d.png)
 
 LACP negotiations for form an ETHERCHANNEL
 
@@ -142,7 +142,7 @@ It DOESN’T have to MATCH the “channel-group” number on the OTHER SWITCH!
 
 ## Static Etherchannel Configuration
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/92db26e7-21ae-40c6-89ee-abe0197ed8ad)
+![image](remote_assets/92db26e7-21ae-40c6-89ee-abe0197ed8ad.png)
 
 > **Note:** NOTE that “on” is the ONLY available mode for STATIC ETHERCHANNEL
 
@@ -156,7 +156,7 @@ ON + active = DOES NOT WORK
 
 ## How to Manually Configure The Negotiation Protocol
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/83ef9bc8-4bd4-4dd3-b28e-83439ba96860)
+![image](remote_assets/83ef9bc8-4bd4-4dd3-b28e-83439ba96860.png)
 
 ## Two Options: 
 
@@ -173,11 +173,11 @@ ON + active = DOES NOT WORK
 
 ## Configuring The Port Interface
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/c485cdf1-f0ed-44b8-8c91-c0553bf6d82d)
+![image](remote_assets/c485cdf1-f0ed-44b8-8c91-c0553bf6d82d.png)
 
 “show running-config” shows “interface Port-channel1” in the configuration
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/6adda3dd-6408-445f-bb3f-61847b3920b6)
+![image](remote_assets/6adda3dd-6408-445f-bb3f-61847b3920b6.png)
 
 > **Note:** NOTE the PHYSICAL INTERFACES (g0/0-g0/3) were auto-configured by the Port-channel1 configuration!
 
@@ -199,7 +199,7 @@ ON + active = DOES NOT WORK
 
 > **Note:** “show etherchannel summary”
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/9e0edb15-2806-4d51-afc9-ad67ed465a97)
+![image](remote_assets/9e0edb15-2806-4d51-afc9-ad67ed465a97.png)
 
 NOTE information at bottom. (”SU” means S - Layer2 + U - in use)
 
@@ -209,11 +209,11 @@ Protocol = What protocol the Etherchannel is using (in this case, LACP)
 
 ## Other Flags
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/23d92ae1-9cc6-4f3a-9ddf-2ead59705c1c)
+![image](remote_assets/23d92ae1-9cc6-4f3a-9ddf-2ead59705c1c.png)
 
 ## “D” = Down
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/b1b3ce70-d9a6-4bd2-be4d-976077438c85)
+![image](remote_assets/b1b3ce70-d9a6-4bd2-be4d-976077438c85.png)
 
 Changing one of the Member interfaces using “switchport mode access” has made it different than the other members so it is now appearing as “s” = suspended
 
@@ -221,37 +221,37 @@ Another useful command
 
 > **Note:** “show etherchannel port-channel”
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/61731b0c-1cc5-4a7e-b92c-d0afbea0ac2d)
+![image](remote_assets/61731b0c-1cc5-4a7e-b92c-d0afbea0ac2d.png)
 
 > **Note:** “show spanning-tree” will show the single EtherChannel port interface
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/df0b9cc8-0448-4bbd-aefa-62fadf2b6089)
+![image](remote_assets/df0b9cc8-0448-4bbd-aefa-62fadf2b6089.png)
 
 ---
 
 ## Layer 3 Etherchannels
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/c553ad64-1d8e-4a2a-a741-3102c89dc030)
+![image](remote_assets/c553ad64-1d8e-4a2a-a741-3102c89dc030.png)
 
 HOW TO CONFIGURE A LAYER 3 ETHERCHANNEL (from a clean configuration)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/c4520b2f-1e3b-49b8-85b1-458cdb6fc865)
+![image](remote_assets/c4520b2f-1e3b-49b8-85b1-458cdb6fc865.png)
 
 > **Note:** “show running-config”
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/8638f32d-47c3-4c64-b68e-a9e2e0070ac9)
+![image](remote_assets/8638f32d-47c3-4c64-b68e-a9e2e0070ac9.png)
 
 ## Note : No Switchport and No IP Interface.
 
 Where do we configure the IP Address?  Directly on the PORT INTERFACE !
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/3ec55a24-1de5-44a7-926c-f85500042115)
+![image](remote_assets/3ec55a24-1de5-44a7-926c-f85500042115.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f99ea2a6-82fb-494a-b80d-a171732d5786)
+![image](remote_assets/f99ea2a6-82fb-494a-b80d-a171732d5786.png)
 
 (”RU” - “R” = Layer 3, “U” = in use)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/acfe62c5-6908-4782-9440-1f75f842c2c9)
+![image](remote_assets/acfe62c5-6908-4782-9440-1f75f842c2c9.png)
 
 ---
 
@@ -277,4 +277,4 @@ SW# show etherchannel port-channel
 ```
 Displays information about the virtual port-channel interfaces on a SWITCH
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/6cae87f0-0226-40cc-92ba-b839c7a5ff53)
+![image](remote_assets/6cae87f0-0226-40cc-92ba-b839c7a5ff53.png)

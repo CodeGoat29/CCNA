@@ -2,9 +2,9 @@
 
 ## Review of Virtual Machines (Type 1 and Type2 Hypervisors)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/bfc801ca-a603-4957-a67c-316fb72e25cb)
+![image](remote_assets/bfc801ca-a603-4957-a67c-316fb72e25cb.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/da1b653d-f5f2-42d3-8088-dd3daa430913)
+![image](remote_assets/da1b653d-f5f2-42d3-8088-dd3daa430913.png)
 
 - VIRTUAL MACHINES (VMs) allow multiple OS’s to run on a single PHYISCAL SERVER
 - A HYPERVISOR is used to manage and allocate HARDWARE RESOURCES to each VM
@@ -20,13 +20,13 @@
 - VMs are easy to create, delete, move, etc.
     - A VM can be easily saved and moved between different physical SERVERS.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/5ed6704c-f332-49bf-8ff9-ad17a7f74b76)
+![image](remote_assets/5ed6704c-f332-49bf-8ff9-ad17a7f74b76.png)
 
 ---
 
 ## Containers
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/4f350818-f030-46fe-8850-f2e633d22bfa)
+![image](remote_assets/4f350818-f030-46fe-8850-f2e633d22bfa.png)
 
 - CONTAINERS are software packages that contain an APP and all dependencies (*Bins/Libs* in the diagram) for the contained APP to run.
     - Multiple APPS can be run in a single CONTAINER, but this is not how CONTAINERS are usually used
@@ -38,13 +38,13 @@
     - DOCKER SWARM is DOCKER’S CONTAINER ORCHESTRATION tool
 - In small numbers, MANUAL operation is possible, but large-scale systems (ie: with Microservices) can require THOUSANDS of CONTAINERS
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/07083826-c7b0-45c1-aefe-e05f63d7acfd)
+![image](remote_assets/07083826-c7b0-45c1-aefe-e05f63d7acfd.png)
 
 ---
 
 ## Virtual Machines Vs. Containers
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/98a4075d-ab70-4579-ba10-c129e935ca22)
+![image](remote_assets/98a4075d-ab70-4579-ba10-c129e935ca22.png)
 
 - VMs can TAKE MINUTES to boot up as each VM runs it’s own OS
 - CONTAINERS can boot up in milliseconds
@@ -61,4 +61,4 @@
 - VMs are more isolated because each VM runs it’s own OS
 - CONTAINERS are less isolated because they all run on the same OS; if the OS crashes, all CONTAINERS running on it are effected
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/128a8574-a555-4a3e-9e9c-62f33df2d34d)
+![image](remote_assets/128a8574-a555-4a3e-9e9c-62f33df2d34d.png)

@@ -1,6 +1,6 @@
 # 26.  OSPF : Part 1 (Igp : Link State)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f58477d1-f574-4195-8f6c-851823dedfbf)
+![image](remote_assets/f58477d1-f574-4195-8f6c-851823dedfbf.png)
 
 ## Link State Routing Protocols
 
@@ -28,7 +28,7 @@ THREE Versions:
 - Routers store information about the NETWORK in LSAs (Link State Advertisements), which are organized in a structure called the LSDB (Link State Database)
 - Routers will **FLOOD** LSAs until all ROUTERS in the OSPF *area* develop the same map of the network (LSDB)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/2a6a126b-74f1-49e2-96be-fc411c8812fd)
+![image](remote_assets/2a6a126b-74f1-49e2-96be-fc411c8812fd.png)
 
 > **Note:** LSA’s have an AGING TIMER of 30 Minutes, by Default). The LSA will be FLOODED again after the timer expires
 
@@ -55,7 +55,7 @@ In OSPF, there are THREE MAIN STEPS in the process of sharing LSAs and determini
 
 ## What Is an OSPF Area?
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/0f5084fe-f7fb-4b33-a8d0-2ed0155d7502)
+![image](remote_assets/0f5084fe-f7fb-4b33-a8d0-2ed0155d7502.png)
 
 - An **AREA is** a set of ROUTERS and LINKS that share the same LSDB
 - The **BACKBONE AREA** (Area 0) is an AREA that all other AREAS must connect to
@@ -86,11 +86,11 @@ In OSPF, there are THREE MAIN STEPS in the process of sharing LSAs and determini
 
 ## OSPF Area 0
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/ad9648f4-736a-43b5-96de-8a30f6f800c8)
+![image](remote_assets/ad9648f4-736a-43b5-96de-8a30f6f800c8.png)
 
 Commands for configuring an OSPF 
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/38fcce32-8d15-4db0-9a0c-170d6083a534)
+![image](remote_assets/38fcce32-8d15-4db0-9a0c-170d6083a534.png)
 
 - The OSPF **Process ID** is **locally significant.** ROUTERS with different Process IDs can become OSPF Neighbors
 - The OSPF “network” command requires you to specify the AREA (in this case, it’s “area 0”)
@@ -102,25 +102,25 @@ The “network” command tells OSPF to:
 - Activate OSPF on the INTERFACE in the specified AREA
 - The ROUTER will then try to become OSPF neighbors with other OSPF-Activated neighbor ROUTERS
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/41da3fe8-f24a-468c-beeb-91cc12066c70)
+![image](remote_assets/41da3fe8-f24a-468c-beeb-91cc12066c70.png)
 
 - Know this command from RIP and EIGRP
 - The “passive-interface” command tells the ROUTERS to stop sending OSFP ‘hello’ messages out of the INTERFACE
 - However, the ROUTER will continue to send LSA’s informing it’s neighbors about the SUBNET configured on the INTERFACE
 - You should ALWAYS USE this command on neighbors which don’t have any OSPF neighbors
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a0422f88-dbd9-4965-8c73-16cfd438b05e)
+![image](remote_assets/a0422f88-dbd9-4965-8c73-16cfd438b05e.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/aaa1daaa-8ab7-441a-bec2-9f0391a82ecc)
+![image](remote_assets/aaa1daaa-8ab7-441a-bec2-9f0391a82ecc.png)
 
 “show ip protocols”
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f02c3838-c9ad-4836-8c89-ecad42e205b2)
+![image](remote_assets/f02c3838-c9ad-4836-8c89-ecad42e205b2.png)
 
 NOTE the "no" in square brackets - this indicates this is the DEFAULT choice
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/c222d290-4d10-4e63-b7d5-8317ae5ccdfc)
+![image](remote_assets/c222d290-4d10-4e63-b7d5-8317ae5ccdfc.png)
 
 DISTANCE (AD) for OSPF is 110 (DEFAULT) but can be changed with the “distance” command
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/849a7fd3-457e-4310-be08-b4c8b4c8a8a2)
+![image](remote_assets/849a7fd3-457e-4310-be08-b4c8b4c8a8a2.png)

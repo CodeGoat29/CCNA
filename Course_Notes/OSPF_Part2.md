@@ -15,11 +15,11 @@
 
 FastEthernet COST
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/453258a2-e724-4bf5-b07c-6c533dcef46c)
+![image](remote_assets/453258a2-e724-4bf5-b07c-6c533dcef46c.png)
 
 Gigabit Ethernet COST
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/17adfd0e-8944-4016-93bd-98b82ceb8a66)
+![image](remote_assets/17adfd0e-8944-4016-93bd-98b82ceb8a66.png)
 
 You can (and SHOULD) change the REFERENCE BANDWIDTH with this command:
 
@@ -42,7 +42,7 @@ THE OSPF COST to a DESTINATION is the TOTAL COST of the ‘outgoing/exit INTERFA
 
 LOOPBACK INTERFACES have a COST of 1
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/ef8de0f8-c22d-4259-bf4c-6fc9894bae29)
+![image](remote_assets/ef8de0f8-c22d-4259-bf4c-6fc9894bae29.png)
 
 To CHANGE the OSPF COST of an INTERFACE, you use the command :
 
@@ -65,7 +65,7 @@ It is RECOMMENDED that you CHANGE the REFERENCE BANDWIDTH
 
 THEN use the **“ip ospf cost”** command to change the COST of the individual INTERFACES, if you want.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/00196380-4452-4ec9-8cd9-b1949665a5d8)
+![image](remote_assets/00196380-4452-4ec9-8cd9-b1949665a5d8.png)
 
 ---
 
@@ -85,7 +85,7 @@ THREE WAYS to modify the OSPF COST:
 
 > **Note:** R1(config-router)# **bandwidth <***kilobits-per-second>*
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/aba02fbc-174c-41a1-a8e3-0ffdda3a6cbd)
+![image](remote_assets/aba02fbc-174c-41a1-a8e3-0ffdda3a6cbd.png)
 
 ---
 
@@ -104,7 +104,7 @@ THREE WAYS to modify the OSPF COST:
 - It sends an OSPF “hello” message to 224.0.0.5
 - It doesn’t know about any OSPF neighbors yet, so the current neighbor state is DOWN
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/fa9b91da-e0c3-42d9-8c0a-eb47991b1894)
+![image](remote_assets/fa9b91da-e0c3-42d9-8c0a-eb47991b1894.png)
 
 ## Init State
 
@@ -112,7 +112,7 @@ THREE WAYS to modify the OSPF COST:
 - In R2’s neighbor table, the relationship with R1 is now in the INIT state
 - INIT state = “hello” packet received, but own ROUTER ID is not in the “hello” packet
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/70f3474f-f4bf-4194-b479-d7a65ad82505)
+![image](remote_assets/70f3474f-f4bf-4194-b479-d7a65ad82505.png)
 
 ## 2-Way State
 
@@ -121,7 +121,7 @@ THREE WAYS to modify the OSPF COST:
 - R1 will send another “hello” message, this time containing R2’s RID
 - Both ROUTERS are now in the 2-WAY state
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/4d5e5310-4680-4176-94ab-2d8015032d18)
+![image](remote_assets/4d5e5310-4680-4176-94ab-2d8015032d18.png)
 
 - The 2-WAY state means the ROUTER has received a “hello” packet with its own RID in it
 - If both ROUTERS reach the 2-WAY state, it means that ALL of the conditions have been met for them to become OSPF neighbors.
@@ -137,7 +137,7 @@ THREE WAYS to modify the OSPF COST:
     - The ROUTER with the lower RID will become the SLAVE
 - To decide the MASTER and SLAVE, they exchange DBD (Database Description) packets
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/34fa7cca-f837-432b-9296-d1be69a8869c)
+![image](remote_assets/34fa7cca-f837-432b-9296-d1be69a8869c.png)
 
 ## Exchange State
 
@@ -145,7 +145,7 @@ THREE WAYS to modify the OSPF COST:
 - These DBDs do NOT include detailed information about the LSAs, just BASIC INFORMATION
 - The ROUTERS compare the information in the DBD they received to the information in their OWN LSDB to determine which LSAs they must receive from their neighbor
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/600722df-4737-4a69-867e-662c03a6b4b4)
+![image](remote_assets/600722df-4737-4a69-867e-662c03a6b4b4.png)
 
 ## Loading State
 
@@ -153,7 +153,7 @@ THREE WAYS to modify the OSPF COST:
 - LSAs are sent in **Link State Update (LSU)** messages
 - The ROUTERS send **LSAck** messages to acknowledge that they received the LSAs
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/4fc0fc23-ce00-4381-afef-259091b8f8ef)
+![image](remote_assets/4fc0fc23-ce00-4381-afef-259091b8f8ef.png)
 
 ## Full State
 
@@ -163,13 +163,13 @@ THREE WAYS to modify the OSPF COST:
 - If the DEAD timer counts down to 0 and no “hello” message is received, the neighbor is REMOVED
 - The ROUTERS will continue to share LSAs as the network changes to make sure each ROUTER has a COMPLETE and ACCURATE map of the NETWORK (LSDB)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/daaa3a7b-ddd0-4ad0-ace7-056cbf2fbe32)
+![image](remote_assets/daaa3a7b-ddd0-4ad0-ace7-056cbf2fbe32.png)
 
 ---
 
 ### **OSPF Neighbors Summary**
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/0d9f9d7e-04fd-472c-8449-a4f12172c055)
+![image](remote_assets/0d9f9d7e-04fd-472c-8449-a4f12172c055.png)
 
 ## 1 ) Become Neighbors
 
@@ -188,7 +188,7 @@ THREE WAYS to modify the OSPF COST:
 
 ## Summary of OSPF Message Types
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/05b6d3ee-8fdb-4f25-9214-557eeb9a53a6)
+![image](remote_assets/05b6d3ee-8fdb-4f25-9214-557eeb9a53a6.png)
 
 ---
 
@@ -198,13 +198,13 @@ Activate OSPF DIRECTLY on an INTERFACE with this command:
 
 > **Note:** R1(config-if)# ip ospf *process-id* area *area*
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/ad7aafd6-9cd8-4259-bd32-aff7b5893b46)
+![image](remote_assets/ad7aafd6-9cd8-4259-bd32-aff7b5893b46.png)
 
 Configure ALL INTERFACES as OSPF Passive Interfaces
 
 > **Note:** R1(config-router) #passive-interface default
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/e953696d-283f-4676-8df2-9aff0418d78d)
+![image](remote_assets/e953696d-283f-4676-8df2-9aff0418d78d.png)
 
 Can then REMOVE specific INTERFACES from being passive using:
 
@@ -212,10 +212,10 @@ Can then REMOVE specific INTERFACES from being passive using:
 
 Activating OSPF DIRECTLY on INTERFACES will show a different output in “show ip protocols”
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/915e31ee-4fee-455b-a947-229e0af4b182)
+![image](remote_assets/915e31ee-4fee-455b-a947-229e0af4b182.png)
 
 They will appear under “Routing on Interfaces Configured Explicitly (Area #) :” (as above)
 
 Showing the OSPF LSDB of a Device
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/75c941ca-b6bd-45f0-9a85-c7e5baff4654)
+![image](remote_assets/75c941ca-b6bd-45f0-9a85-c7e5baff4654.png)

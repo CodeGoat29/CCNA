@@ -10,13 +10,13 @@ THE IPv4 HEADER is used to ENCAPSULATE a TCP or UDP Segment.
 
 To Review:
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/64906e3c-0bae-4c2c-96ca-4e6850f3844a)
+![image](remote_assets/64906e3c-0bae-4c2c-96ca-4e6850f3844a.png)
 
 ---
 
 ## Fields of The Ipv4 Header
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f2667488-2769-4e62-bee7-eddbf9e00058)
+![image](remote_assets/f2667488-2769-4e62-bee7-eddbf9e00058.png)
 
 ## | Field | # of Bits |
 | --- | --- |

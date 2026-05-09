@@ -2,7 +2,7 @@
 
 ## Intro to VRF
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/e122f3c6-290f-4f33-a31d-f308f12140a3)
+![image](remote_assets/e122f3c6-290f-4f33-a31d-f308f12140a3.png)
 
 - VIRTUAL ROUTING AND FORWARDING (VRF) is used to DIVIDE a SINGLE ROUTER into MULTIPLE VIRTUAL ROUTERS
     - Similar to how VLANs are used to divide a SINGLE SWITCH (LAN) into MULTIPLE VIRTUAL SWITCHES (VLANs)
@@ -19,16 +19,16 @@
 
 ## VRF Configuration
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/fec7669b-8868-4529-81fa-6f52e07ff6e4)
+![image](remote_assets/fec7669b-8868-4529-81fa-6f52e07ff6e4.png)
 
 Creation and Configuration of VRFs
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/624ebfc0-c7c0-498d-a00b-c19e2738585a)
+![image](remote_assets/624ebfc0-c7c0-498d-a00b-c19e2738585a.png)
 
 How to `show ip route` for VRFs
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/cbe724be-4497-4976-9927-18ff5c71a4c7)
+![image](remote_assets/cbe724be-4497-4976-9927-18ff5c71a4c7.png)
 
 `ping` other VRFs
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f29dd935-0ec7-4756-b24a-fc44391254c0)
+![image](remote_assets/f29dd935-0ec7-4756-b24a-fc44391254c0.png)

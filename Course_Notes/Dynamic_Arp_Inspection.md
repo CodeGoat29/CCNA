@@ -22,11 +22,11 @@
 - All PORTS are *UNTRUSTED*, by DEFAULT
     - Typically, all PORTS connected to other NETWORK DEVICES (SWITCHES, ROUTERS) should be configured as TRUSTED, while INTERFACES connected to END HOSTS should remain UNTRUSTED
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/02da32ef-654c-4755-abcd-ea8230df4029)
+![image](remote_assets/02da32ef-654c-4755-abcd-ea8230df4029.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/29744383-746e-47be-8220-ba1a641a7a11)
+![image](remote_assets/29744383-746e-47be-8220-ba1a641a7a11.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/6848c2b5-e866-4023-9ad9-c18f63aa6bb5)
+![image](remote_assets/6848c2b5-e866-4023-9ad9-c18f63aa6bb5.png)
 
 ---
 
@@ -36,7 +36,7 @@
 - To do this, the ATTACKER can send GRATUITOUS ARP MESSAGES using another DEVICE’S IP ADDRESS
 - Other DEVICES in the NETWORK will receive the GARP and update their ARP TABLES, causing them to send TRAFFIC to the ATTACKER instead of the legitimate DESTINATION
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/aae80c8f-2673-4c04-a206-9b646f5c1f08)
+![image](remote_assets/aae80c8f-2673-4c04-a206-9b646f5c1f08.png)
 
 ## Dynamic ARP Inspection Operations
 
@@ -44,7 +44,7 @@
     - If there is a MATCH, the ARP MESSAGE is FORWARDED
     - If there is NO MATCH, the ARP MESSAGE is DISCARDED
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/060f3d3a-b2fd-46a1-8b3c-7a6839985c87)
+![image](remote_assets/060f3d3a-b2fd-46a1-8b3c-7a6839985c87.png)
 
 - DAI doesn’t inspect messages received on TRUSTED PORTS. They are FORWARDED as normal.
 
@@ -61,44 +61,44 @@
 
 ## Dynamic ARP Inspection Configuration
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/4a91bd7b-626a-4d64-b69a-308d65bbdda4)
+![image](remote_assets/4a91bd7b-626a-4d64-b69a-308d65bbdda4.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/774765fa-4918-4cd9-bb64-57130968c359)
+![image](remote_assets/774765fa-4918-4cd9-bb64-57130968c359.png)
 
 Command : `show ip arp inspection interfaces`
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/e64a568e-e5c6-442b-98f7-4fe829ff7519)
+![image](remote_assets/e64a568e-e5c6-442b-98f7-4fe829ff7519.png)
 
 ## Dai Rate Limiting
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/6400e059-2c8c-4369-827d-7774fddd57eb)
+![image](remote_assets/6400e059-2c8c-4369-827d-7774fddd57eb.png)
 
 ## Dai Optional Checks
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/0e6b780a-16ef-466a-bfd3-8dd2cdace4ad)
+![image](remote_assets/0e6b780a-16ef-466a-bfd3-8dd2cdace4ad.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/1f109b81-9c9b-4acd-9557-0b652ba29b8d)
+![image](remote_assets/1f109b81-9c9b-4acd-9557-0b652ba29b8d.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/dd78740a-4f41-43aa-8ed2-3fa574acc0f9)
+![image](remote_assets/dd78740a-4f41-43aa-8ed2-3fa574acc0f9.png)
 
 ARP ACLs (Beyond Scope of CCNA)
 
 ## Create an ARP Acl for Srv1
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/cf121a75-45b2-4e2d-a35f-320e3f5491fa)
+![image](remote_assets/cf121a75-45b2-4e2d-a35f-320e3f5491fa.png)
 
 AFTER APPLYING IT TO SWITCH 2, SRV1 is able to send ARP REQUEST to R1
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/582feed0-1915-4f59-b3b9-9db37854c6e1)
+![image](remote_assets/582feed0-1915-4f59-b3b9-9db37854c6e1.png)
 
 Command: `show ip arp inspection`
 
 Shows a summary of the DAI configuration and statistics
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/684e694a-5b0a-4f85-b135-b288a8c4c6ec)
+![image](remote_assets/684e694a-5b0a-4f85-b135-b288a8c4c6ec.png)
 
 ---
 
 ## Command Review
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/4cb7dc28-b09d-4a98-8d43-aca2cdf6180b)
+![image](remote_assets/4cb7dc28-b09d-4a98-8d43-aca2cdf6180b.png)

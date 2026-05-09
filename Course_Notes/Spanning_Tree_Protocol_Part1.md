@@ -9,13 +9,13 @@
 
 ## an Example of a Poorly Designed Network
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/b3b76af5-11e6-495b-8c40-40eb5800704b)
+![image](remote_assets/b3b76af5-11e6-495b-8c40-40eb5800704b.png)
 
 NOTE the many single-point failures that could occur (single connections)
 
 ## a Better Network Design
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/01c20d92-2cf6-4d1f-a193-ded7753aeb38)
+![image](remote_assets/01c20d92-2cf6-4d1f-a193-ded7753aeb38.png)
 
 ## Unfortunately : 
 
@@ -25,11 +25,11 @@ So HOW can all this redundancy be a BAD thing?
 
 ## Broadcast Storms
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a0bf91be-a463-45df-bfc5-df471d0544b5)
+![image](remote_assets/a0bf91be-a463-45df-bfc5-df471d0544b5.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/d13b6ab5-5298-4166-bdfa-3315f05a2961)
+![image](remote_assets/d13b6ab5-5298-4166-bdfa-3315f05a2961.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f719de69-df9e-4549-b3cb-914d7c5aabc4)
+![image](remote_assets/f719de69-df9e-4549-b3cb-914d7c5aabc4.png)
 
 FLOODED WITH ARP REQUESTS (Red = Clockwise Loops // Purple = Counter-Clockwise Loops)
 
@@ -57,11 +57,11 @@ SPANNING TREE PROTOCOL is one solution
 
 > **Note:** SPANNING TREE PROTOCOL still uses the term “BRIDGE”. However, when use the term “BRIDGE”, we really mean “SWITCH”. BRIDGES are not used in modern networks.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f253770d-22fa-4e3f-91b0-8f2b4c2f1a61)
+![image](remote_assets/f253770d-22fa-4e3f-91b0-8f2b4c2f1a61.png)
 
 ORANGE INTERFACE is “BLOCKED” causing a break in the loops
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/45125471-da23-4753-b5b1-16c23a2bfeff)
+![image](remote_assets/45125471-da23-4753-b5b1-16c23a2bfeff.png)
 
 If changes occur in the connections, the traffic will adjust the topology.
 
@@ -79,21 +79,21 @@ If changes occur in the connections, the traffic will adjust the topology.
 - The SWITCH with the lowest BRIDGE ID becomes the ROOT BRIDGE
 - ALL PORTS on the ROOT BRIDGE are put in a FORWARDING state, and other SWITCHES in the topology must have a path to reach the ROOT BRIDGE
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/05177f47-882e-47ea-8bec-22e073392e1c)
+![image](remote_assets/05177f47-882e-47ea-8bec-22e073392e1c.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/17f921f6-0583-4070-9493-5f5d80ad4866)
+![image](remote_assets/17f921f6-0583-4070-9493-5f5d80ad4866.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/bb49a034-9f6d-4e92-9ea0-8bc71c4f2ec8)
+![image](remote_assets/bb49a034-9f6d-4e92-9ea0-8bc71c4f2ec8.png)
 
 To REDUCE the BRIDGE PRIORITY, we can only change it in units of 4096 !
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/39fe6239-1217-4885-b07b-8f368dad0e28)
+![image](remote_assets/39fe6239-1217-4885-b07b-8f368dad0e28.png)
 
 In THIS TOPOLOGY, SW1 becomes the ROOT BRIDGE due to it’s MAC ADDRESS being LOWEST
 
 ## (Hex “a” = 10)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/b1e1a69d-4b9c-46bf-9b77-f30b9f7c3933)
+![image](remote_assets/b1e1a69d-4b9c-46bf-9b77-f30b9f7c3933.png)
 
 ALL INTERFACES on the ROOT BRIDGE are DESIGNATED PORTS.
 
@@ -135,11 +135,11 @@ ALL INTERFACES on the ROOT BRIDGE are DESIGNATED PORTS.
 
 > **Note:** Only OUTGOING INTERFACES toward the ROOT BRIDGE have a STP COST; not RECEIVING INTERFACES. Add up all the OUTGOING PORT costs until you reach the ROOT BRIDGE
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/0ee95883-aed8-42a3-ba82-11209ef8cd40)
+![image](remote_assets/0ee95883-aed8-42a3-ba82-11209ef8cd40.png)
 
 SW1 is the ROOT BRIDGE so has a STP COST of 0 on ALL INTERFACES
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/35037ae9-3430-44ac-be6d-c8d2a2a42c24)
+![image](remote_assets/35037ae9-3430-44ac-be6d-c8d2a2a42c24.png)
 
 The PORTS connected to another SWITCH’s ROOT PORT MUST be DESIGNATED (D). 
 
@@ -147,7 +147,7 @@ Because the ROOT PORT Is the SWITCH’s path to the ROOT BRIDGE, another SWITCH 
 
 STP PORT ID (in case of a tie-breaker)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/63d2fb87-31fa-4b57-a2c3-a203feded8ba)
+![image](remote_assets/63d2fb87-31fa-4b57-a2c3-a203feded8ba.png)
 
 NEIGHBOUR SWITCH PORT ID (in case of a tie-breaker)
 
@@ -155,11 +155,11 @@ NEIGHBOUR SWITCH PORT ID (in case of a tie-breaker)
 
 ## (R) = Root Port
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/c3fcc32b-e95f-4d4b-a241-f9f3080e858f)
+![image](remote_assets/c3fcc32b-e95f-4d4b-a241-f9f3080e858f.png)
 
 ## How to Determine Which Port Will Be Blocked to Prevent Layer 2 Loops
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/1b69a092-4150-44c3-b605-5916fdea91d6)
+![image](remote_assets/1b69a092-4150-44c3-b605-5916fdea91d6.png)
 
 ## Quiz
 
@@ -167,7 +167,7 @@ Identify the ROOT BRIDGE and the ROLE of EACH INTERFACE on the NETWORK (ROOT / D
 
 #1
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/62bcf349-dd89-48be-92f6-d6a184edeb6f)
+![image](remote_assets/62bcf349-dd89-48be-92f6-d6a184edeb6f.png)
 
 ALL SWITCHES have the same PRIORITY NUMBER (32769)
 
@@ -185,7 +185,7 @@ The remaining interfaces on SW2 become NON-DESIGNATED because it has the HIGHEST
 
 #2
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/ae382ec2-9c0f-4673-94b5-5d1411c8db6b)
+![image](remote_assets/ae382ec2-9c0f-4673-94b5-5d1411c8db6b.png)
 
 SW4 has the LOWEST Priority Number so it is designated ROOT BRIDGE
 

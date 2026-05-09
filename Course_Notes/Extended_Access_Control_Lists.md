@@ -4,17 +4,17 @@
 
 - In DAY 34, you learned that numbered ACLs are configured in Global Config mode:
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/d5bbb9d7-5499-43e0-9ac8-b173e5bb5c50)
+![image](remote_assets/d5bbb9d7-5499-43e0-9ac8-b173e5bb5c50.png)
 
 - **You Learned That Named Acls Are Configured With Subcommands in a Separate Config Mode:**
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/73104e31-0630-4b2a-a328-29adc5ceb418)
+![image](remote_assets/73104e31-0630-4b2a-a328-29adc5ceb418.png)
 
 - However, in modern IOS you can also configure numbered ACLs in the exact same way as named ACLs:
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/724638f3-1044-4476-96de-cda39fb51315)
+![image](remote_assets/724638f3-1044-4476-96de-cda39fb51315.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a72df84e-262b-467c-a87e-b70699033076)
+![image](remote_assets/a72df84e-262b-467c-a87e-b70699033076.png)
 
 ---
 
@@ -23,15 +23,15 @@
 - You can easily DELETE individual entries in the ACL with NO *entry-number*
 - You can easily DELETE individual entries in the ACL with NO *sequence-number*
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f7f85684-6300-495d-bde9-1e1ffcead85e)
+![image](remote_assets/f7f85684-6300-495d-bde9-1e1ffcead85e.png)
 
 This doesn’t work with NUMBERED access lists
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/8e27f6f1-794b-45be-ac67-20b3f563f551)
+![image](remote_assets/8e27f6f1-794b-45be-ac67-20b3f563f551.png)
 
 - You can insert NEW entries in-between other entries by specifying the SEQUENCE NUMBER
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/41fb1df8-b368-4349-b33a-ba0f8c768435)
+![image](remote_assets/41fb1df8-b368-4349-b33a-ba0f8c768435.png)
 
 ---
 
@@ -40,7 +40,7 @@ This doesn’t work with NUMBERED access lists
 - There is a *resequencing* function that helps edit ACLs
 - The command is  `R1(config)#ip access-list resequence *acl-id starting-seq-num increment*`
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/1c5e3f13-900a-4be4-99ba-db86b0128f57)
+![image](remote_assets/1c5e3f13-900a-4be4-99ba-db86b0128f57.png)
 
 ---
 
@@ -72,7 +72,7 @@ This doesn’t work with NUMBERED access lists
 
 ## Matching The Protocol
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f6337620-5eb1-4ddc-837c-ae242a718f29)
+![image](remote_assets/f6337620-5eb1-4ddc-837c-ae242a718f29.png)
 
 IP Protocol Number is the number used in the IPv4 Header Protocol field
 
@@ -80,7 +80,7 @@ Examples: (1) ICMP, (6) TCP, (17) UDP, (88) EIGRP, (89) OSPF
 
 ## Matching The Source / Destination IP Address
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/bbb38418-3276-485b-ba6b-5c4c7097d56f)
+![image](remote_assets/bbb38418-3276-485b-ba6b-5c4c7097d56f.png)
 
 This command:
 
@@ -108,7 +108,7 @@ Deny ALL PACKETS that encapsulate a TCP segment from ANY source to DESTINATION 1
 
 - When matching TCP / UDP, you can optionally specify the SOURCE and/or DESTINATION PORT NUMBERS to match
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/c059d148-b685-49b2-81e0-518a6d66c25b)
+![image](remote_assets/c059d148-b685-49b2-81e0-518a6d66c25b.png)
 
 eq = equal than
 
@@ -122,9 +122,9 @@ range = range of ports
 
 You can use either the PORT NUMBER or the specific TYPE (that has a KNOWN PORT NUMBER)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/03dd80be-1f0f-41ac-ae1a-bdb851579bb4)
+![image](remote_assets/03dd80be-1f0f-41ac-ae1a-bdb851579bb4.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f7a11d7b-aeb6-4528-b5cc-62ff515fe33c)
+![image](remote_assets/f7a11d7b-aeb6-4528-b5cc-62ff515fe33c.png)
 
 ---
 
@@ -144,9 +144,9 @@ You can use either the PORT NUMBER or the specific TYPE (that has a KNOWN PORT N
 
 ## Example Network
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/ddb40c27-b195-49fe-a12a-49e078166e30)
+![image](remote_assets/ddb40c27-b195-49fe-a12a-49e078166e30.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/692f4a58-13d3-4c0a-8513-3dc76b014b65)
+![image](remote_assets/692f4a58-13d3-4c0a-8513-3dc76b014b65.png)
 
 ### **Requirements**
 
@@ -195,8 +195,8 @@ EXTENDED ACL #3 (APPLIED at R1 g0/0 OUTBOUND interface)
 
 What the EXTENDED ACLs look like
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/cda064f2-b1ce-45ee-a660-04cdceb3514b)
+![image](remote_assets/cda064f2-b1ce-45ee-a660-04cdceb3514b.png)
 
 ## How to See Which Extended Acl’S Are Applied to an Interface
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f596bca6-c06a-445e-84a3-8f8eb0c6baaf)
+![image](remote_assets/f596bca6-c06a-445e-84a3-8f8eb0c6baaf.png)

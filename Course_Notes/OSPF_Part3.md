@@ -7,7 +7,7 @@
 - It is NOT dependent on a PHYSICAL INTERFACE
 - So, it provides a consistent IP ADDRESS that can be used to REACH / IDENTIFY the ROUTER
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/697e7d43-b428-4fe3-a270-5fc1c9ad13d0)
+![image](remote_assets/697e7d43-b428-4fe3-a270-5fc1c9ad13d0.png)
 
 ---
 
@@ -32,14 +32,14 @@
 
 ## OSPF Broadcast Network Type
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/8f99053d-3501-4d1d-86a2-f859c62c160d)
+![image](remote_assets/8f99053d-3501-4d1d-86a2-f859c62c160d.png)
 
 - Enabled on ETHERNET and FDDI interfaces by DEFAULT
 - ROUTERS *dynamically discover* neighbors by SENDING / LISTENING for OSPF “Hello” messages using the multicast address 224.0.0.5
 - A **DR (DESIGNATED ROUTER)** and **BDR (BACKUP DESIGNATION ROUTER)** must be elected on each subnet (only DR if there are no OSPF neighbors, ie: R1’s G1/0 INTERFACE)
 - ROUTERS which aren’t the DR or BDR become a **DROther**
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/1ba5b6e1-dd4a-4277-8f33-f806e21302bc)
+![image](remote_assets/1ba5b6e1-dd4a-4277-8f33-f806e21302bc.png)
 
 The DR / BDR election order of priority:
 
@@ -57,7 +57,7 @@ The command to change the OSPF PRIORITY of an INTERFACE is :
 
 > **Note:** R2(config-if)# ip ospf priority <priority number>
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/cd98b06f-3730-4b2d-8dfe-a6387fdb66a1)
+![image](remote_assets/cd98b06f-3730-4b2d-8dfe-a6387fdb66a1.png)
 
 > **Note:** IF an OSPF PRIORITY is set to “0”, the ROUTER CANNOT be the DR / BDR for the SUBNET!
 
@@ -70,9 +70,9 @@ Once the DR / DBR are selected, they will keep their role until OSPF is:
 - Is shut down
 - etc.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/e59e6217-0404-476d-9bcf-49e82c380b84)
+![image](remote_assets/e59e6217-0404-476d-9bcf-49e82c380b84.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/82eb1f11-4aed-456b-b2b1-1679cae06743)
+![image](remote_assets/82eb1f11-4aed-456b-b2b1-1679cae06743.png)
 
 > **Note:** In the BROADCAST NETWORK TYPE, ROUTERS will only form a FULL OSPF ADJACENCY with the DR and the BDR of the SEGMENT!
 
@@ -88,13 +88,13 @@ The DR and BDR will form a FULL ADJACENCY with ALL ROUTERS in the SUBNET
 
 DROthers will form a FULL ADJACENCY ONLY with the DR / BDR !
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/61e1c230-3926-40ae-917a-55fcf76caf64)
+![image](remote_assets/61e1c230-3926-40ae-917a-55fcf76caf64.png)
 
 ---
 
 ## OSPF Point-to-Point Network Type
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/51d7d486-a810-4a69-8be2-804f667fca03)
+![image](remote_assets/51d7d486-a810-4a69-8be2-804f667fca03.png)
 
 - ENABLED on **SERIAL** INTERFACES using the **PPP** and **HDLC** encapsulations, by DEFAULT
 - ROUTERS dynamically discover neighbors by SENDING / LISTENING for OSPF “Hello” messages using the multicast address 224.0.0.5
@@ -109,7 +109,7 @@ DROthers will form a FULL ADJACENCY ONLY with the DR / BDR !
 
 ## Serial Interfaces
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/02f6f3a8-dcbb-46cd-bb2e-47ceb84d10cc)
+![image](remote_assets/02f6f3a8-dcbb-46cd-bb2e-47ceb84d10cc.png)
 
 - One side of SERIAL CONNECTION functions as DCE (Data Communications Equipment)
 - The OTHER side functions as DTE (Data Terminal Equipment)
@@ -119,15 +119,15 @@ ETHERNET INTERFACES use the “speed” command to configure the operating speed
 
 SERIAL INTERFACES use the “clock rate” command
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/c32af4a3-105c-451a-9641-0f7fc26e7f42)
+![image](remote_assets/c32af4a3-105c-451a-9641-0f7fc26e7f42.png)
 
 If you change the ENCAPSULATION, it must MATCH on BOTH ENDS or the INTERFACE will go down.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/8a448ef2-96f2-4371-bef1-520572ba5224)
+![image](remote_assets/8a448ef2-96f2-4371-bef1-520572ba5224.png)
 
 R1 and R2 sharing the SAME Encapsulation Type 
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/6f934097-30fb-4605-935d-08a29e53a476)
+![image](remote_assets/6f934097-30fb-4605-935d-08a29e53a476.png)
 
 ## Serial Interfaces Summary
 
@@ -157,9 +157,9 @@ R1 and R2 sharing the SAME Encapsulation Type
 
 ---
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/bc5a756e-c65d-4585-ad3f-c0e29682c0eb)
+![image](remote_assets/bc5a756e-c65d-4585-ad3f-c0e29682c0eb.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/232c8658-d129-49f4-9a37-76139ebe857e)
+![image](remote_assets/232c8658-d129-49f4-9a37-76139ebe857e.png)
 
 - **You Can Configure The OSPF Network Type On an Interface With :**
 
@@ -169,7 +169,7 @@ For example, if TWO ROUTES are directly connected with an ETHERNET link, there i
 
 NOTE: Not all NETWORK TYPES work on ALL LINK TYPES (for example, a serial link cannot use the BROADCAST NETWORK type)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/8688e7ef-d166-4433-9f65-b918917f385f)
+![image](remote_assets/8688e7ef-d166-4433-9f65-b918917f385f.png)
 
 > **Note:** NON-BROADCAST NETWORK type Default Timers : Hello 30, Dead 120
 
@@ -183,17 +183,17 @@ NOTE: Not all NETWORK TYPES work on ALL LINK TYPES (for example, a serial link c
 
 3) OSPF PROCESS must not be **SHUTDOWN**
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/80b626ac-f368-4d86-85f4-dc80e3be5259)
+![image](remote_assets/80b626ac-f368-4d86-85f4-dc80e3be5259.png)
 
 4) OSPF ROUTER ID must be unique
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/8f089c68-96e9-4cbf-a9c0-c93f74de4888)
+![image](remote_assets/8f089c68-96e9-4cbf-a9c0-c93f74de4888.png)
 
 5) HELLO and DEAD Timers must MATCH
 
 6) AUTHENTICATION settings must MATCH
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/06cab926-a458-4978-b754-b2253ee74762)
+![image](remote_assets/06cab926-a458-4978-b754-b2253ee74762.png)
 
 ## *** Special Requirements *** 
 

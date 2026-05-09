@@ -10,7 +10,7 @@
     - etc…
 - The messages can be displayed in the CLI, saved in the DEVICE’S RAM or sent to an external SYSLOG SERVER
 
- ![image](https://github.com/psaumur/CCNA/assets/106411237/44a405e5-6cb1-41e3-b408-470afcaccd7e)
+ ![image](remote_assets/44a405e5-6cb1-41e3-b408-470afcaccd7e.png)
 
 - Logs are essential when troubleshooting issues, examining the cause of incidents, etc.
 - SYSLOG and SNMP are both used for MONITORING and TROUBLESHOOTING of DEVICES. They are complementary, but their functionalities are different
@@ -35,7 +35,7 @@ Official RFC for SYSLOG severity levels
 
 > **Note:** LEVELS and KEYWORDS need to be MEMORIZED for the CCNA
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/9ce46c98-a2b8-462b-ac6f-9bf13bfb3a99)
+![image](remote_assets/9ce46c98-a2b8-462b-ac6f-9bf13bfb3a99.png)
 
 > **Note:** MEMORIZATION MNEMONIC : 
 (E)very (A)wesome (C)isco (E)ngineer (W)ill (N)eed (I)ce cream (D)aily
@@ -44,7 +44,7 @@ Official RFC for SYSLOG severity levels
 
 `description` = Detailed information about the EVENT being reported
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/35413630-9194-4e63-8600-5847153e210e)
+![image](remote_assets/35413630-9194-4e63-8600-5847153e210e.png)
 
 ## SYSLOG Logging Locations
 
@@ -64,7 +64,7 @@ Official RFC for SYSLOG severity levels
 
 ## SYSLOG Configuration
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a5321bcf-d149-4a3d-82a2-197426cf484a)
+![image](remote_assets/a5321bcf-d149-4a3d-82a2-197426cf484a.png)
 
 `level` works from the chosen level and upward toward Level 0 (EMERGENCY)
 
@@ -81,19 +81,19 @@ Official RFC for SYSLOG severity levels
 
 - By default, logging messages displayed in the CLI while you are in the middle of typing a command will result in something like this:
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/bf0ed51a-c8b4-4c96-806a-ba90f829edd0)
+![image](remote_assets/bf0ed51a-c8b4-4c96-806a-ba90f829edd0.png)
 
 - To prevent this, you should use `logging synchronous` on the appropriate *line*
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/350b34e5-8c87-417a-9e8d-fee7d3e57814)
+![image](remote_assets/350b34e5-8c87-417a-9e8d-fee7d3e57814.png)
 
 - This will cause a new line to be printed if your typing is interrupted by a message
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/09acecd5-b25b-4585-80da-950d69e284ad)
+![image](remote_assets/09acecd5-b25b-4585-80da-950d69e284ad.png)
 
 ## Service Timestamps and Service Sequence-Numbers
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/e1f9a979-eb27-47a7-af19-6496c74a4476)
+![image](remote_assets/e1f9a979-eb27-47a7-af19-6496c74a4476.png)
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## 802.11 Message / Frame Format
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/7b459483-7156-44cf-9ee7-f9391e476636)
+![image](remote_assets/7b459483-7156-44cf-9ee7-f9391e476636.png)
 
 - 802.11 FRAMES have a different format than 802.3 ETHERNET FRAMES
 - For the CCNA, you don’t have to learn it in as much detail as the ETHERNET and IP HEADERS
@@ -50,7 +50,7 @@
 
 - The STATION must be AUTHENTICATED and ASSOCIATED with the AP to send traffic through it
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/568d795d-41ee-4afd-908d-858297e89c6c)
+![image](remote_assets/568d795d-41ee-4afd-908d-858297e89c6c.png)
 
 ---
 
@@ -98,7 +98,7 @@
 
 - There is NO CENTRAL MONITORING or MANAGEMENT of APs
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/57faecbb-36a6-424d-b019-52994a5740db)
+![image](remote_assets/57faecbb-36a6-424d-b019-52994a5740db.png)
 
 - AUTONOMOUS APs connect to the WIRED NETWORK with a TRUNK link
 - DATA traffic from WIRELESS CLIENTS have a very direct PATH to the WIRED NETWORK or to other WIRELESS CLIENTS associated with the same AP
@@ -140,7 +140,7 @@
 - The WLC and the lightweight APs AUTHENTICATE each other using DIGITAL CERTIFICATES installed on each DEVICE ( X.509 STANDARD CERTIFICATES )
     - This ensures that only AUTHORIZED APs can join the NETWORK
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/c154bcad-ae81-4fb8-9acf-56913dffaf04)
+![image](remote_assets/c154bcad-ae81-4fb8-9acf-56913dffaf04.png)
 
 - THE WLC and lightweight APs use a PROTOCOL called CAPWAP (CONTROL AND PROVISIONING OF WIRELESS ACCESS POINTS) to communicate
     - Based on an older PROTOCOL called LWAPP (LIGHTWEIGHT ACCESS POINT PROTOCOL)
@@ -157,7 +157,7 @@
 
 - Because ALL traffic from WIRELSS CLIENTS is TUNNELED to the WLC with CAPWAP, APs connect to the SWITCH ACCESS PORTS - NOT TRUNK PORTS
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/10917a40-468a-4ea6-8253-bf229d612af1)
+![image](remote_assets/10917a40-468a-4ea6-8253-bf229d612af1.png)
 
 ---
 
@@ -190,7 +190,7 @@ There are some KEY BENEFITS to SPLIT-MAC ARCHITECTURE
         - Like a LIGHTWEIGHT AP in LOCAL mode, it offers ONE or MORE BSSs for CLIENTS to associate with
         - HOWEVER, FLEXCONNECT allows the AP to locally SWITCH traffic between the WIRED (TRUNK) and WIRELESS NETWORKS (ACCESS) if the TUNNELS to the WLC go down
     
-![image](https://github.com/psaumur/CCNA/assets/106411237/aa2d7d98-2d6f-46b6-ab38-7acc96c8dc52)
+![image](remote_assets/aa2d7d98-2d6f-46b6-ab38-7acc96c8dc52.png)
     
 
 - SNIFFER
@@ -221,7 +221,7 @@ There are some KEY BENEFITS to SPLIT-MAC ARCHITECTURE
     - Allows WIRELESS ACCESS POINTS to locally forward traffic even if connectivity to the WLC is lost
     
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/940a414b-208f-408c-a3e2-37e3bfbb0d32)
+![image](remote_assets/940a414b-208f-408c-a3e2-37e3bfbb0d32.png)
 
 ---
 
@@ -235,9 +235,9 @@ There are some KEY BENEFITS to SPLIT-MAC ARCHITECTURE
 - However, DATA TRAFFIC is not sent to the CLOUD. It is sent directly to the WIRED NETWORK like when using AUTONOMOUS APs
     - Only management / control traffic is sent to the CLOUD
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/8bd00a94-f965-4257-af46-82be67850feb)
+![image](remote_assets/8bd00a94-f965-4257-af46-82be67850feb.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/93e62771-c2d5-4003-9ade-0d5be855ea66)
+![image](remote_assets/93e62771-c2d5-4003-9ade-0d5be855ea66.png)
 
 ---
 
@@ -262,7 +262,7 @@ There are some KEY BENEFITS to SPLIT-MAC ARCHITECTURE
 - A UNIFIED WLC can support up to about 6000 APs
 - If more than 6000 APs are needed, additional WLCs can be added to the NETWORK
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/922eac1f-6c62-4926-89bb-a447f8be2edd)
+![image](remote_assets/922eac1f-6c62-4926-89bb-a447f8be2edd.png)
 
 ---
 
@@ -272,7 +272,7 @@ There are some KEY BENEFITS to SPLIT-MAC ARCHITECTURE
 - CLOUD-BASED WLCs can typically support up to about 3000 APs
 - If more than 3000 APs are needed, more WLC VMs can be deployed
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/9d87546c-6397-48d2-941c-007f5e6440aa)
+![image](remote_assets/9d87546c-6397-48d2-941c-007f5e6440aa.png)
 
 ---
 
@@ -282,7 +282,7 @@ There are some KEY BENEFITS to SPLIT-MAC ARCHITECTURE
 - An EMBEDDED WLC can support up to about 200 APs
 - If more than 200 APs are needed, more SWITCHES with EMBEDDED WLCs can be added
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/fc6a79f2-a7b5-4b5a-99d6-b94238362e8e)
+![image](remote_assets/fc6a79f2-a7b5-4b5a-99d6-b94238362e8e.png)
 
 ---
 
@@ -292,4 +292,4 @@ There are some KEY BENEFITS to SPLIT-MAC ARCHITECTURE
 - A MOBILITY EXPRESS WLC can support up to about 100 APs
 - If more than 100 APs are needed, more APs with EMBEDDED MOBILITY  EXPRESS WLCs can be added
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/4ff02aee-83c9-4a56-8a71-a14e20e8bf3c)
+![image](remote_assets/4ff02aee-83c9-4a56-8a71-a14e20e8bf3c.png)

@@ -9,7 +9,7 @@
 
 ## Servers Before Virtualization
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/365cde17-88c6-4149-91f2-d67c79590aec)
+![image](remote_assets/365cde17-88c6-4149-91f2-d67c79590aec.png)
 
 - Before VIRTUALIZATION, there was a one-to-one relationship between a PHYSICAL SERVER and OPERATION SYSTEM
 - In that OPERATING SYSTEM, apps providing SERVICES (such as a WEB SERVER, EMAIL SERVER, etc) would run
@@ -22,7 +22,7 @@
 
 ## Virtualization (Type 1 Hypervisor)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/62a40737-7451-4b38-a5bd-abd9367cbd40)
+![image](remote_assets/62a40737-7451-4b38-a5bd-abd9367cbd40.png)
 
 - VIRTUALIZATION allows us to break the one-to-one relationships of HARDWARE to OS, allowing multiple OS’s to run on a single PHYSICAL SERVER
 - Each INSTANCE is called a VM (Virtual Machine)
@@ -38,7 +38,7 @@
 
 ## Virtualization (Type 2 Hypervisor)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/25a29935-a56d-4ffe-b9e4-15c5c50bca46)
+![image](remote_assets/25a29935-a56d-4ffe-b9e4-15c5c50bca46.png)
 
 - TYPE 2 HYPERVISORS run as a program on an OS like a regular computer program
     - Examples: VMware Workstation, Oracle Virtualbox, etc
@@ -65,13 +65,13 @@
 - **Hardware Independence :**
     - Provision or migrate any virtual machine to any physical server
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f0f5f886-7924-46fc-addf-6916f0d2b2c9)
+![image](remote_assets/f0f5f886-7924-46fc-addf-6916f0d2b2c9.png)
 
 ---
 
 ## Virtual Networks
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/7bf3f22c-a7b8-41bf-bc1e-8c128a41f20f)
+![image](remote_assets/7bf3f22c-a7b8-41bf-bc1e-8c128a41f20f.png)
 
 - VMs are connected to each other and the EXTERNAL NETWORK via a VIRTUAL SWITCH running on the HYPERVISOR
 - Just like a regular PHYSICAL SWITCH, the vSWITCH’s INTERFACES can operate as ACCESS PORTS or TRUNK PORTS and use VLANs to separate the VMs at LAYER 2
@@ -101,7 +101,7 @@
 
 - The American NIST (National Institute of Standards and Technology) defined cloud computing in SP (Special Publication) 800-145
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/746a4f38-01b9-49cf-8dd9-5522b4cabf7b)
+![image](remote_assets/746a4f38-01b9-49cf-8dd9-5522b4cabf7b.png)
 
 - To understand what the CLOUD is, let’s look at the following outlined in SP 800-145:
 - Five Essential Characteristics
@@ -128,7 +128,7 @@
 
 ## The Three Service Models of The Cloud
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a3f0e08a-3207-4a69-aa81-d4142d6735a3)
+![image](remote_assets/a3f0e08a-3207-4a69-aa81-d4142d6735a3.png)
 
 - In CLOUD COMPUTING, everything is provided on a “SERVICE” model
 - For example: rather than the END USER buying a PHYSICAL SERVER, mounting it on a rack, installing the hypervisor, creating the VM, etc. the SERVICE PROVIDER offers all of this as a SERVICE
@@ -137,15 +137,15 @@
     
     SOFTWARE as a SERVICE (SaaS) - Example : MS Office 365
     
-![image](https://github.com/psaumur/CCNA/assets/106411237/5bcfedb7-3ab6-462a-a089-09884d220ab7)
+![image](remote_assets/5bcfedb7-3ab6-462a-a089-09884d220ab7.png)
     
     PLATFORM as a SERVICE (PaaS) - Examples : AWS Lambda and Google App Engine 
     
-![image](https://github.com/psaumur/CCNA/assets/106411237/e3886b6b-4ed8-4358-ba47-e2f50378c53d)
+![image](remote_assets/e3886b6b-4ed8-4358-ba47-e2f50378c53d.png)
     
     INFRASTRUCTURE as a SERVICE (Iaas) - Examples: Amazon EC2 and Google Compute Engine
     
-![image](https://github.com/psaumur/CCNA/assets/106411237/f8144a61-0d7f-4928-9e47-73fb969e0b4a)
+![image](remote_assets/f8144a61-0d7f-4928-9e47-73fb969e0b4a.png)
     
 
 ---
@@ -158,7 +158,7 @@
 
 - PRIVATE CLOUD
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/b8953a31-3861-41ef-99df-62a49b97610a)
+![image](remote_assets/b8953a31-3861-41ef-99df-62a49b97610a.png)
 
 - PRIVATE CLOUDS are generally only used by large enterprises
 - Although the CLOUD is PRIVATE, it may be owned by a THIRD PARTY
@@ -169,14 +169,14 @@
 
 - COMMUNITY CLOUD
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/1c9008e9-205b-4ca8-8236-fc0b02c3addc)
+![image](remote_assets/1c9008e9-205b-4ca8-8236-fc0b02c3addc.png)
 
 - Least common CLOUD deployment
 - Similar to PRIVATE CLOUD, but the INFRASTRUCTURE is reserved for use by a SPECIFIC GROUP or ORGANIZATION
 
 - PUBLIC CLOUD
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/94e9c895-9538-4664-93db-085f013ee9fb)
+![image](remote_assets/94e9c895-9538-4664-93db-085f013ee9fb.png)
 
 - The most common CLOUD deployment
 - **Popular Public Cloud Service Providers Include:**
@@ -189,7 +189,7 @@
 
 - HYBRID CLOUD
     
-![image](https://github.com/psaumur/CCNA/assets/106411237/14f910cf-b6e2-4f75-8959-4589d2592e1c)
+![image](remote_assets/14f910cf-b6e2-4f75-8959-4589d2592e1c.png)
     
     - Basically ANY combination of the preview THREE DEPLOYMENT TYPES
     - Example: A PRIVATE CLOUD which can offload to a PUBLIC CLOUD when necessary
@@ -215,4 +215,4 @@
 
 ## Connection to Public Clouds
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/671747bb-6908-47bb-b9c8-47f2df82c821)
+![image](remote_assets/671747bb-6908-47bb-b9c8-47f2df82c821.png)

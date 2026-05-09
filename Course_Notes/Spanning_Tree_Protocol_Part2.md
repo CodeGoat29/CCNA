@@ -2,7 +2,7 @@
 
 ## Stp States
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/5c9a17ff-b0d6-455c-8677-5144dd5a0048)
+![image](remote_assets/5c9a17ff-b0d6-455c-8677-5144dd5a0048.png)
 
 - ROOT / DESIGNATED PORTS remain STABLE in a FORWARDING state
 - NON-DESIGNATED PORTS remain STABLE in a BLOCKING state
@@ -43,13 +43,13 @@
 
 ## Summary : 
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f4cea5ca-b90a-423e-9160-f206b8b1621d)
+![image](remote_assets/f4cea5ca-b90a-423e-9160-f206b8b1621d.png)
 
 ---
 
 ## Stp Timers
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a174469f-9e75-4645-aff8-d4bfe46fb207)
+![image](remote_assets/a174469f-9e75-4645-aff8-d4bfe46fb207.png)
 
 > **Note:** SWITCHES do NOT forward the BPDUs out of their ROOT PORTS and NON-DESIGNATED PORTS - ONLY their DESIGNATED PORTS !!!
 
@@ -73,7 +73,7 @@
 
 Ethernet Header of a BPDU
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/0e68839f-c4ec-448b-8876-791212462009)
+![image](remote_assets/0e68839f-c4ec-448b-8876-791212462009.png)
 
 > **Note:** PVST+ uses the MAC ADDRESS : 
 
@@ -102,7 +102,7 @@ PVST+ = Supports 802.1Q
 - If used, it MUST be ENABLED only on PORTS connected to END HOSTS
 - If ENABLED on a PORT connected to another SWITCH, it could cause a LAYER 2 LOOP
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/43c91f09-0d9f-4b81-b5a2-f02003e25b88)
+![image](remote_assets/43c91f09-0d9f-4b81-b5a2-f02003e25b88.png)
 
 You can also ENABLE PORTFAST with the following command:
 
@@ -114,7 +114,7 @@ This ENABLES PORTFAST on ALL ACCESS PORTS (not TRUNK PORTS)
 
 - If an INTERFACE with BPDU GUARD ENABLED receives a BPDU from another SWITCH, the INTERFACE will be SHUT DOWN to prevent loops from forming.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/00c61767-72b4-4d51-b964-f76b6f4f6ae9)
+![image](remote_assets/00c61767-72b4-4d51-b964-f76b6f4f6ae9.png)
 
 You can also ENABLE BPDU GUARD with the following command:
 
@@ -124,7 +124,7 @@ This ENABLES BPDU GUARD on all PORTFAST-enabled INTERFACES
 
 ### **Root Guard / Loop Guard**
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/bb38aedc-df38-4d76-b6cb-30319e74ecc1)
+![image](remote_assets/bb38aedc-df38-4d76-b6cb-30319e74ecc1.png)
 
 You probably do NOT have to know these STP optional features (or others such as UplinkFast, Backbone Fast, etcetera) for the CCNA. 
 
@@ -138,7 +138,7 @@ You probably do NOT have to know these STP optional features (or others such as 
 
 Command to CONFIGURE Spanning-Tree mode on a SWITCH
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f29e2f41-3fac-463c-ab14-bb2d2f49816d)
+![image](remote_assets/f29e2f41-3fac-463c-ab14-bb2d2f49816d.png)
 
 Modern Cisco SWITCHES run **rapid-pvst**, by default
 
@@ -148,7 +148,7 @@ Modern Cisco SWITCHES run **rapid-pvst**, by default
 
 Command to CONFIGURE Spanning-Tree PRIMARY ROOT BRIDGE on a SWITCH
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/e90f16ad-c85c-4868-bbf4-9095c0abd581)
+![image](remote_assets/e90f16ad-c85c-4868-bbf4-9095c0abd581.png)
 
 Confirm with “(do) show spanning-tree”
 
@@ -162,7 +162,7 @@ SECONDARY ROOT BRIGE (backup ROOT BRIDGE)
 
 Command to CONFIGURE Spanning-Tree SECONDARY ROOT BRIDGE on a SWITCH
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/7d28f782-4673-4bc8-9aae-999aeac90685)
+![image](remote_assets/7d28f782-4673-4bc8-9aae-999aeac90685.png)
 
 - The “spanning-tree vlan <vlan-number> root secondary” command sets the STP PRIORITY to 28672 (exactly 4096 higher than 24576).
 
@@ -170,7 +170,7 @@ Command to CONFIGURE Spanning-Tree SECONDARY ROOT BRIDGE on a SWITCH
 
 VLAN 1 TOPOLOGY running PVST+
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/880a4cc7-e472-4764-a68b-a62288066796)
+![image](remote_assets/880a4cc7-e472-4764-a68b-a62288066796.png)
 
 SW1 WAS the PRIMARY ROOT BRIDGE but : 
 
@@ -179,7 +179,7 @@ SW1 WAS the PRIMARY ROOT BRIDGE but :
 
 The TOPOLOGY for VLAN 2, however, won’t be the same. It will be the OLD Topology.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/2cedeb36-27f1-4984-96e7-28ab70957c51)
+![image](remote_assets/2cedeb36-27f1-4984-96e7-28ab70957c51.png)
 
 ## Why?
 Because we made changes ONLY to the TOPOLOGY found in VLAN 1 (see the commands we used)
@@ -188,7 +188,7 @@ Because we made changes ONLY to the TOPOLOGY found in VLAN 1 (see the commands w
 
 ## Configure Stp Port Settings
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/58af0a8d-eeb4-4c34-8b54-6b8ff511695c)
+![image](remote_assets/58af0a8d-eeb4-4c34-8b54-6b8ff511695c.png)
 
 ## “Cost” = “Root Cost”
 

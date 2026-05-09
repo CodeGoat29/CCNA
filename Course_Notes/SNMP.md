@@ -26,7 +26,7 @@ RFC 1067 - A simple network management protocol
 
 ## Smnp Operations
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/bfa13793-5bc7-4344-8592-f38ef3a64784)
+![image](remote_assets/bfa13793-5bc7-4344-8592-f38ef3a64784.png)
 
 ---
 
@@ -34,21 +34,21 @@ RFC 1067 - A simple network management protocol
 
 ## Overview
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/632a83c5-27c8-4adc-8b08-079030c5f52c)
+![image](remote_assets/632a83c5-27c8-4adc-8b08-079030c5f52c.png)
 
 ## Nms
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/aa59534d-01d5-404c-bdf6-e0fd92cf9d98)
+![image](remote_assets/aa59534d-01d5-404c-bdf6-e0fd92cf9d98.png)
 
 ## Managed Devices
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/656e27b1-86a4-42c7-a1a1-94309aa19610)
+![image](remote_assets/656e27b1-86a4-42c7-a1a1-94309aa19610.png)
 
 ## SNMP Oids
 
 - SNMP Object IDs are ORGANIZED in a HIERARCHICAL STRUCTURE
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/79180299-7d9a-4607-a592-7e7d8d090cd1)
+![image](remote_assets/79180299-7d9a-4607-a592-7e7d8d090cd1.png)
 
 ---
 
@@ -74,35 +74,35 @@ RFC 1067 - A simple network management protocol
 
 ## SNMP Messages
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/25b15c81-931a-41a6-8033-dff07bfb5f15)
+![image](remote_assets/25b15c81-931a-41a6-8033-dff07bfb5f15.png)
 
 ### **1) SNMP Read**
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/e7d671f6-f2b0-468a-95a2-6678a52945c4)
+![image](remote_assets/e7d671f6-f2b0-468a-95a2-6678a52945c4.png)
 
 ### **2) Smnp Write**
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/d8679ff7-5103-4e01-8f2e-25bb1bd25734)
+![image](remote_assets/d8679ff7-5103-4e01-8f2e-25bb1bd25734.png)
 
 ### **3) SNMP Notification**
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/fe9266fc-12b8-41d3-8d8f-95f3f7b52ef6)
+![image](remote_assets/fe9266fc-12b8-41d3-8d8f-95f3f7b52ef6.png)
 
 SNMP AGENT listens for MESSAGES on UDP Port 161
 
 SNMP MANAGER listens for MESSAGES on UDP Port 162
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/23e6fd0a-ed1e-441b-b7b0-457a4e55f645)
+![image](remote_assets/23e6fd0a-ed1e-441b-b7b0-457a4e55f645.png)
 
 ---
 
 SNMPv2c CONFIGURATION (Basic)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/caf4624e-9ca2-4c8e-82fe-53db2499a38f)
+![image](remote_assets/caf4624e-9ca2-4c8e-82fe-53db2499a38f.png)
 
 ## What Happens With R1’S G0/1 Interface Goes Down?
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/96341ab3-1ed3-4dd4-903c-fa57ab1f83be)
+![image](remote_assets/96341ab3-1ed3-4dd4-903c-fa57ab1f83be.png)
 
 ### **Note**
 

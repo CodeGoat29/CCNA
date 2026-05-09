@@ -15,7 +15,7 @@
 
 - Because they SHARE INFORMATION about the DEVICES in the NETWORK, they can be considered a security risk and are often NOT used. It is up to the NETWORK ENGINEER / ADMIN to decide if they want to use them in the NETWORK or not.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/65f39e9f-ae1a-42c6-8afb-5e79f939fe5d)
+![image](remote_assets/65f39e9f-ae1a-42c6-8afb-5e79f939fe5d.png)
 
 ---
 
@@ -31,15 +31,15 @@
 - By DEFAULT, the CDP hold-time is **180 seconds.** If a message isn’t received from a neighbor for 180 seconds, the neighbor is REMOVED from the CDP Neighbor Table
 - CDPv2 messages are sent by DEFAULT
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/8a0552be-dbc7-4c7b-b011-e32dff75a57e)
+![image](remote_assets/8a0552be-dbc7-4c7b-b011-e32dff75a57e.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/26e180ec-da08-44d2-bb55-325fdc0c234f)
+![image](remote_assets/26e180ec-da08-44d2-bb55-325fdc0c234f.png)
 
 ---
 
 ## CDP Neighbor Tables
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/00cd814e-0255-4fac-ac71-3e50054f813c)
+![image](remote_assets/00cd814e-0255-4fac-ac71-3e50054f813c.png)
 
 “Device ID” = What devices were DISCOVERED by CDP
 
@@ -57,7 +57,7 @@
 
 ## More Detailed Output
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/cd4fbedb-c12f-4e1e-8582-8db16985121f)
+![image](remote_assets/cd4fbedb-c12f-4e1e-8582-8db16985121f.png)
 
 “Version” = shows what version of Cisco’s IOS is running on the device
 
@@ -65,13 +65,13 @@
 
 ## Show Specific CDP Neighbor Entry
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/83ef9488-e82c-4453-ae6e-02575039d0f9)
+![image](remote_assets/83ef9488-e82c-4453-ae6e-02575039d0f9.png)
 
 ---
 
 ## CDP Configuration Commands
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/393b2680-2304-4c8e-9180-88cc5fefbfd8)
+![image](remote_assets/393b2680-2304-4c8e-9180-88cc5fefbfd8.png)
 
 - CDP is GLOBALLY ENABLED, by DEFAULT
 - CDP is also ENABLED on each INTERFACE, by DEFAULT
@@ -119,24 +119,24 @@ YOU NEED TO ENABLE BOTH TO SEND AND RECEIVE (Unless you want to only enable SEND
 - Configure the LLDP holdtime: `R1(config)# lldp holdtime *seconds*`
 - Configure the LLDP reinit timer: `R1(config)# lldp reinit *seconds*`
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/25afc5ad-4d82-4472-b282-31ed2a65eae7)
+![image](remote_assets/25afc5ad-4d82-4472-b282-31ed2a65eae7.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/78fab926-9fda-4c83-91eb-eda4bf4ec005)
+![image](remote_assets/78fab926-9fda-4c83-91eb-eda4bf4ec005.png)
 
 ## Show LLDP Status
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/32b11d7b-4050-422e-afd4-bec23e8db3a1)
+![image](remote_assets/32b11d7b-4050-422e-afd4-bec23e8db3a1.png)
 
 ## Show All LLDP Neighbors
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/85a46d24-5574-4400-bc03-6b0568294940)
+![image](remote_assets/85a46d24-5574-4400-bc03-6b0568294940.png)
 
 ## Show LLDP Neighbors in Detail
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/26751ca8-ed54-4e5c-9927-8c6eb0e2e3f7)
+![image](remote_assets/26751ca8-ed54-4e5c-9927-8c6eb0e2e3f7.png)
 
 ## Show Specific LLDP Device Entry
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/b5332838-d112-4556-bee0-c3716a3d4f89)
+![image](remote_assets/b5332838-d112-4556-bee0-c3716a3d4f89.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/2dd16e33-75a9-4e11-91aa-b507ed490e9b)
+![image](remote_assets/2dd16e33-75a9-4e11-91aa-b507ed490e9b.png)

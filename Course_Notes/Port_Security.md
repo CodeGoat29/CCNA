@@ -7,7 +7,7 @@
 - If an unauthorized SOURCE MAC ADDRESS enters the PORT, an ACTION will be TAKEN
     - The DEFAULT action is to place the INTERFACE in an “err-disabled” state
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/92f4ce9b-8fb4-4d57-b200-f41c7d5236ee)
+![image](remote_assets/92f4ce9b-8fb4-4d57-b200-f41c7d5236ee.png)
 
 - When you enable PORT SECURITY on an INTERFACE with the DEFAULT settings, one MAC ADDRESS is allowed
     - You can configure the ALLOWED MAC ADDRESS manually
@@ -15,7 +15,7 @@
 - You can CHANGE the MAXIMUM number of MAC ADDRESSES allowed
 - A COMBINATION of manually configured MAC ADDRESSES and DYNAMICALLY LEARNED ADDRESSES is possible
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/0b6e8053-6819-4e02-ae28-4699a5c9c92d)
+![image](remote_assets/0b6e8053-6819-4e02-ae28-4699a5c9c92d.png)
 
 ---
 
@@ -33,25 +33,25 @@
 
 ## Enabling Port Security
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/b00765c2-f3a1-45be-8ed4-0a8dab68e43e)
+![image](remote_assets/b00765c2-f3a1-45be-8ed4-0a8dab68e43e.png)
 
 `show port-security interface`
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/787959b1-ffad-451d-ac65-11ea9a99db2d)
+![image](remote_assets/787959b1-ffad-451d-ac65-11ea9a99db2d.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/9a6dd39d-130e-411b-be46-ecfe93420813)
+![image](remote_assets/9a6dd39d-130e-411b-be46-ecfe93420813.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f071f447-a6ef-4ee6-8a40-2bde94030993)
+![image](remote_assets/f071f447-a6ef-4ee6-8a40-2bde94030993.png)
 
 ## Re-Enabling an Interface (Manually)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/706736d4-ee7c-42b2-b424-6cc30eb50905)
+![image](remote_assets/706736d4-ee7c-42b2-b424-6cc30eb50905.png)
 
 ## Re-Enabling an Interface (Err-Disable Recovery)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/6eb0d808-a989-4261-9b39-1ac9e1bf1460)
+![image](remote_assets/6eb0d808-a989-4261-9b39-1ac9e1bf1460.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/41d54ef0-7391-473e-9b51-87f44b9e3f3c)
+![image](remote_assets/41d54ef0-7391-473e-9b51-87f44b9e3f3c.png)
 
 ---
 
@@ -78,17 +78,17 @@
 
 ## Violation Mode - Restrict
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/819f00b9-9694-442d-8459-8018f4277e45)
+![image](remote_assets/819f00b9-9694-442d-8459-8018f4277e45.png)
 
 ## Violation Mode - Protect
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/20d17f97-056e-4e76-8566-bb49c10bb9e1)
+![image](remote_assets/20d17f97-056e-4e76-8566-bb49c10bb9e1.png)
 
 ---
 
 ## Secure Mac Address Aging
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/4454fedf-f942-4b0d-9b6f-074765de653d)
+![image](remote_assets/4454fedf-f942-4b0d-9b6f-074765de653d.png)
 
 - By DEFAULT, SECURE MAC ADDRESSES will not ‘age out’ (Aging Time : 0 mins)
     - Can be configured with `switchport port-security aging time *minutes*`
@@ -101,7 +101,7 @@
             - Aging type is configured with:  `switchport port-security aging type {absolute | inactivity}`
 - Secure Static MAC AGING (address configured with `switchport port-security mac-address x.x.x`) is DISABLED by DEFAULT
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/93f11517-9d97-4e52-89ad-a0e590bca702)
+![image](remote_assets/93f11517-9d97-4e52-89ad-a0e590bca702.png)
 
 ---
 
@@ -118,7 +118,7 @@
 - When you issue the `switchport port-security mac-address sticky` command, all current dynamically-learned secure MAC addresses will be converted to STICKY SECURE MAC ADDRESSES
 - If you issue the `no switchport port-security mac-address sticky` command, all current STICKY SECURE MAC ADDRESSES will be converted to regular dynamically-learned SECURE MAC ADDRESSES
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/10d591f9-334c-4e3b-889e-16030c36c445)
+![image](remote_assets/10d591f9-334c-4e3b-889e-16030c36c445.png)
 
 ---
 
@@ -130,10 +130,10 @@
     - You can view all SECURE MAC ADDRESSES with `show mac address-table secure`
     
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/c9123729-541c-4363-ba19-d8e49f75c6c5)
+![image](remote_assets/c9123729-541c-4363-ba19-d8e49f75c6c5.png)
 
 ---
 
 ## Command Review
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/716ce91d-d1bb-4f12-a8fd-226b65f22569)
+![image](remote_assets/716ce91d-d1bb-4f12-a8fd-226b65f22569.png)

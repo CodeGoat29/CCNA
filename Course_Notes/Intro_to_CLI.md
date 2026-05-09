@@ -13,7 +13,7 @@ A GUI is a "Graphical User Interface"
 
 You can use a "Rollover cable" : DB9 serial connector to RJ45 OR a DB9 Serial to USB
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/0527c007-d607-4bef-8ce1-7b18a177614d)
+![image](remote_assets/0527c007-d607-4bef-8ce1-7b18a177614d.png)
 
 ### How Do You Actually Access The CLI?
 
@@ -54,7 +54,7 @@ Using the 'enable' command, in User EXEC mode, switches you to 'Privileged EXEC'
 
 USE a Question Mark (?) to view the available commands in ANY mode. Combining ? with a letter or partial command will list all the commands with those letters.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/52454e6f-d5b1-45f0-9a50-e412d356f6d2)
+![image](remote_assets/52454e6f-d5b1-45f0-9a50-e412d356f6d2.png)
 
 USE the TAB key to complete partially entered commands IF the command exists.
 
@@ -157,7 +157,7 @@ Future passwords will ALSO be *encrypted*
 
 “Enable secret” will not be effected (it’s ALWAYS encrypted)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/09c841fe-b5c0-4683-9082-baf060e24c03)
+![image](remote_assets/09c841fe-b5c0-4683-9082-baf060e24c03.png)
 
 Now you will see that the password is no longer in plaintext.
 
@@ -167,7 +167,7 @@ Now you will see that the password is no longer in plaintext.
 
 For BETTER / STRONGER encryption, use “enable secret”
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/346f3015-9211-47a9-888f-4e02a013a728)
+![image](remote_assets/346f3015-9211-47a9-888f-4e02a013a728.png)
 
 “5” refers to MD5 encryption.
 
@@ -179,7 +179,7 @@ Once you use “enable secret” command, this will override “enable password�
 
 To CANCEL or delete a command you entered, use the “no” keyword
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/2978d101-08d4-4ee3-8995-f36aa1c47d15)
+![image](remote_assets/2978d101-08d4-4ee3-8995-f36aa1c47d15.png)
 
 In this instance, disabling “service password-encryption”:
 
@@ -189,12 +189,12 @@ In this instance, disabling “service password-encryption”:
 
 ---
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/e16966a3-674a-4376-bdab-2c06e3659e5f)
+![image](remote_assets/e16966a3-674a-4376-bdab-2c06e3659e5f.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/e449e074-bf4c-40f1-a61e-0442ad83f284)
+![image](remote_assets/e449e074-bf4c-40f1-a61e-0442ad83f284.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/4c1bdf58-7de6-4074-8189-1573a174474c)
+![image](remote_assets/4c1bdf58-7de6-4074-8189-1573a174474c.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/e7771e65-5ed5-406d-9751-76520713210c)
+![image](remote_assets/e7771e65-5ed5-406d-9751-76520713210c.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/5f7357d4-f44b-4a61-a24c-86f3368f30f7)
+![image](remote_assets/5f7357d4-f44b-4a61-a24c-86f3368f30f7.png)

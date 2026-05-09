@@ -16,17 +16,17 @@
 
 HUB-and-SPOKE topology
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/57575fad-883d-4999-a56d-a77fa1542976)
+![image](remote_assets/57575fad-883d-4999-a56d-a77fa1542976.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/cfc23064-a133-445a-b854-e044828eca7d)
+![image](remote_assets/cfc23064-a133-445a-b854-e044828eca7d.png)
 
 ## WAN Connection Via Ethernet (Fiber)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/022ccdbd-7ce9-41fd-9f99-9e9c6dcb9f76)
+![image](remote_assets/022ccdbd-7ce9-41fd-9f99-9e9c6dcb9f76.png)
 
 ## WAN Over Shared Infrastructure (Internet Vpn)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/38eff264-7ed4-43fd-943b-47e9e1ce995e)
+![image](remote_assets/38eff264-7ed4-43fd-943b-47e9e1ce995e.png)
 
 ---
 
@@ -37,7 +37,7 @@ HUB-and-SPOKE topology
 - There are various standards that provide different speeds and different standards are available in different countries.
 - Due to the HIGHER cost, HIGHER installation lead time, and SLOWER speeds of LEASED LINES, Ethernet WAN technologies are becoming MORE popular
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/77dd5503-8b29-4919-8747-6dd80eec28fa)
+![image](remote_assets/77dd5503-8b29-4919-8747-6dd80eec28fa.png)
 
 ## Mpls Vpns
 
@@ -49,7 +49,7 @@ HUB-and-SPOKE topology
     - PE ROUTER = Provider Edge ROUTER
     - P ROUTER = Provider Core ROUTER
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/166bff5b-d977-48dc-9a74-b9a523b91e1b)
+![image](remote_assets/166bff5b-d977-48dc-9a74-b9a523b91e1b.png)
 
 - When the PE ROUTERS receive FRAMES from the CE ROUTERS, they add a LABEL to the FRAME
 - These LABELS are used to make forwarding decisions within the SERVICE PROVIDER NETWORK - NOT the DESTINATION IP
@@ -66,7 +66,7 @@ OFFICE A’s CE will learn about OFFICE B’s ROUTES via this OSPF peering
 
 OFFICE B’s CE will learn about OFFICE A’s ROUTES as well
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/2b3d8d6e-3501-4d54-a6f8-5a05c9140d24)
+![image](remote_assets/2b3d8d6e-3501-4d54-a6f8-5a05c9140d24.png)
 
 - When using a LAYER 2 MPLS VPN, the CE and PE ROUTERS do NOT form PEERINGS
 - The SERVICE PROVIDER NETWORK is entirely *transparent* to the CE ROUTERS
@@ -76,9 +76,9 @@ OFFICE B’s CE will learn about OFFICE A’s ROUTES as well
 
 CE ROUTERS connected via LAYER 2 MPLS VPN
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/b0b19dfd-e417-40ce-ac36-ce0ace8484cc)
+![image](remote_assets/b0b19dfd-e417-40ce-ac36-ce0ace8484cc.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/cc5c9508-a2b0-4fe7-9c83-6c03e7d2d861)
+![image](remote_assets/cc5c9508-a2b0-4fe7-9c83-6c03e7d2d861.png)
 
 ---
 
@@ -86,7 +86,7 @@ CE ROUTERS connected via LAYER 2 MPLS VPN
 
 - Many different technologies can be used to connect to a SERVICE PROVIDER’s MPLS NETWORK for WAN Service
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/c6e6e60d-2a96-415e-82a2-a090c38a68a3)
+![image](remote_assets/c6e6e60d-2a96-415e-82a2-a090c38a68a3.png)
 
 ## Internet Connectivity
 
@@ -106,7 +106,7 @@ CE ROUTERS connected via LAYER 2 MPLS VPN
 - A DSL MODEM (Modulator / Demodulator) is required to convert DATA into a format suitable to be sent over the phone lines
     - The MODEM might be a separate DEVICE or it might be incorporated in to a “HOME ROUTER”
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a708b6b4-6de5-4a72-8c77-13f569f4c2d5)
+![image](remote_assets/a708b6b4-6de5-4a72-8c77-13f569f4c2d5.png)
 
 ## Cable Internet
 
@@ -114,13 +114,13 @@ CE ROUTERS connected via LAYER 2 MPLS VPN
 - Like DLS, a CABLE MODEM is required to convert DATA into a format suitable to be sent over the CATV CABLES.
     - Like a DSL MODEM, this can be a separate device or built into the HOME ROUTER
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a33bb999-83bc-49a8-ad37-e7ca91fcb954)
+![image](remote_assets/a33bb999-83bc-49a8-ad37-e7ca91fcb954.png)
 
 ---
 
 ## Redundant Internet Connections
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/af770f82-a55c-4af5-af7b-5708b39833c4)
+![image](remote_assets/af770f82-a55c-4af5-af7b-5708b39833c4.png)
 
 ---
 
@@ -139,9 +139,9 @@ CE ROUTERS connected via LAYER 2 MPLS VPN
 - A VPN “TUNNEL” is created between the TWO DEVICES by ENCAPSULATING the original IP PACKET with a VPN HEADER and a new IP HEADER
     - When using IPSec, the original PACKET is encrypted before its ENCAPSULATED with the new HEADER
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/b17c6149-90b2-4bc7-beb7-c53698d588a0)
+![image](remote_assets/b17c6149-90b2-4bc7-beb7-c53698d588a0.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/d41295a9-af54-4cd5-acc8-4b60c39c40c2)
+![image](remote_assets/d41295a9-af54-4cd5-acc8-4b60c39c40c2.png)
 
 ### **Process Summary**
 
@@ -178,11 +178,11 @@ GRE over IPSec
 - To get the FLEXIBILITY of GRE with the SECURITY of IPSec, “GRE over IPSec” can be used
 - The original PACKET will be ENCAPSULATED by a GRE HEADER and a new IP HEADER, and then the GRE PACKET will be ENCRYPTED and ENCAPSULATED within an IPSec VPN HEADER and a NEW IP HEADER
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/09c7da0c-debe-453e-822c-b97c0b8658ef)
+![image](remote_assets/09c7da0c-debe-453e-822c-b97c0b8658ef.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/3dfd6b86-28bb-489d-931b-5cc74669c1ac)
+![image](remote_assets/3dfd6b86-28bb-489d-931b-5cc74669c1ac.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/939ce5af-5ffc-44da-96fc-def2ca99ecae)
+![image](remote_assets/939ce5af-5ffc-44da-96fc-def2ca99ecae.png)
 
 ---
 
@@ -192,11 +192,11 @@ GRE over IPSec
 
 1) CONFIGURE IPSec TUNNELS to a HUB SITE
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/00c33e7f-2b28-4a33-908d-7aceff1e4092)
+![image](remote_assets/00c33e7f-2b28-4a33-908d-7aceff1e4092.png)
 
 2) The HUB ROUTER gives each ROUTER information about HOW to form an IPSec TUNNEL with the OTHER ROUTERS
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/7a621160-10d4-4e14-868b-3c23f6bb0a64)
+![image](remote_assets/7a621160-10d4-4e14-868b-3c23f6bb0a64.png)
 
 DMVPN provides the configuration simplicity of HUB-AND-SPOKE (each SPOKE ROUTER only needs one TUNNEL configured) and the EFFICIENCY of DIRECT SPOKE-TO-SPOKE communication (SPOKE ROUTERS can communicate directly without TRAFFIC passing through the HUB)
 
@@ -212,7 +212,7 @@ DMVPN provides the configuration simplicity of HUB-AND-SPOKE (each SPOKE ROUTER 
 - These END DEVICES then form SECURE TUNNELS to one of the company’s ROUTERS / FIREWALLS acting as a TLS SERVER
 - This allows the END USERS to securely access RESOURCES on the company’s INTERNAL NETWORK without being directly connected to the company NETWORK
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f4a77cb7-9d42-4daa-9a25-630c0fb260cf)
+![image](remote_assets/f4a77cb7-9d42-4daa-9a25-630c0fb260cf.png)
 
 ---
 

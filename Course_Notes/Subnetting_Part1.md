@@ -1,6 +1,6 @@
 # 13. Subnetting : Part 1
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a475e909-59b8-4615-a0b9-8a3c1fbdc313)
+![image](remote_assets/a475e909-59b8-4615-a0b9-8a3c1fbdc313.png)
 
 HOWEVER, only Class A, B, C Addresses can be assigned to a device as an IP Address.
 
@@ -10,7 +10,7 @@ HOWEVER, only Class A, B, C Addresses can be assigned to a device as an IP Addre
 ## B 			/16
 ## C 			/24
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/f0836136-c4a9-475b-b6c2-d1c550b8cfdd)
+![image](remote_assets/f0836136-c4a9-475b-b6c2-d1c550b8cfdd.png)
 
 The IANA (Internet Assigned Numbers Authority) assigns IPv4 addresses/networks to companies based on their size.
 
@@ -146,7 +146,7 @@ Solving for 2nd and 1st Octet is the same as above, keeping in mind the Octet co
 ---
 Alternative method to "Cheat Sheet"
 
-![image](https://github.com/user-attachments/assets/d1e103b8-142a-44cc-8ab4-f5337268c9de)
+![image](remote_assets/d1e103b8-142a-44cc-8ab4-f5337268c9de.png)
 
 1. Find the "magic octet" where a given IP /Prefix lies, from the bit chart shown (boundary digits are inclusive of the octet preceding them)
 2. Count the number of network bits (left to right) in that octet and count the same amount, using the red bit slot chart. This'll be your address group size.

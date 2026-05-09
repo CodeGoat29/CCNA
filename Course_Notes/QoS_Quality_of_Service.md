@@ -18,13 +18,13 @@
 
 ## Pcp / Cos
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/2d2037b6-6992-4758-a1cb-5df0f939b153)
+![image](remote_assets/2d2037b6-6992-4758-a1cb-5df0f939b153.png)
 
 - PCP is also known as CoS (CLASS OF SERVICE)
 - It’s use is defined by IEEE 802.1p
 - 3 bits = 8 possible values (2^3 = 8)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/af191e31-082d-43c0-ab76-225d4dd2e354)
+![image](remote_assets/af191e31-082d-43c0-ab76-225d4dd2e354.png)
 
 - **Pcp Value 0:**
     - “BEST EFFORT” DELIVERY means there is no guarantee that data is delivered or that it meets ANY QoS Standard. This is REGULAR TRAFFIC - NOT HIGH PRIORITY
@@ -39,15 +39,15 @@
     
 - In the diagram below, TRAFFIC between R1 and R2, or between R2 and EXTERNAL DESTINATIONS will not have a dot1q tag. So, traffic over those links PCP cannot be marked with a PCP value.
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/07a1cbb3-d034-4a9b-accc-59e7f738452f)
+![image](remote_assets/07a1cbb3-d034-4a9b-accc-59e7f738452f.png)
 
 ---
 
 ## The IP Tos Byte
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/3323ff23-96a5-45f4-abde-893d72a4021f)
+![image](remote_assets/3323ff23-96a5-45f4-abde-893d72a4021f.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/ffec398b-7b0a-47a1-9758-a7a14daf6aa0)
+![image](remote_assets/ffec398b-7b0a-47a1-9758-a7a14daf6aa0.png)
 
 (6 bits for DSCP and 2 bits for ECN)
 
@@ -55,7 +55,7 @@
 
 ## IP Precedence (Old)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/1b0ca3ca-fc8d-4225-9368-64c8ff9587da)
+![image](remote_assets/1b0ca3ca-fc8d-4225-9368-64c8ff9587da.png)
 
 - **Standard Ipp Markings Are Similar to Pcp:**
     - 6 and 7 are reserved to ‘network control traffic’ (ie: OSPF Messages between ROUTERS)
@@ -70,7 +70,7 @@
 
 ## Dscp (Current)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/48a63948-81b9-43d5-a108-34525a381533)
+![image](remote_assets/48a63948-81b9-43d5-a108-34525a381533.png)
 
 - RFC 2474 (1998) defines the DSCP field, and other ‘DiffServ’ RFCs elaborate on its use
 - With IPP updated to DSCP, new STANDARD MARKINGS had to be decided on
@@ -91,14 +91,14 @@
 
 ## Default Forwarding (Df)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/26f6bc76-6b33-40f0-9327-022b4816d280)
+![image](remote_assets/26f6bc76-6b33-40f0-9327-022b4816d280.png)
 
 - Used for BEST EFFORT TRAFFIC
 - The DSCP marking for DF is 0
 
 ## Expedited Forwarding (Ef)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/12cf77c0-f139-494c-ab8b-d765a73a92f4)
+![image](remote_assets/12cf77c0-f139-494c-ab8b-d765a73a92f4.png)
 
 - EF is used for TRAFFIC that requires Low Loss / Latency / Jitter
 - The DSCP marking for EF is 46
@@ -113,23 +113,23 @@
     - HIGHER DROP PRECEDENCE = More likely to DROP the PACKET during CONGESTION
     
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/407ab29c-678d-4a38-8e8e-2a6f904b4d94)
+![image](remote_assets/407ab29c-678d-4a38-8e8e-2a6f904b4d94.png)
 
 ### **Examples**
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/d6b2dac7-fefc-409b-8136-f34df165dd23)
+![image](remote_assets/d6b2dac7-fefc-409b-8136-f34df165dd23.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/6543afb5-9aba-4d91-9d61-233c2c67958d)
+![image](remote_assets/6543afb5-9aba-4d91-9d61-233c2c67958d.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/fae89ed7-7229-4632-b3de-5415a36ad267)
+![image](remote_assets/fae89ed7-7229-4632-b3de-5415a36ad267.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/a7440ed0-70d8-48c2-b83d-dcb4e169fade)
+![image](remote_assets/a7440ed0-70d8-48c2-b83d-dcb4e169fade.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/0d2d9ba8-fecc-47a8-9cee-02ae5a7a30e9)
+![image](remote_assets/0d2d9ba8-fecc-47a8-9cee-02ae5a7a30e9.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/05fa1552-e305-4e2d-b6aa-db0c8cbed3f7)
+![image](remote_assets/05fa1552-e305-4e2d-b6aa-db0c8cbed3f7.png)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/be10edd7-a4e3-4df6-a94f-b9e1b1c9e304)
+![image](remote_assets/be10edd7-a4e3-4df6-a94f-b9e1b1c9e304.png)
 
 - AF41 gets the BEST TREATMENT (Highest Priority / Lowest Drop)
 - AF13 gets the WORST TREATMENT (Lowest Priority / Highest Drop)
@@ -141,7 +141,7 @@
 - Defines EIGHT DSCP values for backward compatibility with IPP
 - The THREE BITS that were added for DSCP are set to 0, and the original IPP bits are used to make 8 values
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/d7619e44-1ffd-4613-bbad-f2ff19ff6d2a)
+![image](remote_assets/d7619e44-1ffd-4613-bbad-f2ff19ff6d2a.png)
 
 ---
 
@@ -166,13 +166,13 @@
 - **If The Markings Are Not Trusted:**
     - DEVICE will change the MARKINGS according to configured POLICY
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/cdcdc302-9dbe-4dd8-9184-72d1f501bc1a)
+![image](remote_assets/cdcdc302-9dbe-4dd8-9184-72d1f501bc1a.png)
 
 - If an IP PHONE is connected to the SWITCH PORT, it is RECOMMENDED to move the TRUST BOUNDARY to the IP PHONES
 - This is done via CONFIGURATION on the SWITCH PORT connected to the IP PHONE
 - If a user MARKS their PC’s TRAFFIC with a HIGH PRIORITY, the MARKING will be CHANGED (not trusted)
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/606ad681-fad4-4f23-96bf-bd7dde91eaf4)
+![image](remote_assets/606ad681-fad4-4f23-96bf-bd7dde91eaf4.png)
 
 ---
 
@@ -182,7 +182,7 @@
 - When a QUEUE becomes FULL, PACKETS that don’t FIT in the QUEUE are dropped (Tail Drop)
 - RED and WRED DROP PACKETS early to avoid TAIL DROP
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/5dbfd417-097c-4107-a5e1-b5476f423b15)
+![image](remote_assets/5dbfd417-097c-4107-a5e1-b5476f423b15.png)
 
 - An essential part of QoS is the use of MULTIPLE QUEUES
     - This is where CLASSIFICATION plays a role.
@@ -191,7 +191,7 @@
 - HOWEVER, the DEVICE is only able to forward one FRAME out of an INTERFACE at once SO a *SCHEDULER*, is used to decide which QUEUE TRAFFIC is FORWARDED from the next
     - *PRIORITZATION* allows the SCHEDULER to give certain QUEUES more PRIORITY than others
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/56bfe184-5bdf-4b8f-8851-756766456bf9)
+![image](remote_assets/56bfe184-5bdf-4b8f-8851-756766456bf9.png)
 
 - A COMMON scheduling method is *WEIGHTED ROUND-ROBIN*
 - **Round-Robin:**
@@ -206,7 +206,7 @@
     - Uses WEIGHTED ROUND-ROBIN SCHEDULER while guaranteeing each QUEUE a certain PERCENTAGE of the INTERFACE’S bandwidth during CONGESTION
     
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/eee24cef-c67a-42de-9fa0-9351cab56354)
+![image](remote_assets/eee24cef-c67a-42de-9fa0-9351cab56354.png)
 
 - ROUND-ROBIN SCHEDULING is NOT IDEAL for VOICE / VIDEO TRAFFIC
     - Even if VOICE / VIDEO TRAFFIC receives a guaranteed MINIMUM amount of BANDWIDTH, ROUND-ROBIN can add DELAY and JITTER because even the HIGH PRIORITY QUEUES have to wait their turn in the SCHEDULER
@@ -221,7 +221,7 @@
         - POLICING can control the AMOUNT of TRAFFIC allowed in the *STRICT PRIORITY QUEUE* so that it can’t take all of the link’s BANDWIDTH
     
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/2b544243-3a2e-4721-bf1f-4636ec4085a7)
+![image](remote_assets/2b544243-3a2e-4721-bf1f-4636ec4085a7.png)
 
  
 
@@ -243,4 +243,4 @@
 - In BOTH cases, CLASSIFICATION can be used to ALLOW for different RATES for different KINDS of TRAFFIC
 - WHY would you want to LIMIT the RATE that TRAFFIC is SENT / RECEIVED ?
 
-![image](https://github.com/psaumur/CCNA/assets/106411237/09771d78-4570-4300-97e1-adba77fe28b4)
+![image](remote_assets/09771d78-4570-4300-97e1-adba77fe28b4.png)
