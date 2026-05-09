@@ -1,20 +1,23 @@
-# Complete CCNA 200-300 Course Notes
+# Complete CCNA 200-301 Course Notes (v1.1)
 
-This is my repository of my personal notes taken during Jeremy's IT Lab Complete CCNA 200-300 course.
-Each "Day" is broken down into individual chapters.
+This repository contains my personal notes from Jeremy's IT Lab for the **CCNA 200-301 v1.1** exam.
+Each course day is broken into its own Markdown note file.
 
-Exam Objectives https://learningnetwork.cisco.com/s/ccna-exam-topics
-![alt text](/CCNA/Course_Notes/remote_assets/Objectives.png)
+## Exam Objectives
+
+[Cisco CCNA Exam Topics](https://learningnetwork.cisco.com/s/ccna-exam-topics)
+
+![CCNA 200-301 v1.1 Exam Objectives](Course_Notes/remote_assets/Objectives.png)
 
 ## Copy These Notes with Git
 
-To copy these notes to your computer, run:
+Clone the repository:
 
 ```bash
 git clone <repo-url>
 ```
 
-Then move into the folder:
+Move into the project folder:
 
 ```bash
 cd CCNA
@@ -22,7 +25,17 @@ cd CCNA
 
 Replace `<repo-url>` with your GitHub repository URL.
 
----
+To get future updates later:
+
+```bash
+git pull
+```
+
+## Included Notes
+
+- Notes are stored in [`Course_Notes`](Course_Notes).
+- Images used by the notes are stored in [`Course_Notes/remote_assets`](Course_Notes/remote_assets).
+- The notes are written in Markdown so they render well on GitHub and locally.
 
 ## Course Day Chapter Notes
 
