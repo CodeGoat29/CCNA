@@ -10,15 +10,15 @@ A **computer network** is a digital telecommunications network that allows **nod
 > **Note:** The same device can be a **client** in some situations and a **server** in others.  
 > Example: a **peer-to-peer network**.
 
-![Network overview](image-2.png)
+![Network overview](remote_assets/image-2.png)
 
-![Client server example](image.png)
+![Client server example](remote_assets/image.png)
 
 ## Common Network Devices
 
 ### **Switches** (Layer 2)
 
-![Switch](image-3.png)
+![Switch](remote_assets/image-3.png)
 
 - Have many network interfaces/ports for **end hosts** to connect to. (**24+**)
 - Provide connectivity to hosts within the same **LAN (Local Area Network)**.
@@ -26,7 +26,7 @@ A **computer network** is a digital telecommunications network that allows **nod
 
 ### **Routers** (Layer 3)
 
-![Router](image-4.png)
+![Router](remote_assets/image-4.png)
 
 - Have fewer network interfaces than switches.
 - Provide connectivity **between LANs**.
@@ -34,7 +34,7 @@ A **computer network** is a digital telecommunications network that allows **nod
 
 ### **Firewalls** (Can Operate At Layers 3, 4, and 7)
 
-![Firewall](image-5.png)
+![Firewall](remote_assets/image-5.png)
 
 - Specialized hardware network security devices that control traffic entering and exiting a network.
 - Can be placed **inside** or **outside** the network.
@@ -44,4 +44,4 @@ A **computer network** is a digital telecommunications network that allows **nod
 - **Next-Generation Firewalls (NGFWs)** when they include more modern and advanced filtering capabilities.
 - **Host-based firewalls** are software applications that filter traffic entering and exiting a host machine, such as a PC.
 
-![Host-based firewall](image-6.png)
+![Host-based firewall](remote_assets/image-6.png)
