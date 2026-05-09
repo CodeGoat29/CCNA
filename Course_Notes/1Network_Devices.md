@@ -39,7 +39,9 @@ A **computer network** is a digital telecommunications network that allows **nod
 - Specialized hardware network security devices that control traffic entering and exiting a network.
 - Can be placed **inside** or **outside** the network.
 - Monitor and control network traffic based on configured rules.
-- Called **Next-Generation Firewalls (NGFWs)** when they include more modern and advanced filtering capabilities.
+
+
+- **Next-Generation Firewalls (NGFWs)** when they include more modern and advanced filtering capabilities.
 - **Host-based firewalls** are software applications that filter traffic entering and exiting a host machine, such as a PC.
 
 ![Host-based firewall](image-6.png)
