@@ -6,6 +6,8 @@ Networking models categorize and provide a structure for networking protocols an
 
 (Protocols are a set of logical rules defining how network devices and software should work)
 
+![alt text](image.png)
+
 ## Osi Model
 
 - Open Systems Interconnection Model
@@ -16,6 +18,7 @@ Networking models categorize and provide a structure for networking protocols an
 
 ![image](remote_assets/bbf46de2-e025-4ddd-b52b-614b280598da.png)
 
+![IEE/IETF](image-1.png)
 As data moves from the top layer, downward, the process is called “encapsulation”
 
 As data moves from the bottom layer, upward, the process is called “de-encapsulation”
