@@ -171,3 +171,119 @@ Same-Layer Interactions:
 Example:
 
 The Application Layer of YouTube's web server and your PC's browser.
+
+# CCNA — Encapsulation / TCP-IP / PDUs
+
+## Encapsulation
+
+Data moves DOWN the stack and gets wrapped with headers/trailers.
+
+```text id="zcndxg"
+Data → Segment → Packet → Frame → Bits
+```
+
+* Transport layer adds TCP/UDP header
+* Internet layer adds IP header
+* Network Access layer adds Ethernet header/trailer
+
+---
+
+# Decapsulation
+
+Data moves UP the stack and headers are removed.
+
+```text id="4c9mhr"
+Bits → Frame → Packet → Segment → Data
+```
+
+---
+
+# TCP/IP Model
+
+| Layer          | Purpose             | PDU     |
+| -------------- | ------------------- | ------- |
+| Application    | Network services    | Data    |
+| Transport      | End-to-end delivery | Segment |
+| Internet       | Routing/IP          | Packet  |
+| Network Access | Local delivery/MAC  | Frame   |
+| Physical       | Electrical signals  | Bits    |
+
+---
+
+# PDU Names
+
+```text id="6nnjwb"
+Application → Data
+Transport → Segment
+Internet → Packet
+Network Access → Frame
+Physical → Bits
+```
+
+---
+
+# Segment
+
+```text id="gh9tso"
+[TCP/UDP Header][Data]
+```
+
+Contains:
+
+* Source port
+* Destination port
+
+---
+
+# Packet
+
+```text id="yqf6md"
+[IP Header][Segment]
+```
+
+Contains:
+
+* Source IP
+* Destination IP
+
+---
+
+# Frame
+
+```text id="haxl0v"
+[Ethernet Header][Packet][Trailer]
+```
+
+Contains:
+
+* Source MAC
+* Destination MAC
+* FCS
+
+---
+
+# Address Types by Layer
+
+| Layer          | Address     |
+| -------------- | ----------- |
+| Transport      | Port Number |
+| Internet       | IP Address  |
+| Network Access | MAC Address |
+
+---
+
+# TCP vs UDP
+
+## TCP
+
+* Reliable
+* Connection-oriented
+* Acknowledgments
+* Segments
+
+## UDP
+
+* Faster
+* Connectionless
+* No acknowledgments
+* Datagrams
