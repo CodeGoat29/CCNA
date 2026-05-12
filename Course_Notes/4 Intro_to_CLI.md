@@ -11,6 +11,8 @@ A GUI is a "Graphical User Interface"
 
 - Console Port : When you first configure a device, you have to connect via the Console Port.
 
+![Console port](image-2.png)
+
 You can use a "Rollover cable" : DB9 serial connector to RJ45 OR a DB9 Serial to USB
 
 ![image](remote_assets/0527c007-d607-4bef-8ce1-7b18a177614d.png)
